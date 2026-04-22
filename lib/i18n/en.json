@@ -1,0 +1,23 @@
+{
+  "nav": {
+    "home": "Home",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge_dev": "Full-stack web developer",
+    "badge_design": "UI/UX Designer",
+    "title": "Hi, I'm Luca",
+    "subtitle": "Engineering student at CESI working at Assystem, I work across the full stack: backend, frontend, and product experience.",
+    "btn_projects": "Projects",
+    "btn_contact": "Contact"
+  },
+  "projects": {
+    "title": "Projects",
+    "description": "Discover my recent projects."
+  },
+  "contact": {
+    "title": "Contact",
+    "description": "Feel free to reach out."
+  }
+}

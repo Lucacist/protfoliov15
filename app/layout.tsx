@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Google_Sans_Flex } from "next/font/google";
 import Navbar from "@/components/Navbar";
+import { LanguageProvider } from "@/lib/language-context";
 
 import "./globals.css";
 import { cn } from "@/lib/utils";
@@ -23,8 +24,10 @@ export default function RootLayout({
       className={cn("h-full", "antialiased", google_sans_flex.variable)}
     >
       <body className="min-h-full flex flex-col">
-        <Navbar />
-        {children}
+        <LanguageProvider>
+          <Navbar />
+          {children}
+        </LanguageProvider>
       </body>
     </html>
   );
