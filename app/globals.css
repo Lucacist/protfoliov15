@@ -49,7 +49,7 @@
 }
 
 :root {
-  --background: oklch(1 0 0);
+  --background: #F9F9F9;
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
@@ -127,4 +127,9 @@
   html {
     @apply font-sans;
   }
+}
+
+@utility mask-circular-fade {
+  -webkit-mask-image: radial-gradient(circle, black 40%, transparent 70%);
+  mask-image: radial-gradient(circle, black 40%, transparent 70%);
 }
