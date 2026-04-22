@@ -106,7 +106,9 @@ export default function Hero() {
           </motion.div>
         </div>
       </div>
-      <div>
+      <div className="relative">
+        <img src="/rosas/rosas1.svg" className="absolute top-[-30px] left-[-50px] h-30 w-30 object-cover z-10 opacity-50" />
+        <img src="/rosas/rosas2.svg" className="absolute bottom-[-100px] right-[-50px] h-60 w-60 object-cover z-10 opacity-80 " />
         <img src="/landing/profile.png" alt="Profile" className="h-120 w-120 object-cover filter grayscale" />
       </div>
       <motion.div
