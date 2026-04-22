@@ -50,7 +50,7 @@ export default function Navbar() {
                     <PopoverTrigger asChild>
                         <Button variant="ghost" size="sm" className="h-8 gap-1.5 px-2">
                             <Languages className="h-4 w-4" />
-                            <span className="text-xs">{currentLocale?.flag}</span>
+                            <span className="text-lg">{currentLocale?.flag}</span>
                         </Button>
                     </PopoverTrigger>
                     <PopoverContent align="end" className="w-40 p-1 gap-1">

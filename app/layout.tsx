@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Google_Sans_Flex } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import { LanguageProvider } from "@/lib/language-context";
+import { TooltipProvider } from "@/components/ui/tooltip";
 
 import "./globals.css";
 import { cn } from "@/lib/utils";
@@ -25,8 +26,10 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         <LanguageProvider>
-          <Navbar />
-          {children}
+          <TooltipProvider>
+            <Navbar />
+            {children}
+          </TooltipProvider>
         </LanguageProvider>
       </body>
     </html>

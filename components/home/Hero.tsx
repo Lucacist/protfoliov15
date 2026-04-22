@@ -1,6 +1,11 @@
 "use client";
 
 import { Badge } from "@/components/ui/badge"
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip"
 import { motion } from "framer-motion";
 import { Paintbrush, CodeXml, BriefcaseBusiness, Send } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -16,7 +21,7 @@ export default function Hero() {
     <section className="relative container mx-auto px-4 h-screen flex items-center justify-center gap-8">
       <div className="flex flex-col gap-4">
         {/* <img src="/landing/wave.svg" alt="Profile" className="absolute top-0 left-0 w-full object-cover" /> */}
-        <div className="flex flex-row gap-2 justify-center">
+        <div className="flex flex-row gap-2 justify-start">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -38,16 +43,16 @@ export default function Hero() {
             </Badge>
           </motion.div>
         </div>
-        <motion.h1 className="text-7xl font-medium text-center"
+        <motion.h1 className="text-7xl font-medium text-start"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}>{t("hero.title")}</motion.h1>
-        <motion.h3 className="text-xl text-center max-w-2xl mx-auto"
+        <motion.h3 className="text-xl text-start max-w-2xl mx-auto"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}>{t("hero.subtitle")}</motion.h3>
 
-        <div className="flex flex-row gap-2 justify-center">
+        <div className="flex flex-row gap-2 justify-start">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -65,6 +70,39 @@ export default function Hero() {
             <Button asChild>
               <Link href="/contact"><Send />{t("hero.btn_contact")}</Link>
             </Button>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 1 }}
+            className="flex items-center"
+          ><Tooltip>
+              <TooltipTrigger asChild>
+                <a href="https://assystem.com/">
+                  <img src="/landing/assystem.svg" alt="Assystem" className="h-6 w-auto object-cover" />
+                </a>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>Assystem</p>
+              </TooltipContent>
+            </Tooltip>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 1 }}
+            className="flex items-center"
+          >    <Tooltip>
+              <TooltipTrigger asChild>
+                <a href="https://cesi.fr/">
+                  <img src="/landing/cesi.png" alt="CESI" className="h-6 w-auto object-cover" />
+                </a>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>CESI</p>
+              </TooltipContent>
+            </Tooltip>
+
           </motion.div>
         </div>
       </div>
@@ -84,6 +122,6 @@ export default function Hero() {
           <img src="/landing/Hand.svg" alt="Hand" className="h-12 w-12 object-cover" />
         </motion.div>
       </motion.div>
-    </section>
+    </section >
   );
 }
