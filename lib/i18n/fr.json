@@ -13,8 +13,91 @@
     "btn_contact": "Contact"
   },
   "projects": {
-    "title": "Projets",
-    "description": "Découvrez mes projets récents."
+    "title": "Mes projets",
+    "ui": {
+      "searchPlaceholder": "Rechercher un projet, une technologie...",
+      "filters": {
+        "all": "Tous",
+        "web": "Web Full-Stack",
+        "software": "Logiciel",
+        "infra": "Infra & Sécurité",
+        "iot": "IoT & Embarqué"
+      },
+      "btnViewProject": "Voir le projet",
+      "btnViewRepo": "Voir le dépôt"
+    },
+    "items": [
+      {
+        "id": "easysave",
+        "title": "EasySave",
+        "category": "software",
+        "shortDescription": "Logiciel de sauvegarde multithreadé en C# (MVVM). Intègre des sauvegardes différentielles, le chiffrement à la volée et la centralisation des logs via Docker.",
+        "technologies": ["C#", "Avalonia", ".NET 10", "GitHub Actions"]
+      },
+      {
+        "id": "xanadu-infra",
+        "title": "Infrastructure XANADU",
+        "category": "infra",
+        "shortDescription": "Architecture réseau complète sur Proxmox : segmentation VLAN, DMZ, liaison MPLS inter-sites, AD avec administration déléguée et politique de sauvegarde 3-2-1.",
+        "technologies": ["pfSense", "Active Directory", "Windows Server", "Proxmox", "Docker", "Linux"]
+      },
+      {
+        "id": "stagelink",
+        "title": "Stagelink",
+        "category": "web",
+        "shortDescription": "Application web MVC centralisant les offres de stage. Gestion complexe des rôles (étudiants, pilotes, admins) avec des candidatures et tableau de bord.",
+        "technologies": ["PHP", "MVC", "MySQL", "JavaScript", "HTML5/CSS3"]
+      },
+      {
+        "id": "conway-game",
+        "title": "Jeu de la Vie de Conway",
+        "category": "software",
+        "shortDescription": "Implémentation interactive de l'automate cellulaire en C++ (POO). Mode console et interface graphique permettant de modifier la grille dynamiquement en temps réel.",
+        "technologies": ["C++", "POO", "Algorithmique", "UI Graphique"]
+      },
+      {
+        "id": "funkytown-network",
+        "title": "FunkyTown City",
+        "category": "infra",
+        "shortDescription": "Conception et déploiement d'une architecture réseau globale multi-sites. Plan d'adressage IPv4/IPv6, segmentation avancée et tunnel IPv6 sécurisé.",
+        "technologies": ["Cisco Packet Tracer", "VLAN", "IPv6", "Routage", "Switching L3"]
+      },
+      {
+        "id": "weather-station",
+        "title": "Station Météo Embarquée",
+        "category": "iot",
+        "shortDescription": "Système embarqué pour navires mesurant des paramètres environnementaux critiques (pression, température, GPS) avec centralisation des logs sur carte SD.",
+        "technologies": ["Arduino", "C++", "Capteurs I2C/SPI", "RTC", "Électronique"]
+      },
+      {
+        "id": "calibre",
+        "title": "Calibre",
+        "category": "web",
+        "shortDescription": "Plateforme web moderne sécurisée pour enseignants, permettant d'organiser et de partager des ressources pédagogiques avec un contrôle d'accès granulaire.",
+        "technologies": ["Next.js", "React", "PostgreSQL", "Authentification"]
+      },
+      {
+        "id": "guest-wifi-plugin",
+        "title": "Plugin Guest Wifi GLPI",
+        "category": "web",
+        "shortDescription": "Extension PHP pour GLPI 10.x facilitant la gestion des accès Wi-Fi temporaires avec validation par ticket et création automatique d'identifiants.",
+        "technologies": ["PHP 7.4", "GLPI API", "MySQL", "Plugin Architecture"]
+      },
+      {
+        "id": "strongbox-3000",
+        "title": "Strongbox 3000",
+        "category": "infra",
+        "shortDescription": "Création d'un dispositif de cybersécurité multi-niveaux pour protéger des prototypes. Intègre une authentification forte (MFA), la biométrie et des codes dynamiques.",
+        "technologies": ["Cybersécurité", "MFA", "Biométrie", "Algorithmique"]
+      },
+      {
+        "id": "escape-no-game",
+        "title": "Escape no Game",
+        "category": "iot",
+        "shortDescription": "Conception d'une technologie de communication furtive pour zones hostiles : conversion de la voix en signaux électriques inaudibles et analyse des émotions.",
+        "technologies": ["Traitement du signal", "Acoustique", "Électronique", "Systèmes embarqués"]
+      }
+    ]
   },
   "contact": {
     "title": "Contact",

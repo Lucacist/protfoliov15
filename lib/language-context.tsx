@@ -16,7 +16,7 @@ const messages: Record<Locale, Record<string, unknown>> = { fr, en };
 type LanguageContextType = {
   locale: Locale;
   setLocale: (locale: Locale) => void;
-  t: (key: string) => string;
+  t: <T = string>(key: string) => T;
 };
 
 const LanguageContext = createContext<LanguageContextType | null>(null);
@@ -25,17 +25,17 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const [locale, setLocale] = useState<Locale>("fr");
 
   const t = useCallback(
-    (key: string): string => {
+    <T = string>(key: string): T => {
       const keys = key.split(".");
       let value: unknown = messages[locale];
       for (const k of keys) {
         if (value && typeof value === "object") {
           value = (value as Record<string, unknown>)[k];
         } else {
-          return key;
+          return key as T;
         }
       }
-      return typeof value === "string" ? value : key;
+      return (value ?? key) as T;
     },
     [locale]
   );
