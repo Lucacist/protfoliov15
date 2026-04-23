@@ -94,13 +94,6 @@
         "technologies": ["Arduino", "C++", "Capteurs I2C/SPI", "RTC", "Électronique"]
       },
       {
-        "id": "calibre",
-        "title": "Calibre",
-        "category": "web",
-        "shortDescription": "Plateforme web moderne sécurisée pour enseignants, permettant d'organiser et de partager des ressources pédagogiques avec un contrôle d'accès granulaire.",
-        "technologies": ["Next.js", "React", "PostgreSQL", "Authentification"]
-      },
-      {
         "id": "guest-wifi-plugin",
         "title": "Plugin Guest Wifi GLPI",
         "category": "web",
