@@ -32,16 +32,16 @@ export default function Projects({ searchQuery = "" }: { searchQuery?: string })
     : [];
 
   return (
-    <div className="flex flex-col gap-8 mt-8 max-w-3xl mx-auto">
+    <div className="flex flex-col gap-6 sm:gap-8 mt-6 sm:mt-8">
       {filteredItems.map((project) => (
-        <article key={project.id} className="flex flex-col gap-4">
-          <h2 className="text-xl font-semibold">{project.title}</h2>
-          <p className="text-muted-foreground leading-relaxed">
+        <article key={project.id} className="flex flex-col gap-3 sm:gap-4">
+          <h2 className="text-lg sm:text-xl font-semibold">{project.title}</h2>
+          <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
             {project.shortDescription}
           </p>
-          <div className="flex flex-wrap items-center gap-2">
+          <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
             {project.technologies.map((tech) => (
-              <Badge key={tech} variant="outline" className="text-sm">
+              <Badge key={tech} variant="outline" className="text-xs sm:text-sm">
                 {tech}
               </Badge>
             ))}
