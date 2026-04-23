@@ -4,6 +4,7 @@ import { useLanguage } from "@/lib/language-context";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
+import { motion } from "framer-motion";
 
 type Project = {
   id: string;
@@ -33,8 +34,14 @@ export default function Projects({ searchQuery = "" }: { searchQuery?: string })
 
   return (
     <div className="flex flex-col gap-6 sm:gap-8 mt-6 sm:mt-8">
-      {filteredItems.map((project) => (
-        <article key={project.id} className="flex flex-col gap-3 sm:gap-4">
+      {filteredItems.map((project, index) => (
+        <motion.article
+          key={project.id}
+          className="flex flex-col gap-3 sm:gap-4"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, delay: index * 0.1, ease: "easeOut" }}
+        >
           <h2 className="text-lg sm:text-xl font-semibold">{project.title}</h2>
           <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
             {project.shortDescription}
@@ -62,7 +69,7 @@ export default function Projects({ searchQuery = "" }: { searchQuery?: string })
               {t("projects.ui.btnViewProject")}
             </a>
           </Button>
-        </article>
+        </motion.article>
       ))}
     </div>
   );

@@ -28,6 +28,22 @@
     },
     "items": [
       {
+        "id": "calibre",
+        "title": "Calibre",
+        "category": "web",
+        "shortDescription": "Plateforme web pour enseignants : gestion des notes par activité, génération de bulletins avec graphiques d'évolution et planification pédagogique.",
+        "technologies": ["Typescript", "PostgreSQL", "Next.js", "Gestion scolaire", "SonarQube"],
+        "repoUrl": "https://github.com/Lucacist/calibre"
+      },
+      {
+        "id": "arahub-workspace",
+        "title": "AraHub",
+        "category": "web",
+        "shortDescription": "Espace de travail centralisé pour la gestion de projets : agrégation de notes, agendas, ressources, liens et médias au sein d'une interface unifiée.",
+        "technologies": ["Next.js", "Productivité", "Gestion de projet", "UI/UX", "Centralisation"],
+        "repoUrl": "https://github.com/Lucacist/arahub"
+      },
+      {
         "id": "easysave",
         "title": "EasySave",
         "category": "software",
@@ -40,6 +56,14 @@
         "category": "infra",
         "shortDescription": "Architecture réseau complète sur Proxmox : segmentation VLAN, DMZ, liaison MPLS inter-sites, AD avec administration déléguée et politique de sauvegarde 3-2-1.",
         "technologies": ["pfSense", "Active Directory", "Windows Server", "Proxmox", "Docker", "Linux"]
+      },
+      {
+        "id": "jourdren-tp-landing",
+        "title": "Jourdren-TP",
+        "category": "web",
+        "shortDescription": "Développement d'un site vitrine moderne et responsive pour une entreprise de travaux. Optimisation SEO et design centré sur la conversion client.",
+        "technologies": ["Vue.js", "SEO", "Web Design"],
+        "repoUrl": "https://github.com/Lucacist/site-jourdren-evans"
       },
       {
         "id": "stagelink",
