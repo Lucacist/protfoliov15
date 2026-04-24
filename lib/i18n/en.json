@@ -5,19 +5,119 @@
     "contact": "Contact"
   },
   "hero": {
-    "badge_dev": "Full-stack web developer",
+    "badge_dev": "Full-stack Web Developer",
     "badge_design": "UI/UX Designer",
     "title": "Hi, I'm Luca",
-    "subtitle": "Engineering student at CESI working at Assystem, I work across the full stack: backend, frontend, and product experience.",
+    "subtitle": "Engineering student at CESI working at Assystem, I work across the entire stack: backend, frontend, and product experience.",
     "btn_projects": "Projects",
     "btn_contact": "Contact"
   },
   "projects": {
-    "title": "Projects",
-    "description": "Discover my recent projects."
+    "title": "My Projects",
+    "ui": {
+      "searchPlaceholder": "Search for a project, a technology...",
+      "filters": {
+        "all": "All",
+        "web": "Full-Stack Web",
+        "software": "Software",
+        "infra": "Infra & Security",
+        "iot": "IoT & Embedded"
+      },
+      "btnViewProject": "View Project",
+      "btnViewRepo": "View Repository"
+    },
+    "items": [
+      {
+        "id": "calibre",
+        "title": "Calibre",
+        "category": "web",
+        "shortDescription": "Web platform for teachers: activity-based grading, report card generation with progress charts, and educational planning.",
+        "technologies": ["TypeScript", "PostgreSQL", "Next.js", "School Management", "SonarQube"],
+        "repoUrl": "https://github.com/Lucacist/calibre"
+      },
+      {
+        "id": "arahub-workspace",
+        "title": "AraHub",
+        "category": "web",
+        "shortDescription": "Centralized workspace for project management: aggregation of notes, calendars, resources, links, and media within a unified interface.",
+        "technologies": ["Next.js", "Productivity", "Project Management", "UI/UX", "Centralization"],
+        "repoUrl": "https://github.com/Lucacist/arahub"
+      },
+      {
+        "id": "easysave",
+        "title": "EasySave",
+        "category": "software",
+        "shortDescription": "Multithreaded backup software in C# (MVVM). Integrates differential backups, on-the-fly encryption, and log centralization via Docker.",
+        "technologies": ["C#", "Avalonia", ".NET 10", "GitHub Actions"]
+      },
+      {
+        "id": "xanadu-infra",
+        "title": "XANADU Infrastructure",
+        "category": "infra",
+        "shortDescription": "Complete network architecture on Proxmox: VLAN segmentation, DMZ, inter-site MPLS link, AD with delegated administration, and 3-2-1 backup policy.",
+        "technologies": ["pfSense", "Active Directory", "Windows Server", "Proxmox", "Docker", "Linux"]
+      },
+      {
+        "id": "jourdren-tp-landing",
+        "title": "Jourdren-TP",
+        "category": "web",
+        "shortDescription": "Development of a modern, responsive showcase website for a construction company. SEO optimization and customer conversion-centric design.",
+        "technologies": ["Vue.js", "SEO", "Web Design"],
+        "repoUrl": "https://github.com/Lucacist/site-jourdren-evans"
+      },
+      {
+        "id": "stagelink",
+        "title": "Stagelink",
+        "category": "web",
+        "shortDescription": "MVC web application centralizing internship offers. Complex role management (students, managers, admins) with applications and a dashboard.",
+        "technologies": ["PHP", "MVC", "MySQL", "JavaScript", "HTML5/CSS3"]
+      },
+      {
+        "id": "conway-game",
+        "title": "Conway's Game of Life",
+        "category": "software",
+        "shortDescription": "Interactive implementation of the cellular automaton in C++ (OOP). Console mode and GUI allowing dynamic, real-time grid modification.",
+        "technologies": ["C++", "OOP", "Algorithmics", "GUI"]
+      },
+      {
+        "id": "funkytown-network",
+        "title": "FunkyTown City",
+        "category": "infra",
+        "shortDescription": "Design and deployment of a global multi-site network architecture. IPv4/IPv6 addressing plan, advanced segmentation, and secure IPv6 tunnel.",
+        "technologies": ["Cisco Packet Tracer", "VLAN", "IPv6", "Routing", "Switching L3"]
+      },
+      {
+        "id": "weather-station",
+        "title": "Embedded Weather Station",
+        "category": "iot",
+        "shortDescription": "Embedded system for ships measuring critical environmental parameters (pressure, temperature, GPS) with log centralization on an SD card.",
+        "technologies": ["Arduino", "C++", "I2C/SPI Sensors", "RTC", "Electronics"]
+      },
+      {
+        "id": "guest-wifi-plugin",
+        "title": "Guest Wifi GLPI Plugin",
+        "category": "web",
+        "shortDescription": "PHP extension for GLPI 10.x facilitating the management of temporary Wi-Fi access with ticket validation and automatic credential creation.",
+        "technologies": ["PHP 7.4", "GLPI API", "MySQL", "Plugin Architecture"]
+      },
+      {
+        "id": "strongbox-3000",
+        "title": "Strongbox 3000",
+        "category": "infra",
+        "shortDescription": "Creation of a multi-level cybersecurity device to protect prototypes. Integrates strong authentication (MFA), biometrics, and dynamic codes.",
+        "technologies": ["Cybersecurity", "MFA", "Biometrics", "Algorithmics"]
+      },
+      {
+        "id": "escape-no-game",
+        "title": "Escape no Game",
+        "category": "iot",
+        "shortDescription": "Design of stealth communication technology for hostile zones: conversion of voice into inaudible electrical signals and emotion analysis.",
+        "technologies": ["Signal Processing", "Acoustics", "Electronics", "Embedded Systems"]
+      }
+    ]
   },
   "contact": {
     "title": "Contact",
-    "description": "Feel free to reach out."
+    "description": "Feel free to contact me."
   }
 }
