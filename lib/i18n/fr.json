@@ -5,6 +5,7 @@
     "contact": "Contact"
   },
   "hero": {
+    "dispo": "Actuellement disponible",
     "badge_dev": "Développeur web full-stack",
     "badge_design": "Designer UI/UX",
     "title": "Salut, je suis Luca",
