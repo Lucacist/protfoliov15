@@ -21,7 +21,7 @@ export default function Hero() {
     <section className="relative container mx-auto px-4 min-h-screen flex flex-col md:flex-row items-center justify-center gap-8 py-20 md:py-0">
       <div className="flex flex-col gap-4">
         {/* <img src="/landing/wave.svg" alt="Profile" className="absolute top-0 left-0 w-full object-cover" /> */}
-        <motion.div className="flex items-center gap-1"
+        <motion.div className="flex items-center gap-1 justify-center md:justify-start"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
