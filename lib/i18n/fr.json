@@ -21,6 +21,38 @@
     "btnMore": "Voir plus",
     "projectCount": "projets réalisés"
   },
+  "sec4": {
+    "titleEducation": "Formation",
+    "titleExperience": "Expérience",
+    "education": [
+      {
+        "school": "CESI École d'Ingénieurs",
+        "url": "https://cesi.fr",
+        "degree": "Diplôme d'Ingénieur en Informatique et Génie Logiciel",
+        "start": "Oct 2025",
+        "end": "Oct 2028 (prévu)",
+        "location": "Rouen, France"
+      },
+      {
+        "school": "CESI École d'Ingénieurs",
+        "url": "https://cesi.fr",
+        "degree": "Cycle préparatoire ingénieur",
+        "start": "Sep 2023",
+        "end": "Jul 2025",
+        "location": "Rouen, France"
+      }
+    ],
+    "experience": [
+      {
+        "company": "Assystem",
+        "url": "https://assystem.com",
+        "role": "Apprenti Développeur Full-Stack",
+        "start": "Oct 2025",
+        "end": "Aujourd'hui",
+        "location": "Rouen, France"
+      }
+    ]
+  },
   "projects": {
     "title": "Mes projets",
     "ui": {
@@ -41,7 +73,13 @@
         "title": "Calibre",
         "category": "web",
         "shortDescription": "Plateforme web pour enseignants : gestion des notes par activité, génération de bulletins avec graphiques d'évolution et planification pédagogique.",
-        "technologies": ["Typescript", "PostgreSQL", "Next.js", "Gestion scolaire", "SonarQube"],
+        "technologies": [
+          "Typescript",
+          "PostgreSQL",
+          "Next.js",
+          "Gestion scolaire",
+          "SonarQube"
+        ],
         "repoUrl": "https://github.com/Lucacist/calibre"
       },
       {
@@ -49,7 +87,13 @@
         "title": "AraHub",
         "category": "web",
         "shortDescription": "Espace de travail centralisé pour la gestion de projets : agrégation de notes, agendas, ressources, liens et médias au sein d'une interface unifiée.",
-        "technologies": ["Next.js", "Productivité", "Gestion de projet", "UI/UX", "Centralisation"],
+        "technologies": [
+          "Next.js",
+          "Productivité",
+          "Gestion de projet",
+          "UI/UX",
+          "Centralisation"
+        ],
         "repoUrl": "https://github.com/Lucacist/arahub"
       },
       {
@@ -64,7 +108,14 @@
         "title": "Infrastructure XANADU",
         "category": "infra",
         "shortDescription": "Architecture réseau complète sur Proxmox : segmentation VLAN, DMZ, liaison MPLS inter-sites, AD avec administration déléguée et politique de sauvegarde 3-2-1.",
-        "technologies": ["pfSense", "Active Directory", "Windows Server", "Proxmox", "Docker", "Linux"]
+        "technologies": [
+          "pfSense",
+          "Active Directory",
+          "Windows Server",
+          "Proxmox",
+          "Docker",
+          "Linux"
+        ]
       },
       {
         "id": "jourdren-tp-landing",
@@ -93,14 +144,26 @@
         "title": "FunkyTown City",
         "category": "infra",
         "shortDescription": "Conception et déploiement d'une architecture réseau globale multi-sites. Plan d'adressage IPv4/IPv6, segmentation avancée et tunnel IPv6 sécurisé.",
-        "technologies": ["Cisco Packet Tracer", "VLAN", "IPv6", "Routage", "Switching L3"]
+        "technologies": [
+          "Cisco Packet Tracer",
+          "VLAN",
+          "IPv6",
+          "Routage",
+          "Switching L3"
+        ]
       },
       {
         "id": "weather-station",
         "title": "Station Météo Embarquée",
         "category": "iot",
         "shortDescription": "Système embarqué pour navires mesurant des paramètres environnementaux critiques (pression, température, GPS) avec centralisation des logs sur carte SD.",
-        "technologies": ["Arduino", "C++", "Capteurs I2C/SPI", "RTC", "Électronique"]
+        "technologies": [
+          "Arduino",
+          "C++",
+          "Capteurs I2C/SPI",
+          "RTC",
+          "Électronique"
+        ]
       },
       {
         "id": "guest-wifi-plugin",
@@ -121,7 +184,12 @@
         "title": "Escape no Game",
         "category": "iot",
         "shortDescription": "Conception d'une technologie de communication furtive pour zones hostiles : conversion de la voix en signaux électriques inaudibles et analyse des émotions.",
-        "technologies": ["Traitement du signal", "Acoustique", "Électronique", "Systèmes embarqués"]
+        "technologies": [
+          "Traitement du signal",
+          "Acoustique",
+          "Électronique",
+          "Systèmes embarqués"
+        ]
       }
     ]
   },
