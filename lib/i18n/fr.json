@@ -13,6 +13,14 @@
     "btn_projects": "Projets",
     "btn_contact": "Contact"
   },
+  "sec2": {
+    "title": "Stack & Outils"
+  },
+  "sec3": {
+    "title": "Projets sélectionnés",
+    "btnMore": "Voir plus",
+    "projectCount": "projets réalisés"
+  },
   "projects": {
     "title": "Mes projets",
     "ui": {
