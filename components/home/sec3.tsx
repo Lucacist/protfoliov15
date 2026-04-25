@@ -4,7 +4,7 @@ import { useLanguage } from '@/lib/language-context';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { ExternalLink, ArrowRight } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { motion, type Variants } from 'framer-motion';
 import Link from 'next/link';
 
 type Project = {
@@ -19,6 +19,25 @@ type Project = {
 
 const selectedProjectIds = ['calibre', 'arahub-workspace', 'easysave'];
 
+const containerVariants: Variants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.12,
+      delayChildren: 0.1,
+    },
+  },
+};
+
+const itemVariants: Variants = {
+  hidden: { opacity: 0, y: 16 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.4, ease: 'easeOut' as const },
+  },
+};
+
 export default function Sec3() {
   const { t } = useLanguage();
 
@@ -28,10 +47,18 @@ export default function Sec3() {
     : [];
 
   return (
-    <section className="flex container mx-auto p-4 max-w-5xl flex gap-6">
+    <section className="flex container mx-auto p-4 max-w-5xl gap-6">
       <div className="flex flex-col gap-6 z-2">
         <div className="flex items-center justify-between">
-          <h2 className="text-xl sm:text-2xl font-bold">{t('sec3.title')}</h2>
+          <motion.h2
+            className="text-xl sm:text-2xl font-bold"
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.4, ease: 'easeOut' as const }}
+          >
+            {t('sec3.title')}
+          </motion.h2>
           <div className="flex relative items-center md:hidden">
             <div className="flex flex-col items-center h-auto w-full justify-center z-2">
               <span className="text-xl font-bold">
@@ -49,18 +76,18 @@ export default function Sec3() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-6 sm:gap-8">
-          {selectedProjects.map((project, index) => (
+        <motion.div
+          className="flex flex-col gap-6 sm:gap-8"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+        >
+          {selectedProjects.map((project) => (
             <motion.article
               key={project.id}
               className="flex flex-col gap-3 sm:gap-4"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 0.4,
-                delay: index * 0.1,
-                ease: 'easeOut',
-              }}
+              variants={itemVariants}
             >
               <h3 className="text-lg sm:text-xl font-semibold">
                 {project.title}
@@ -92,12 +119,13 @@ export default function Sec3() {
               </div>
             </motion.article>
           ))}
-        </div>
+        </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4, delay: 0.4, ease: 'easeOut' }}
+          variants={itemVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
         >
           <Button asChild className="w-full sm:w-auto">
             <Link href="/projects">
@@ -107,7 +135,14 @@ export default function Sec3() {
           </Button>
         </motion.div>
       </div>
-      <div className="relative shrink-0 min-w-[200px] items-center hidden md:flex">
+
+      <motion.div
+        className="relative shrink-0 min-w-[200px] items-center hidden md:flex"
+        initial={{ opacity: 0, x: 50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.5 }}
+      >
         <div className="flex flex-col items-center h-[200px] w-full justify-center p-8 z-2">
           <span className="text-6xl font-bold">
             {Array.isArray(allItems) ? allItems.length : 0}
@@ -121,7 +156,7 @@ export default function Sec3() {
           src="/rosas/rosas1.svg"
           alt=""
         />
-      </div>
+      </motion.div>
     </section>
   );
 }
