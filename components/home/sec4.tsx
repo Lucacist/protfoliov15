@@ -50,6 +50,9 @@ export default function Sec4() {
   const experience = (t<ExperienceItem[]>('sec4.experience') ??
     []) as ExperienceItem[];
 
+  console.log('education:', education);
+  console.log('type:', typeof education, Array.isArray(education));
+
   return (
     <section className="container mx-auto p-4 max-w-5xl flex flex-col gap-8">
       {/* Formation */}
