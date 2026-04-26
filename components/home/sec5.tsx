@@ -24,7 +24,7 @@ export default function Sec5() {
         <h3 className="text-md sm:text-lg text-muted-foreground text-center">
           {t('sec5.subtitle')}
         </h3>
-        <div className="flex justify-center gap-4">
+        <div className="flex justify-center gap-4 flex-wrap gap-y-2">
           <Button className="px-4 py-2 bg-primary text-primary-foreground rounded-lg">
             <a
               className="flex items-center gap-2"
