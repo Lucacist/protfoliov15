@@ -53,6 +53,10 @@
       }
     ]
   },
+  "sec5": {
+    "title": "Travaillons ensemble",
+    "subtitle": "Ouvert aux opportunités de stage, alternance ou projets freelance."
+  },
   "projects": {
     "title": "Mes projets",
     "ui": {
