@@ -1,10 +1,11 @@
-"use client";
+'use client';
 
-import { useLanguage } from "@/lib/language-context";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { ExternalLink } from "lucide-react";
-import { motion } from "framer-motion";
+import { useLanguage } from '@/lib/language-context';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { ExternalLink, ArrowRight } from 'lucide-react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 type Project = {
   id: string;
@@ -16,10 +17,14 @@ type Project = {
   projectUrl?: string;
 };
 
-export default function Projects({ searchQuery = "" }: { searchQuery?: string }) {
+export default function Projects({
+  searchQuery = '',
+}: {
+  searchQuery?: string;
+}) {
   const { t } = useLanguage();
 
-  const items = t<Project[]>("projects.items");
+  const items = t<Project[]>('projects.items');
 
   const filteredItems = Array.isArray(items)
     ? items.filter((project) => {
@@ -27,7 +32,9 @@ export default function Projects({ searchQuery = "" }: { searchQuery?: string })
         return (
           project.title.toLowerCase().includes(query) ||
           project.shortDescription.toLowerCase().includes(query) ||
-          project.technologies.some((tech) => tech.toLowerCase().includes(query))
+          project.technologies.some((tech) =>
+            tech.toLowerCase().includes(query),
+          )
         );
       })
     : [];
@@ -40,7 +47,7 @@ export default function Projects({ searchQuery = "" }: { searchQuery?: string })
           className="flex flex-col gap-3 sm:gap-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4, delay: index * 0.1, ease: "easeOut" }}
+          transition={{ duration: 0.4, delay: index * 0.1, ease: 'easeOut' }}
         >
           <h2 className="text-lg sm:text-xl font-semibold">{project.title}</h2>
           <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
@@ -48,7 +55,11 @@ export default function Projects({ searchQuery = "" }: { searchQuery?: string })
           </p>
           <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
             {project.technologies.map((tech) => (
-              <Badge key={tech} variant="outline" className="text-xs sm:text-sm">
+              <Badge
+                key={tech}
+                variant="outline"
+                className="text-xs sm:text-sm"
+              >
                 {tech}
               </Badge>
             ))}
@@ -59,15 +70,16 @@ export default function Projects({ searchQuery = "" }: { searchQuery?: string })
                 rel="noopener noreferrer"
                 className="ml-auto text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1"
               >
-                {t("projects.ui.btnViewRepo")}
+                {t('projects.ui.btnViewRepo')}
                 <ExternalLink className="h-3.5 w-3.5" />
               </a>
             )}
           </div>
           <Button className="w-full" asChild>
-            <a href={project.projectUrl || `#${project.id}`}>
-              {t("projects.ui.btnViewProject")}
-            </a>
+            <Link href={`/projects/${project.id}`}>
+              {t('projects.ui.btnViewProject')}
+              <ArrowRight className="h-4 w-4 ml-2" />
+            </Link>
           </Button>
         </motion.article>
       ))}

@@ -55,6 +55,7 @@
   },
   "projects": {
     "title": "My Projects",
+    "notFound": "Project not found",
     "ui": {
       "searchPlaceholder": "Search for a project, a technology...",
       "filters": {

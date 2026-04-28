@@ -59,6 +59,7 @@
   },
   "projects": {
     "title": "Mes projets",
+    "notFound": "Projet non trouvé",
     "ui": {
       "searchPlaceholder": "Rechercher un projet, une technologie...",
       "filters": {
@@ -84,7 +85,31 @@
           "Gestion scolaire",
           "SonarQube"
         ],
-        "repoUrl": "https://github.com/Lucacist/calibre"
+        "repoUrl": "https://github.com/Lucacist/calibre",
+        "content": [
+          {
+            "type": "text",
+            "value": "Calibre est une plateforme complète de gestion scolaire développée pour simplifier le travail des enseignants."
+          },
+          {
+            "type": "image",
+            "value": "/projects/calibre/screenshot1.png",
+            "alt": "Interface de gestion des notes"
+          },
+          {
+            "type": "heading",
+            "value": "Fonctionnalités principales"
+          },
+          {
+            "type": "list",
+            "value": [
+              "Gestion des notes par activité avec pondération",
+              "Génération automatique de bulletins PDF",
+              "Graphiques d'évolution des élèves",
+              "Planification pédagogique collaborative"
+            ]
+          }
+        ]
       },
       {
         "id": "arahub-workspace",
