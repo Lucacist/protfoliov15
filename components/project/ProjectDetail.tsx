@@ -2,14 +2,14 @@
 
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { ExternalLink, ArrowLeft } from 'lucide-react';
+import { ExternalLink, ArrowLeft, TriangleAlert } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { useLanguage } from '@/lib/language-context';
 
 type ContentBlock =
   | { type: 'text'; value: string }
-  | { type: 'image'; value: string; alt: string }
+  | { type: 'image'; value: string; alt: string; maxWidth?: string }
   | { type: 'heading'; value: string }
   | { type: 'list'; value: string[] };
 
@@ -26,6 +26,7 @@ type Project = {
   downloadUrl2?: string;
   downloadLabel?: string;
   downloadLabel2?: string;
+  nodownloadLabel?: string;
   content?: ContentBlock[];
 };
 
@@ -173,6 +174,12 @@ export default function ProjectDetail({ projectId }: Props) {
               </a>
             </Button>
           )}
+          {project.nodownloadLabel && (
+            <div className="flex items-center gap-2 text-destructive bg-destructive/10 p-2 rounded border border-destructive">
+              <TriangleAlert className="h-4 w-4" />
+              <span>{project.nodownloadLabel}</span>
+            </div>
+          )}
         </motion.div>
 
         {/* Rich Content */}
@@ -207,7 +214,12 @@ export default function ProjectDetail({ projectId }: Props) {
                       key={index}
                       src={block.value}
                       alt={block.alt}
-                      className="rounded-lg w-full object-cover"
+                      className="rounded-lg w-full mx-auto object-cover"
+                      style={
+                        block.maxWidth
+                          ? { maxWidth: block.maxWidth }
+                          : undefined
+                      }
                     />
                   );
                 case 'list':
