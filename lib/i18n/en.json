@@ -975,5 +975,10 @@
   "contact": {
     "title": "Contact",
     "description": "Feel free to reach out to me."
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "start": "Built with",
+    "after": "and a lot of"
   }
 }

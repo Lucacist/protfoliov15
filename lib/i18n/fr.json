@@ -975,5 +975,10 @@
   "contact": {
     "title": "Contact",
     "description": "N'hésitez pas à me contacter."
+  },
+  "footer": {
+    "start": "Fait avec le",
+    "after": "et beaucoup de",
+    "rights": "Tous droits réservés."
   }
 }

@@ -43,7 +43,7 @@ type ExperienceItem = {
 };
 
 export default function Sec4() {
-  const { t } = useLanguage();
+  const { t, locale } = useLanguage();
 
   const education = (t<EducationItem[]>('sec4.education') ??
     []) as EducationItem[];
@@ -51,7 +51,10 @@ export default function Sec4() {
     []) as ExperienceItem[];
 
   return (
-    <section className="container mx-auto p-4 max-w-5xl flex flex-col gap-8">
+    <section
+      key={locale}
+      className="container mx-auto p-4 max-w-5xl flex flex-col gap-8"
+    >
       {/* Formation */}
       <div className="flex flex-col gap-4">
         <motion.h2
