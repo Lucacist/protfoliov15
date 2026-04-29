@@ -1,0 +1,48 @@
+{
+  "comment": "Exemple de projet avec tous les types de boutons disponibles",
+  "exemple_complet": {
+    "id": "mon-projet-exemple",
+    "title": "Mon Projet Exemple",
+    "category": "software",
+    "shortDescription": "Un projet démontrant tous les types de boutons disponibles : dépôt GitHub, site web, et téléchargement de fichiers.",
+    "technologies": ["TypeScript", "Next.js", "React"],
+    "repoUrl": "https://github.com/username/mon-projet",
+    "siteUrl": "https://mon-projet.com",
+    "downloadUrl": "/files/documentation.pdf",
+    "downloadLabel": "Télécharger la documentation (PDF)",
+    "content": [
+      {
+        "type": "text",
+        "value": "Description détaillée du projet..."
+      }
+    ]
+  },
+  "exemple_pdf": {
+    "id": "rapport-stage",
+    "title": "Rapport de Stage",
+    "category": "software",
+    "shortDescription": "Rapport de stage détaillé sur le développement d'une application web.",
+    "technologies": ["LaTeX", "Research", "Documentation"],
+    "downloadUrl": "/files/rapport-stage.pdf",
+    "downloadLabel": "Télécharger le rapport complet (PDF)"
+  },
+  "exemple_logiciel": {
+    "id": "mon-logiciel",
+    "title": "Mon Logiciel",
+    "category": "software",
+    "shortDescription": "Logiciel de bureau téléchargeable pour Windows et macOS.",
+    "technologies": ["C#", ".NET", "Avalonia"],
+    "repoUrl": "https://github.com/username/mon-logiciel",
+    "downloadUrl": "/downloads/mon-logiciel-v1.0.zip",
+    "downloadLabel": "Télécharger v1.0 (ZIP - 25 MB)"
+  },
+  "exemple_site_web": {
+    "id": "site-vitrine",
+    "title": "Site Vitrine Client",
+    "category": "web",
+    "shortDescription": "Site web moderne développé pour un client.",
+    "technologies": ["Vue.js", "TailwindCSS", "SEO"],
+    "repoUrl": "https://github.com/username/site-client",
+    "siteUrl": "https://client-example.com"
+  }
+}

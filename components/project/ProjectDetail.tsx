@@ -21,6 +21,11 @@ type Project = {
   technologies: string[];
   repoUrl?: string;
   projectUrl?: string;
+  siteUrl?: string;
+  downloadUrl?: string;
+  downloadUrl2?: string;
+  downloadLabel?: string;
+  downloadLabel2?: string;
   content?: ContentBlock[];
 };
 
@@ -136,6 +141,34 @@ export default function ProjectDetail({ projectId }: Props) {
                 rel="noopener noreferrer"
               >
                 {t('projects.ui.btnViewProject')}
+                <ExternalLink className="h-4 w-4 ml-2" />
+              </a>
+            </Button>
+          )}
+          {project.siteUrl && (
+            <Button asChild>
+              <a
+                href={project.siteUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {t('projects.ui.btnVisitSite')}
+                <ExternalLink className="h-4 w-4 ml-2" />
+              </a>
+            </Button>
+          )}
+          {project.downloadUrl && (
+            <Button variant="outline" asChild>
+              <a href={project.downloadUrl} download>
+                {project.downloadLabel || t('projects.ui.btnDownloadFile')}
+                <ExternalLink className="h-4 w-4 ml-2" />
+              </a>
+            </Button>
+          )}
+          {project.downloadUrl2 && (
+            <Button variant="outline" asChild>
+              <a href={project.downloadUrl2} download>
+                {project.downloadLabel2 || t('projects.ui.btnDownloadFile')}
                 <ExternalLink className="h-4 w-4 ml-2" />
               </a>
             </Button>

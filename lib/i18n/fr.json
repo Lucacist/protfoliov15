@@ -70,7 +70,9 @@
         "iot": "IoT & Embarqué"
       },
       "btnViewProject": "Voir le projet",
-      "btnViewRepo": "Voir le dépôt"
+      "btnViewRepo": "Voir le dépôt",
+      "btnDownloadFile": "Télécharger",
+      "btnVisitSite": "Visiter le site"
     },
     "items": [
       {
@@ -130,7 +132,68 @@
         "title": "EasySave",
         "category": "software",
         "shortDescription": "Logiciel de sauvegarde multithreadé en C# (MVVM). Intègre des sauvegardes différentielles, le chiffrement à la volée et la centralisation des logs via Docker.",
-        "technologies": ["C#", "Avalonia", ".NET 10", "GitHub Actions"]
+        "technologies": ["C#", "Avalonia", ".NET 10", "GitHub Actions"],
+        "repoUrl": "https://github.com/Lucacist/EasySave",
+        "downloadUrl": "/files/Livrable_Final-grp-5.pdf",
+        "downloadLabel": "Télécharger le rapport (PDF)",
+        "content": [
+          {
+            "type": "text",
+            "value": "Le projet EasySave est le développement itératif d'un logiciel de sauvegarde professionnel pour l'éditeur ProSoft. Réalisé en C# et .NET 10.0, il évolue d'une application console vers une solution graphique multithreadée intégrant la centralisation des données sous Docker."
+          },
+          {
+            "type": "heading",
+            "value": "Fonctionnalités principales :"
+          },
+          {
+            "type": "list",
+            "value": [
+              "Exécution de travaux de sauvegarde complets ou différentiels (séquentiels puis en parallèle)",
+              "Génération de logs journaliers (JSON/XML) et suivi d'état en temps réel via une DLL dédiée",
+              "Gestion avancée : traitement des fichiers prioritaires et limitation de la bande passante",
+              "Interaction en temps réel : mise en pause, reprise (Play) et arrêt (Stop) des travaux",
+              "Détection de logiciels métiers pour suspendre automatiquement les sauvegardes",
+              "Centralisation des journaux d'activité sur un serveur Docker"
+            ]
+          },
+          {
+            "type": "heading",
+            "value": "Prérequis techniques :"
+          },
+          {
+            "type": "list",
+            "value": [
+              "Langage C# et framework .NET 10.0 (Architecture MVVM)",
+              "Interface graphique WPF ou équivalent",
+              "Conteneurisation Docker pour le serveur de centralisation",
+              "Outils de versioning et modélisation (Git, Visual Studio, ArgoUML)"
+            ]
+          },
+          {
+            "type": "heading",
+            "value": "Installation :"
+          },
+          {
+            "type": "text",
+            "value": "Le logiciel est conçu pour être déployé facilement sur les postes clients. L'installation comprend la mise en place de l'exécutable, des librairies dynamiques (EasyLog.dll) et de l'outil de chiffrement. Le système de centralisation nécessite le déploiement préalable d'un conteneur Docker sur le réseau de l'entreprise."
+          },
+          {
+            "type": "heading",
+            "value": "Configuration :"
+          },
+          {
+            "type": "text",
+            "value": "L'utilisateur peut paramétrer le logiciel via l'interface graphique. Les réglages incluent la définition des chemins source/cible (disques locaux, externes ou réseaux), le choix du format de log (JSON ou XML), la sélection des extensions à chiffrer, et la déclaration des logiciels métiers bloquants."
+          },
+          {
+            "type": "heading",
+            "value": "Utilisation :"
+          },
+          {
+            "type": "text",
+            "value": "Disponible en français et en anglais, l'application peut être pilotée via une interface graphique intuitive ou en ligne de commande (CLI). L'utilisateur suit l'avancement des transferts en temps réel, interagit avec les tâches en cours, et accède aux historiques locaux ou centralisés pour une traçabilité totale."
+          }
+        ]
       },
       {
         "id": "xanadu-infra",
@@ -144,6 +207,77 @@
           "Proxmox",
           "Docker",
           "Linux"
+        ],
+        "content": [
+          {
+            "type": "text",
+            "value": "Le projet Administration et Sécurisation du SI XANADU accompagne l'entreprise dans son déménagement et son expansion. Face aux risques de cyberattaques comme les rançongiciels, cette refonte transforme une infrastructure vieillissante en un système d'information stable, fiable, sécurisé et facile à administrer."
+          },
+          {
+            "type": "heading",
+            "value": "Fonctionnalités principales :"
+          },
+          {
+            "type": "list",
+            "value": [
+              "Cartographie et refonte complète de l’annuaire Active Directory",
+              "Interconnexion sécurisée entre le site principal et distant via VPN MPLS",
+              "Gestion fine des droits d'accès et des dossiers partagés par service",
+              "Plan de sauvegarde hiérarchisé (données critiques, importantes, etc.)",
+              "Mise en place d'un système de supervision avec alertes de sécurité",
+              "Création de scripts automatisés d'administration (PowerShell/Bash)",
+              "Audit des vulnérabilités via un questionnaire de sécurité"
+            ]
+          },
+          {
+            "type": "heading",
+            "value": "Prérequis techniques :"
+          },
+          {
+            "type": "list",
+            "value": [
+              "Serveurs Windows Server 2019 (AD, DNS, DHCP) et serveurs Linux",
+              "Infrastructure réseau avec pare-feu et liaison VPN MPLS garantie par SLA",
+              "Compatibilité avec l'ERP existant (PostgreSQL) et la suite Office 365"
+            ]
+          },
+          {
+            "type": "heading",
+            "value": "Installation :"
+          },
+          {
+            "type": "text",
+            "value": "Le déploiement s'appuie sur une cartographie cible détaillée et une maquette validant la nouvelle architecture. Il inclut l'installation des équipements réseau, la mise en place des serveurs et l'intégration sécurisée des postes de travail au domaine."
+          },
+          {
+            "type": "heading",
+            "value": "Configuration :"
+          },
+          {
+            "type": "text",
+            "value": "La configuration repose sur une structuration optimisée des Unités d'Organisation (OU). Des Stratégies de Groupe (GPO) sont appliquées pour durcir la sécurité. Une politique de pare-feu stricte et des règles de filtrage réseau sont configurées selon les recommandations de l'ANSSI."
+          },
+          {
+            "type": "heading",
+            "value": "Utilisation :"
+          },
+          {
+            "type": "list",
+            "value": [
+              "Au quotidien, l'infrastructure permet aux collaborateurs d'accéder aux ressources à distance en toute sécurité",
+              "Les correspondants informatiques peuvent gérer les comptes de leur propre service",
+              "L'équipe IT peut superviser les événements critiques en temps réel",
+              "Un retour à la normale est assuré sous 4 heures pour les services critiques"
+            ]
+          },
+          {
+            "type": "heading",
+            "value": "Sécurité :"
+          },
+          {
+            "type": "text",
+            "value": "L'architecture garantit la confidentialité, l'intégrité, la disponibilité et la traçabilité (CIDT). Le système est protégé contre les rançongiciels grâce à un plan de sauvegarde robuste, une politique de moindre privilège, et une surveillance continue."
+          }
         ]
       },
       {
@@ -152,21 +286,137 @@
         "category": "web",
         "shortDescription": "Développement d'un site vitrine moderne et responsive pour une entreprise de travaux. Optimisation SEO et design centré sur la conversion client.",
         "technologies": ["Vue.js", "SEO", "Web Design"],
-        "repoUrl": "https://github.com/Lucacist/site-jourdren-evans"
+        "repoUrl": "https://github.com/Lucacist/site-jourdren-evans",
+        "siteUrl": "https://jourdren-tp.fr"
       },
       {
         "id": "stagelink",
         "title": "Stagelink",
         "category": "web",
         "shortDescription": "Application web MVC centralisant les offres de stage. Gestion complexe des rôles (étudiants, pilotes, admins) avec des candidatures et tableau de bord.",
-        "technologies": ["PHP", "MVC", "MySQL", "JavaScript", "HTML5/CSS3"]
+        "technologies": ["PHP", "MVC", "MySQL", "JavaScript", "HTML5/CSS3"],
+        "repoUrl": "https://github.com/Lucacist/StageLinkV1",
+        "content": [
+          {
+            "type": "text",
+            "value": "Ce projet consiste en la création d'une application web permettant de centraliser les offres de stage pour les étudiants du CESI. L’objectif est de faciliter la recherche de stage en regroupant les offres et en enregistrant les données des entreprises partenaires, tout en offrant un espace de gestion aux différents profils d’utilisateurs (étudiants, pilotes de promotion, administrateurs)."
+          },
+          {
+            "type": "heading",
+            "value": "Fonctionnalités principales :"
+          },
+          {
+            "type": "list",
+            "value": [
+              "Authentification selon le rôle utilisateur (étudiant, pilote, administrateur)",
+              "Gestion complète des entreprises : création, modification, évaluation, suppression",
+              "Gestion des offres de stage : recherche, création, modification, suppression, statistiques",
+              "Gestion des comptes étudiants et pilotes : création, modification, suppression",
+              "Ajout et suppression d'offres à la wish-list",
+              "Postulation à une offre avec envoi de CV et lettre de motivation",
+              "Affichage des candidatures en cours",
+              "Tableau de bord statistique pour les administrateurs"
+            ]
+          },
+          {
+            "type": "heading",
+            "value": "Prérequis techniques :"
+          },
+          {
+            "type": "list",
+            "value": [
+              "Serveur Apache avec gestion des vhost",
+              "Langages requis : HTML5, CSS3, JavaScript, PHP (POO)",
+              "Base de données relationnelle (MySQL, PostgreSQL, etc.)",
+              "Architecture MVC obligatoire",
+              "Moteur de template côté back-end",
+              "Utilisation de clés étrangères dans la base de données",
+              "Responsive design pour compatibilité mobile et tablette",
+              "Vérification des formulaires côté client et serveur",
+              "Interdiction d’utiliser des CMS"
+            ]
+          },
+          {
+            "type": "heading",
+            "value": "Installation :"
+          },
+          {
+            "type": "text",
+            "value": "Le site sera déployé sur un serveur Apache configuré avec plusieurs vhosts, un pour le contenu statique (images, CSS, JS), un autre pour l'application dynamique PHP. La base de données sera initialisée avec les tables et relations nécessaires au bon fonctionnement du site."
+          },
+          {
+            "type": "heading",
+            "value": "Configuration :"
+          },
+          {
+            "type": "text",
+            "value": "Lors de la mise en place du projet, les rôles utilisateurs sont définis dans une matrice de gestion des permissions. Chaque utilisateur se connecte via une interface sécurisée (email/mot de passe). Les données sensibles sont protégées selon les normes de sécurité en vigueur (cookies sécurisés, données chiffrées, protection SQL)."
+          },
+          {
+            "type": "heading",
+            "value": "Utilisation :"
+          },
+          {
+            "type": "list",
+            "value": [
+              "Les étudiants peuvent chercher et consulter des offres, les ajouter à leur liste de souhaits, postuler, et suivre leur progression.",
+              "Les pilotes peuvent gérer les comptes, consulter les statistiques de candidatures et encadrer les étudiants.",
+              "Les administrateurs disposent de tous les droits, y compris la gestion des utilisateurs, des offres et des entreprises."
+            ]
+          },
+          {
+            "type": "heading",
+            "value": "Sécurité :"
+          },
+          {
+            "type": "text",
+            "value": "Le projet respecte les normes RGPD. Les données personnelles sont stockées de manière sécurisée et ne sont accessibles que selon les droits de chaque utilisateur. Aucune information sensible n’est conservée en clair. Des mécanismes sont mis en place pour prévenir les attaques type injection SQL et assurer la fiabilité de l’authentification."
+          }
+        ]
       },
       {
         "id": "conway-game",
         "title": "Jeu de la Vie de Conway",
         "category": "software",
         "shortDescription": "Implémentation interactive de l'automate cellulaire en C++ (POO). Mode console et interface graphique permettant de modifier la grille dynamiquement en temps réel.",
-        "technologies": ["C++", "POO", "Algorithmique", "UI Graphique"]
+        "technologies": ["C++", "POO", "Algorithmique", "UI Graphique"],
+        "repoUrl": "https://github.com/Lucacist/jeu-de-Conway-projet",
+
+        "content": [
+          {
+            "type": "text",
+            "value": "Le Jeu de la Vie est un automate cellulaire fascinant créé par le mathématicien John Conway en 1970. Ce projet est une implémentation interactive qui permet d'explorer les motifs émergents et les comportements complexes qui peuvent naître de règles très simples. Il a été réalisé en moins d'une semaine dans le cadre d'un travail en groupe de deux personnes, en utilisant la programmation orientée objet (POO) avec le langage C++."
+          },
+          {
+            "type": "heading",
+            "value": "Règles de fonctionnement :"
+          },
+          {
+            "type": "list",
+            "value": [
+              "Une cellule morte entourée exactement de trois voisines vivantes devient vivante",
+              "Une cellule vivante reste en vie si elle a deux ou trois voisines vivantes",
+              "Elle meurt de solitude si elle a moins de deux voisines vivantes",
+              "Elle meurt de surpopulation si elle en a plus de trois"
+            ]
+          },
+          {
+            "type": "heading",
+            "value": "Exécution et interactions :"
+          },
+          {
+            "type": "text",
+            "value": "Le jeu s'effectue sur une grille bidimensionnelle, chaque cellule étant influencée par ses huit voisines adjacentes. Deux modes d'exécution sont disponibles : un mode console et un mode graphique. Ce dernier offre la possibilité d'interagir directement avec la grille, en ajoutant ou supprimant des cellules par simple clic, et de régler la vitesse de simulation à l'aide des touches '<' et '>'."
+          },
+          {
+            "type": "heading",
+            "value": "Options avancées :"
+          },
+          {
+            "type": "text",
+            "value": "Une fonctionnalité supplémentaire permet d'activer le mode torique, dans lequel les bords de la grille sont connectés entre eux, comme si la grille était repliée sur elle-même. Enfin, des cellules obstacles peuvent être placées sur la grille ; celles-ci restent figées et ne subissent aucune évolution au fil des itérations."
+          }
+        ]
       },
       {
         "id": "funkytown-network",
@@ -179,6 +429,75 @@
           "IPv6",
           "Routage",
           "Switching L3"
+        ],
+        "downloadUrl": "/files/Livrable_1_Equipe_1_Réseau.docx",
+        "downloadLabel": "Livrable 1",
+        "downloadUrl2": "/files/Livrable_2_Equipe_1_Réseau.docx",
+        "downloadLabel2": "Livrable 2",
+        "content": [
+          {
+            "type": "text",
+            "value": "Le projet \"Infrastructure Réseau FunkyTown\" consiste en la conception, la planification et le déploiement d'une architecture réseau globale pour plusieurs entités (ESN eXia, Bibliothèque, Engie, DIGIPLEX et un Datacenter). Il vise à fournir une connectivité inter-sites fiable, sécurisée et évolutive, tout en optimisant les ressources via un plan d'adressage rigoureux."
+          },
+          {
+            "type": "heading",
+            "value": "Fonctionnalités principales :"
+          },
+          {
+            "type": "list",
+            "value": [
+              "Élaboration d'un plan d'adressage complet en IPv4 (VLSM/CIDR) et IPv6",
+              "Segmentation avancée des réseaux locaux via des VLANs dédiés par service",
+              "Interconnexion sécurisée des sites au DSLAM du FAI via des liaisons point à point",
+              "Mise en place d'un tunnel IPv6 entre le site eXia et le Datacenter (accès cloud Meraki)",
+              "Déploiement de réseaux sans fil avec SSIDs distincts (Employés et Invités)",
+              "Planification et suivi de projet via des diagrammes de Gantt et PERT"
+            ]
+          },
+          {
+            "type": "heading",
+            "value": "Prérequis techniques :"
+          },
+          {
+            "type": "list",
+            "value": [
+              "Équipements réseaux (Routeurs, Switchs L2/L3, Contrôleurs et bornes WiFi)",
+              "Serveurs de services locaux (DHCP, DNS, FTP)",
+              "Outil de maquettage et simulation (Cisco Packet Tracer)"
+            ]
+          },
+          {
+            "type": "heading",
+            "value": "Installation :"
+          },
+          {
+            "type": "text",
+            "value": "Le déploiement suit un plan structuré allant de l'analyse des besoins à l'installation physique. Il inclut le câblage stratégique des sites (topologies en étoile et hiérarchiques) et la mise en place d'agrégations de liens (EtherChannel) pour garantir la redondance et la bande passante."
+          },
+          {
+            "type": "heading",
+            "value": "Configuration :"
+          },
+          {
+            "type": "text",
+            "value": "La configuration intègre le routage inter-VLAN, la translation d'adresses (NAT) pour l'accès Internet, et l'attribution dynamique des adresses (DHCP). La gestion des switchs est centralisée via le protocole VTP, et le routage du trafic cloud est assuré par des routes statiques IPv6."
+          },
+          {
+            "type": "heading",
+            "value": "Utilisation :"
+          },
+          {
+            "type": "text",
+            "value": "Au quotidien, les collaborateurs et le public accèdent aux ressources de manière fluide et segmentée. Les administrateurs réseau supervisent l'infrastructure à distance via des VLANs de management dédiés et gèrent les équipements cloud de manière centralisée grâce au tunnel IPv6."
+          },
+          {
+            "type": "heading",
+            "value": "Sécurité :"
+          },
+          {
+            "type": "text",
+            "value": "L'architecture protège les données grâce à l'isolation des flux (VLANs), la restriction des accès distants (SSH), le contrôle des ports (Port Security) et le chiffrement des réseaux sans fil (WPA2-PSK). Le NAT masque les adresses privées des attaques externes."
+          }
         ]
       },
       {

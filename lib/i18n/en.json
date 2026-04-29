@@ -66,7 +66,9 @@
         "iot": "IoT & Embedded"
       },
       "btnViewProject": "View Project",
-      "btnViewRepo": "View Repository"
+      "btnViewRepo": "View Repository",
+      "btnDownloadFile": "Download",
+      "btnVisitSite": "Visit Site"
     },
     "items": [
       {
@@ -124,7 +126,8 @@
         "category": "web",
         "shortDescription": "Development of a modern, responsive showcase website for a construction company. SEO optimization and customer conversion-centric design.",
         "technologies": ["Vue.js", "SEO", "Web Design"],
-        "repoUrl": "https://github.com/Lucacist/site-jourdren-evans"
+        "repoUrl": "https://github.com/Lucacist/site-jourdren-evans",
+        "siteUrl": "https://jourdren-tp.fr"
       },
       {
         "id": "stagelink",

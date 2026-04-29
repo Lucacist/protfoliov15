@@ -15,6 +15,9 @@ type Project = {
   technologies: string[];
   repoUrl?: string;
   projectUrl?: string;
+  siteUrl?: string;
+  downloadUrl?: string;
+  downloadLabel?: string;
 };
 
 const selectedProjectIds = ['calibre', 'arahub-workspace', 'easysave'];
