@@ -1,0 +1,984 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "projects": "Proyectos",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "dispo": "Actualmente disponible",
+    "badge_dev": "Desarrollador web Full-Stack",
+    "badge_design": "Diseñador UI/UX",
+    "title": "Hola, soy Luca",
+    "subtitle": "Estudiante de ingeniería en CESI y aprendiz en Assystem, trabajo en todo el stack: backend, frontend y experiencia de producto.",
+    "btn_projects": "Proyectos",
+    "btn_contact": "Contacto"
+  },
+  "sec2": {
+    "title": "Stack y Herramientas"
+  },
+  "sec3": {
+    "title": "Proyectos destacados",
+    "btnMore": "Ver más",
+    "projectCount": "proyectos realizados"
+  },
+  "sec4": {
+    "titleEducation": "Educación",
+    "titleExperience": "Experiencia",
+    "education": [
+      {
+        "school": "CESI Escuela de Ingeniería",
+        "url": "https://cesi.fr",
+        "degree": "Título de Ingeniero en Informática e Ingeniería de Software",
+        "start": "Oct 2025",
+        "end": "Oct 2028 (previsto)",
+        "location": "Ruán, Francia"
+      },
+      {
+        "school": "CESI Escuela de Ingeniería",
+        "url": "https://cesi.fr",
+        "degree": "Ciclo preparatorio de ingeniería",
+        "start": "Sep 2023",
+        "end": "Jul 2025",
+        "location": "Ruán, Francia"
+      }
+    ],
+    "experience": [
+      {
+        "company": "Assystem",
+        "url": "https://assystem.com",
+        "role": "Aprendiz de Desarrollador Full-Stack",
+        "start": "Oct 2025",
+        "end": "Actualidad",
+        "location": "Ruán, Francia"
+      }
+    ]
+  },
+  "sec5": {
+    "title": "Trabajemos juntos",
+    "subtitle": "Abierto a oportunidades de prácticas, aprendizaje en alternancia o proyectos freelance."
+  },
+  "projects": {
+    "title": "Mis proyectos",
+    "notFound": "Proyecto no encontrado",
+    "ui": {
+      "searchPlaceholder": "Buscar un proyecto, una tecnología...",
+      "filters": {
+        "all": "Todos",
+        "web": "Web Full-Stack",
+        "software": "Software",
+        "infra": "Infra y Seguridad",
+        "iot": "IoT y Sistemas Integrados"
+      },
+      "btnViewProject": "Ver proyecto",
+      "btnViewRepo": "Ver repositorio",
+      "btnDownloadFile": "Descargar",
+      "btnVisitSite": "Visitar sitio web"
+    },
+    "items": [
+      {
+        "id": "calibre",
+        "title": "Calibre",
+        "category": "web",
+        "shortDescription": "Plataforma web para profesores: gestión de notas por actividad, generación de boletines con gráficos de evolución y planificación pedagógica.",
+        "technologies": [
+          "Typescript",
+          "PostgreSQL",
+          "Next.js",
+          "Gestión escolar",
+          "SonarQube"
+        ],
+        "repoUrl": "https://github.com/Lucacist/calibre",
+        "siteUrl": "https://www.calibre-chatos.uk",
+        "content": [
+          {
+            "type": "text",
+            "value": "Calibre es una aplicación web de gestión pedagógica dedicada a la formación en mecánica automotriz. Centraliza la organización de clases, el seguimiento de los alumnos y la estructuración de los marcos de evaluación. Basada en una arquitectura técnica moderna (Next.js, Drizzle ORM y una base de datos PostgreSQL remota a través de Neon), ofrece interfaces a medida para satisfacer las necesidades de cada actor de la formación."
+          },
+          {
+            "type": "heading",
+            "value": "Objetivos del proyecto:"
+          },
+          {
+            "type": "list",
+            "value": [
+              "Centralizar el seguimiento pedagógico de las formaciones técnicas (tipo CAP o Bac Pro)",
+              "Gestionar eficazmente las clases, los grupos y el seguimiento individual de los estudiantes",
+              "Estructurar un marco de evaluación jerárquico (áreas, actividades, competencias e indicadores)",
+              "Garantizar la trazabilidad de las evaluaciones asociándolas a los vehículos y tipos de intervenciones realizadas"
+            ]
+          },
+          {
+            "type": "heading",
+            "value": "Características principales:"
+          },
+          {
+            "type": "list",
+            "value": [
+              "Paneles de control personalizados para profesores y administradores",
+              "Espacios dedicados por clase con tablas de calificación detalladas",
+              "Portal individual para que el alumno consulte sus resultados y progreso",
+              "Administración completa de recursos: clases, estudiantes, flota de vehículos y trabajos prácticos",
+              "Autenticación segura gestionada por Clerk, con sincronización de cuentas en la base de datos vía Webhooks"
+            ]
+          },
+          {
+            "type": "heading",
+            "value": "Gestión de roles y accesos:"
+          },
+          {
+            "type": "list",
+            "value": [
+              "Administrador: control total de la plataforma, gestión de usuarios y configuración de parámetros",
+              "Profesor: acceso a herramientas de evaluación, ingreso de notas y seguimiento pedagógico de los alumnos",
+              "Alumno: acceso restringido a un espacio personal para consultar únicamente sus propios resultados"
+            ]
+          },
+          {
+            "type": "heading",
+            "value": "Seguridad:"
+          },
+          {
+            "type": "text",
+            "value": "La seguridad de los accesos está garantizada por un middleware que protege estrictamente las rutas privadas de la aplicación. Además, el acceso a la plataforma está condicionado: cualquier usuario autenticado a través de Clerk debe corresponder obligatoriamente a un perfil previamente registrado y autorizado en la base de datos de la institución."
+          }
+        ]
+      },
+      {
+        "id": "arahub-workspace",
+        "title": "AraHub",
+        "category": "web",
+        "shortDescription": "Espacio de trabajo centralizado para la gestión de proyectos: integración de notas, agendas, recursos, enlaces y archivos multimedia en una interfaz unificada.",
+        "technologies": [
+          "Next.js",
+          "Productividad",
+          "Gestión de proyectos",
+          "UI/UX",
+          "Centralización"
+        ],
+        "repoUrl": "https://github.com/Lucacist/arahub",
+        "siteUrl": "https://arahub.vercel.app/",
+        "content": [
+          {
+            "type": "text",
+            "value": "AraHub (del latín «Ara»: altar, lugar de concentración) es un hub visual diseñado a medida para freelancers y solopreneurs. Su objetivo principal es reducir la carga mental centralizando enlaces, tareas, agenda y archivos dentro de un espacio unificado y modular, regido por una regla de oro simple: un proyecto = una página."
+          },
+          {
+            "type": "heading",
+            "value": "Características principales:"
+          },
+          {
+            "type": "list",
+            "value": [
+              "Gestión de tareas: estados, fechas límite y arrastrar y soltar (drag & drop)",
+              "Centralización de enlaces: agrupación de recursos importantes por proyecto",
+              "Editor de notas enriquecido: integración de BlockNote para una toma de notas fluida",
+              "Seguimiento de agenda: gestión de reuniones y eventos relacionados con el proyecto",
+              "Gestión de archivos: subida y organización mediante UploadThing",
+              "Hoja de cálculo integrada: seguimiento de datos estructurados directamente en la herramienta",
+              "Seguridad reforzada: almacenamiento seguro de claves API (cifrado AES-256-GCM)",
+              "Papelera segura: borrado lógico (soft delete) con posibilidad de restauración en 7 días",
+              "Multi-espacio de trabajo: separación clara de los espacios profesionales y personales",
+              "Diseño responsivo: interfaz optimizada para ordenadores de escritorio y dispositivos móviles"
+            ]
+          },
+          {
+            "type": "heading",
+            "value": "Casos de uso:"
+          },
+          {
+            "type": "list",
+            "value": [
+              "Freelancer solitario: centralizar todos los recursos de un cliente (briefings, archivos, enlaces, tareas).",
+              "Agencia pequeña: gestionar varios espacios de trabajo distintos y compartir plantillas de proyectos reutilizables.",
+              "Emprendedor: hacer un seguimiento del avance global de un producto, los entregables y los puntos de sincronización."
+            ]
+          },
+          {
+            "type": "heading",
+            "value": "Ejemplo de recorrido del usuario:"
+          },
+          {
+            "type": "list",
+            "value": [
+              "Creación de un espacio de trabajo (ej. «Pro») y de un proyecto dedicado a un cliente",
+              "Adición de enlaces de referencia e inicialización de las primeras tareas",
+              "Integración de archivos (contratos, maquetas) y planificación de reuniones",
+              "Toma de notas en directo durante las reuniones y conversión de las acciones en tareas",
+              "Uso de la hoja de cálculo para el seguimiento del tiempo invertido o de la facturación"
+            ]
+          },
+          {
+            "type": "heading",
+            "value": "Evoluciones previstas (Roadmap):"
+          },
+          {
+            "type": "list",
+            "value": [
+              "Integraciones externas: sincronización con Google Calendar y Notion",
+              "Colaboración en tiempo real en notas y hojas de cálculo",
+              "Creación de plantillas compartidas y establecimiento de un mercado de componentes (marketplace)",
+              "Mejora en la gestión de permisos multiusuario por espacio de trabajo"
+            ]
+          },
+          {
+            "type": "heading",
+            "value": "Arquitectura y despliegue:"
+          },
+          {
+            "type": "text",
+            "value": "El proyecto se distribuye bajo licencia MIT. El repositorio integra scripts de linting, así como pruebas unitarias para asegurar la fiabilidad del código. La arquitectura está diseñada para integrarse fácilmente en un canal de integración continua (ej. GitHub Actions) con un despliegue automatizado recomendado en plataformas como Vercel."
+          }
+        ]
+      },
+      {
+        "id": "easysave",
+        "title": "EasySave",
+        "category": "software",
+        "shortDescription": "Software de copia de seguridad multiproceso en C# (MVVM). Incluye copias de seguridad diferenciales, cifrado al vuelo y centralización de registros a través de Docker.",
+        "technologies": ["C#", "Avalonia", ".NET 10", "GitHub Actions"],
+        "repoUrl": "https://github.com/Lucacist/EasySave",
+        "downloadUrl": "/files/Livrable_Final-grp-5.pdf",
+        "downloadLabel": "Descargar el informe (PDF)",
+        "content": [
+          {
+            "type": "text",
+            "value": "El proyecto EasySave es el desarrollo iterativo de un software de copia de seguridad profesional para el editor ProSoft. Creado en C# y .NET 10.0, evoluciona de una aplicación de consola a una solución gráfica multiproceso que integra la centralización de datos bajo Docker."
+          },
+          {
+            "type": "heading",
+            "value": "Características principales:"
+          },
+          {
+            "type": "list",
+            "value": [
+              "Ejecución de trabajos de copia de seguridad completos o diferenciales (secuenciales y luego en paralelo)",
+              "Generación de registros diarios (JSON/XML) y seguimiento del estado en tiempo real mediante una DLL dedicada",
+              "Gestión avanzada: procesamiento de archivos prioritarios y limitación del ancho de banda",
+              "Interacción en tiempo real: pausar, reanudar (Play) y detener (Stop) los trabajos",
+              "Detección de software empresarial para suspender automáticamente las copias de seguridad",
+              "Centralización de los registros de actividad en un servidor Docker"
+            ]
+          },
+          {
+            "type": "heading",
+            "value": "Requisitos técnicos:"
+          },
+          {
+            "type": "list",
+            "value": [
+              "Lenguaje C# y framework .NET 10.0 (Arquitectura MVVM)",
+              "Interfaz gráfica WPF o equivalente",
+              "Contenedorización Docker para el servidor de centralización",
+              "Herramientas de control de versiones y modelado (Git, Visual Studio, ArgoUML)"
+            ]
+          },
+          {
+            "type": "heading",
+            "value": "Instalación:"
+          },
+          {
+            "type": "text",
+            "value": "El software está diseñado para desplegarse fácilmente en las estaciones de trabajo de los clientes. La instalación incluye la configuración del ejecutable, las bibliotecas dinámicas (EasyLog.dll) y la herramienta de cifrado. El sistema de centralización requiere el despliegue previo de un contenedor Docker en la red de la empresa."
+          },
+          {
+            "type": "heading",
+            "value": "Configuración:"
+          },
+          {
+            "type": "text",
+            "value": "El usuario puede configurar el software a través de la interfaz gráfica. Los ajustes incluyen la definición de rutas de origen/destino (discos locales, externos o de red), la elección del formato de registro (JSON o XML), la selección de extensiones a cifrar y la declaración del software empresarial que bloquea la ejecución."
+          },
+          {
+            "type": "heading",
+            "value": "Uso:"
+          },
+          {
+            "type": "text",
+            "value": "Disponible en francés e inglés, la aplicación puede manejarse mediante una interfaz gráfica intuitiva o por línea de comandos (CLI). El usuario sigue el progreso de las transferencias en tiempo real, interactúa con las tareas en curso y accede a los historiales locales o centralizados para una trazabilidad total."
+          }
+        ]
+      },
+      {
+        "id": "xanadu-infra",
+        "title": "Infraestructura XANADU",
+        "category": "infra",
+        "shortDescription": "Arquitectura de red completa en Proxmox: segmentación VLAN, DMZ, enlace MPLS entre sitios, AD con administración delegada y política de copia de seguridad 3-2-1.",
+        "technologies": [
+          "pfSense",
+          "Active Directory",
+          "Windows Server",
+          "Proxmox",
+          "Docker",
+          "Linux"
+        ],
+        "content": [
+          {
+            "type": "text",
+            "value": "El proyecto de Administración y Seguridad del SI XANADU acompaña a la empresa en su traslado y expansión. Ante los riesgos de ciberataques como el ransomware, esta reestructuración transforma una infraestructura obsoleta en un sistema de información estable, fiable, seguro y fácil de administrar."
+          },
+          {
+            "type": "heading",
+            "value": "Características principales:"
+          },
+          {
+            "type": "list",
+            "value": [
+              "Mapeo y reestructuración completa del directorio Active Directory",
+              "Interconexión segura entre la sede principal y el sitio remoto vía VPN MPLS",
+              "Gestión detallada de los derechos de acceso y carpetas compartidas por departamento",
+              "Plan de copia de seguridad jerarquizado (datos críticos, importantes, etc.)",
+              "Implementación de un sistema de monitorización con alertas de seguridad",
+              "Creación de scripts automatizados de administración (PowerShell/Bash)",
+              "Auditoría de vulnerabilidades mediante un cuestionario de seguridad"
+            ]
+          },
+          {
+            "type": "heading",
+            "value": "Requisitos técnicos:"
+          },
+          {
+            "type": "list",
+            "value": [
+              "Servidores Windows Server 2019 (AD, DNS, DHCP) y servidores Linux",
+              "Infraestructura de red con cortafuegos (firewall) y enlace VPN MPLS garantizado por SLA",
+              "Compatibilidad con el ERP existente (PostgreSQL) y la suite Office 365"
+            ]
+          },
+          {
+            "type": "heading",
+            "value": "Instalación:"
+          },
+          {
+            "type": "text",
+            "value": "El despliegue se basa en un mapa objetivo detallado y una maqueta que valida la nueva arquitectura. Incluye la instalación del equipo de red, la configuración de los servidores y la integración segura de las estaciones de trabajo en el dominio."
+          },
+          {
+            "type": "heading",
+            "value": "Configuración:"
+          },
+          {
+            "type": "text",
+            "value": "La configuración se apoya en una estructuración optimizada de las Unidades Organizativas (OU). Se aplican Políticas de Grupo (GPO) para reforzar la seguridad. Se configura una política estricta de cortafuegos y reglas de filtrado de red según las recomendaciones de la ANSSI."
+          },
+          {
+            "type": "heading",
+            "value": "Uso:"
+          },
+          {
+            "type": "list",
+            "value": [
+              "En el día a día, la infraestructura permite a los empleados acceder a los recursos de forma remota y segura",
+              "Los responsables de IT pueden gestionar las cuentas de su propio departamento",
+              "El equipo de IT puede supervisar los eventos críticos en tiempo real",
+              "Se garantiza una vuelta a la normalidad en menos de 4 horas para los servicios críticos"
+            ]
+          },
+          {
+            "type": "heading",
+            "value": "Seguridad:"
+          },
+          {
+            "type": "text",
+            "value": "La arquitectura garantiza la confidencialidad, integridad, disponibilidad y trazabilidad. El sistema está protegido contra ransomware gracias a un sólido plan de copias de seguridad, una política de privilegios mínimos y una monitorización continua."
+          }
+        ]
+      },
+      {
+        "id": "jourdren-tp-landing",
+        "title": "Jourdren-TP",
+        "category": "web",
+        "shortDescription": "Desarrollo de un sitio web corporativo moderno y responsivo para una empresa de obras. Optimización SEO y diseño centrado en la conversión de clientes.",
+        "technologies": ["Vue.js", "SEO", "Web Design"],
+        "repoUrl": "https://github.com/Lucacist/site-jourdren-evans",
+        "siteUrl": "https://jourdren-tp.fr"
+      },
+      {
+        "id": "stagelink",
+        "title": "Stagelink",
+        "category": "web",
+        "shortDescription": "Aplicación web MVC que centraliza las ofertas de prácticas. Gestión compleja de roles (estudiantes, coordinadores, administradores) con candidaturas y panel de control.",
+        "technologies": ["PHP", "MVC", "MySQL", "JavaScript", "HTML5/CSS3"],
+        "repoUrl": "https://github.com/Lucacist/StageLinkV1",
+        "content": [
+          {
+            "type": "text",
+            "value": "Este proyecto consiste en la creación de una aplicación web para centralizar las ofertas de prácticas de los estudiantes de CESI. El objetivo es facilitar la búsqueda de prácticas agrupando las ofertas y registrando los datos de las empresas asociadas, al mismo tiempo que ofrece un espacio de gestión a los diferentes perfiles de usuarios (estudiantes, coordinadores de promoción, administradores)."
+          },
+          {
+            "type": "heading",
+            "value": "Características principales:"
+          },
+          {
+            "type": "list",
+            "value": [
+              "Autenticación según el rol de usuario (estudiante, coordinador, administrador)",
+              "Gestión completa de empresas: creación, modificación, evaluación, eliminación",
+              "Gestión de ofertas de prácticas: búsqueda, creación, modificación, eliminación, estadísticas",
+              "Gestión de cuentas de estudiantes y coordinadores: creación, modificación, eliminación",
+              "Adición y eliminación de ofertas en la lista de deseos (wish-list)",
+              "Postulación a una oferta con envío de CV y carta de presentación",
+              "Visualización de las candidaturas en curso",
+              "Panel de control estadístico para los administradores"
+            ]
+          },
+          {
+            "type": "heading",
+            "value": "Requisitos técnicos:"
+          },
+          {
+            "type": "list",
+            "value": [
+              "Servidor Apache con gestión de vhost",
+              "Lenguajes requeridos: HTML5, CSS3, JavaScript, PHP (POO)",
+              "Base de datos relacional (MySQL, PostgreSQL, etc.)",
+              "Arquitectura MVC obligatoria",
+              "Motor de plantillas en el back-end",
+              "Uso de claves foráneas en la base de datos",
+              "Diseño responsivo para compatibilidad con móviles y tabletas",
+              "Verificación de formularios en el cliente y en el servidor",
+              "Prohibición del uso de CMS"
+            ]
+          },
+          {
+            "type": "heading",
+            "value": "Instalación:"
+          },
+          {
+            "type": "text",
+            "value": "El sitio se desplegará en un servidor Apache configurado con varios vhosts, uno para el contenido estático (imágenes, CSS, JS) y otro para la aplicación dinámica en PHP. La base de datos se inicializará con las tablas y relaciones necesarias para el correcto funcionamiento del sitio."
+          },
+          {
+            "type": "heading",
+            "value": "Configuración:"
+          },
+          {
+            "type": "text",
+            "value": "Durante la configuración del proyecto, los roles de usuario se definen en una matriz de gestión de permisos. Cada usuario se conecta a través de una interfaz segura (correo electrónico/contraseña). Los datos sensibles están protegidos según las normas de seguridad vigentes (cookies seguras, datos cifrados, protección SQL)."
+          },
+          {
+            "type": "heading",
+            "value": "Uso:"
+          },
+          {
+            "type": "list",
+            "value": [
+              "Los estudiantes pueden buscar y consultar ofertas, añadirlas a su lista de deseos, postularse y hacer un seguimiento de su progreso.",
+              "Los coordinadores pueden gestionar las cuentas, consultar las estadísticas de las candidaturas y supervisar a los estudiantes.",
+              "Los administradores tienen todos los derechos, incluida la gestión de usuarios, ofertas y empresas."
+            ]
+          },
+          {
+            "type": "heading",
+            "value": "Seguridad:"
+          },
+          {
+            "type": "text",
+            "value": "El proyecto respeta las normas RGPD. Los datos personales se almacenan de forma segura y solo son accesibles de acuerdo con los derechos de cada usuario. No se conserva ninguna información sensible en texto plano. Se implementan mecanismos para prevenir ataques de inyección SQL y garantizar la fiabilidad de la autenticación."
+          }
+        ]
+      },
+      {
+        "id": "conway-game",
+        "title": "Juego de la Vida de Conway",
+        "category": "software",
+        "shortDescription": "Implementación interactiva del autómata celular en C++ (POO). Modo consola e interfaz gráfica que permite modificar la cuadrícula de forma dinámica en tiempo real.",
+        "technologies": ["C++", "POO", "Algoritmia", "UI Gráfica"],
+        "repoUrl": "https://github.com/Lucacist/jeu-de-Conway-projet",
+        "content": [
+          {
+            "type": "text",
+            "value": "El Juego de la Vida es un fascinante autómata celular creado por el matemático John Conway en 1970. Este proyecto es una implementación interactiva que permite explorar los patrones emergentes y los comportamientos complejos que pueden surgir a partir de reglas muy simples. Se realizó en menos de una semana como parte de un trabajo en grupo de dos personas, utilizando programación orientada a objetos (POO) con el lenguaje C++."
+          },
+          {
+            "type": "heading",
+            "value": "Reglas de funcionamiento:"
+          },
+          {
+            "type": "list",
+            "value": [
+              "Una célula muerta rodeada exactamente de tres vecinas vivas se convierte en una célula viva",
+              "Una célula viva permanece viva si tiene dos o tres vecinas vivas",
+              "Muere de soledad si tiene menos de dos vecinas vivas",
+              "Muere de sobrepoblación si tiene más de tres"
+            ]
+          },
+          {
+            "type": "heading",
+            "value": "Ejecución e interacciones:"
+          },
+          {
+            "type": "text",
+            "value": "El juego se desarrolla en una cuadrícula bidimensional, donde cada célula es influenciada por sus ocho vecinas adyacentes. Están disponibles dos modos de ejecución: un modo consola y un modo gráfico. Este último ofrece la posibilidad de interactuar directamente con la cuadrícula, añadiendo o eliminando células con un simple clic, y ajustar la velocidad de simulación con las teclas '<' y '>'."
+          },
+          {
+            "type": "heading",
+            "value": "Opciones avanzadas:"
+          },
+          {
+            "type": "text",
+            "value": "Una función adicional permite activar el modo toroide, en el cual los bordes de la cuadrícula se conectan entre sí, como si la cuadrícula estuviera doblada sobre sí misma. Finalmente, se pueden colocar células obstáculo en la cuadrícula; estas permanecen fijas y no experimentan ninguna evolución a lo largo de las iteraciones."
+          }
+        ]
+      },
+      {
+        "id": "funkytown-network",
+        "title": "Ciudad FunkyTown",
+        "category": "infra",
+        "shortDescription": "Diseño y despliegue de una arquitectura de red global multisitio. Plan de direccionamiento IPv4/IPv6, segmentación avanzada y túnel IPv6 seguro.",
+        "technologies": [
+          "Cisco Packet Tracer",
+          "VLAN",
+          "IPv6",
+          "Enrutamiento",
+          "Switching L3"
+        ],
+        "downloadUrl": "/files/Livrable_1_Equipe_1_Réseau.docx",
+        "downloadLabel": "Entregable 1",
+        "downloadUrl2": "/files/Livrable_2_Equipe_1_Réseau.docx",
+        "downloadLabel2": "Entregable 2",
+        "content": [
+          {
+            "type": "text",
+            "value": "El proyecto \"Infraestructura de Red FunkyTown\" consiste en el diseño, la planificación y el despliegue de una arquitectura de red global para varias entidades (ESN eXia, Biblioteca, Engie, DIGIPLEX y un Centro de Datos). Su objetivo es proporcionar una conectividad intersitios fiable, segura y escalable, optimizando al mismo tiempo los recursos mediante un plan de direccionamiento riguroso."
+          },
+          {
+            "type": "heading",
+            "value": "Características principales:"
+          },
+          {
+            "type": "list",
+            "value": [
+              "Elaboración de un plan de direccionamiento completo en IPv4 (VLSM/CIDR) e IPv6",
+              "Segmentación avanzada de redes locales mediante VLANs dedicadas por departamento",
+              "Interconexión segura de los sitios al DSLAM del ISP mediante enlaces punto a punto",
+              "Implementación de un túnel IPv6 entre la sede eXia y el Centro de Datos (acceso a la nube Meraki)",
+              "Despliegue de redes inalámbricas con SSID distintos (Empleados e Invitados)",
+              "Planificación y seguimiento del proyecto a través de diagramas de Gantt y PERT"
+            ]
+          },
+          {
+            "type": "heading",
+            "value": "Requisitos técnicos:"
+          },
+          {
+            "type": "list",
+            "value": [
+              "Equipos de red (Routers, Switches L2/L3, Controladores y puntos de acceso WiFi)",
+              "Servidores de servicios locales (DHCP, DNS, FTP)",
+              "Herramienta de maquetación y simulación (Cisco Packet Tracer)"
+            ]
+          },
+          {
+            "type": "heading",
+            "value": "Instalación:"
+          },
+          {
+            "type": "text",
+            "value": "El despliegue sigue un plan estructurado que abarca desde el análisis de las necesidades hasta la instalación física. Incluye el cableado estratégico de los sitios (topologías en estrella y jerárquicas) y la implementación de agregación de enlaces (EtherChannel) para garantizar la redundancia y el ancho de banda."
+          },
+          {
+            "type": "heading",
+            "value": "Configuración:"
+          },
+          {
+            "type": "text",
+            "value": "La configuración integra el enrutamiento inter-VLAN, la traducción de direcciones (NAT) para el acceso a Internet y la asignación dinámica de direcciones (DHCP). La gestión de los switches está centralizada a través del protocolo VTP, y el enrutamiento del tráfico en la nube está asegurado mediante rutas estáticas IPv6."
+          },
+          {
+            "type": "heading",
+            "value": "Uso:"
+          },
+          {
+            "type": "text",
+            "value": "En el día a día, los empleados y el público acceden a los recursos de manera fluida y segmentada. Los administradores de red supervisan la infraestructura de forma remota a través de VLANs de gestión dedicadas y gestionan el equipo en la nube de forma centralizada gracias al túnel IPv6."
+          },
+          {
+            "type": "heading",
+            "value": "Seguridad:"
+          },
+          {
+            "type": "text",
+            "value": "La arquitectura protege los datos mediante el aislamiento de flujos (VLANs), la restricción de accesos remotos (SSH), el control de puertos (Port Security) y el cifrado de las redes inalámbricas (WPA2-PSK). El NAT oculta las direcciones privadas frente a ataques externos."
+          }
+        ]
+      },
+      {
+        "id": "weather-station",
+        "title": "Estación Meteorológica Integrada",
+        "category": "iot",
+        "shortDescription": "Sistema integrado para barcos que mide parámetros ambientales críticos (presión, temperatura, GPS) con centralización de registros en tarjeta SD.",
+        "technologies": [
+          "Arduino",
+          "C++",
+          "Sensores I2C/SPI",
+          "RTC",
+          "Electrónica"
+        ],
+        "nodownloadLabel": "Lamentablemente, no tengo el código a mano. Si lo encuentro, te avisaré.",
+        "content": [
+          {
+            "type": "text",
+            "value": "El proyecto \"Worldwide Weather Watcher\" es una iniciativa impulsada por la Agencia Internacional para la Vigilancia Meteorológica (AIVM), destinada a equipar los barcos de vigilancia oceánica con estaciones meteorológicas integradas. El objetivo principal es medir parámetros ambientales críticos que contribuyen a la formación de ciclones u otros desastres naturales."
+          },
+          {
+            "type": "heading",
+            "value": "Contexto:"
+          },
+          {
+            "type": "text",
+            "value": "Muchas compañías de transporte marítimo han aceptado equipar sus barcos con estas estaciones, siempre que sean fáciles de usar, eficientes y que puedan ser operadas por un miembro de la tripulación. Para ello se proporcionará documentación técnica."
+          },
+          {
+            "type": "heading",
+            "value": "Hardware seleccionado:"
+          },
+          {
+            "type": "list",
+            "value": [
+              "Microcontrolador: ATmega328 (Arduino)",
+              "Almacenamiento: Lector de tarjetas SD (SPI)",
+              "Tiempo real: Reloj RTC (I2C)",
+              "Señalización: LED RGB (2 hilos)",
+              "Interacción: 2 botones pulsadores (digitales)"
+            ]
+          },
+          {
+            "type": "heading",
+            "value": "Sensores integrados:"
+          },
+          {
+            "type": "list",
+            "value": [
+              "Presión atmosférica (I2C o SPI)",
+              "Temperatura del aire (I2C o SPI)",
+              "Higrometría (I2C o SPI)",
+              "GPS (UART)",
+              "Luminosidad (analógica)"
+            ]
+          },
+          {
+            "type": "heading",
+            "value": "Módulos adicionales previstos:"
+          },
+          {
+            "type": "list",
+            "value": [
+              "Temperatura del agua (analógica)",
+              "Fuerza de la corriente marina (I2C)",
+              "Fuerza del viento (I2C)",
+              "Tasa de partículas finas (2 hilos)"
+            ]
+          },
+          {
+            "type": "heading",
+            "value": "Objetivos de aprendizaje:"
+          },
+          {
+            "type": "list",
+            "value": [
+              "Analizar, diseñar y estructurar un sistema embebido en un entorno crítico",
+              "Implementar sensores y componentes de hardware en un microcontrolador",
+              "Proporcionar una documentación clara para el usuario y el supervisor final"
+            ]
+          },
+          {
+            "type": "heading",
+            "value": "Conexiones:"
+          },
+          {
+            "type": "text",
+            "value": "Ensambla delicadamente los 3 componentes en este orden, haciendo coincidir los pines con los puertos."
+          },
+          {
+            "type": "image",
+            "value": "/projet/weather/piece1.webp",
+            "alt": "Pieza 1",
+            "maxWidth": "200px"
+          },
+          {
+            "type": "image",
+            "value": "/projet/weather/piece2.webp",
+            "alt": "Pieza 2",
+            "maxWidth": "200px"
+          },
+          {
+            "type": "image",
+            "value": "/projet/weather/piece3.webp",
+            "alt": "Pieza 3",
+            "maxWidth": "200px"
+          },
+          {
+            "type": "heading",
+            "value": "Modos de funcionamiento:"
+          },
+          {
+            "type": "heading",
+            "value": "Modo 1: Modo Estándar"
+          },
+          {
+            "type": "text",
+            "value": "Objetivo: Adquisición regular de datos ambientales. Este modo se inicia automáticamente sin presionar ningún botón al arrancar. El sistema lee los sensores a intervalos regulares (por defecto, cada 10 minutos, configurable a través de LOG_INTERVAL). Los datos se guardan en archivos en la tarjeta SD. Cada archivo está limitado a 2 KB (FILE_MAX_SIZE), tras lo cual se crea un nuevo archivo con un número de revisión. Si un sensor no responde dentro de un tiempo de espera (TIMEOUT) de 30 segundos, se registra el valor \"NA\"."
+          },
+          {
+            "type": "heading",
+            "value": "Modo 2: Modo Configuración"
+          },
+          {
+            "type": "text",
+            "value": "Objetivo: Permitir la configuración de los parámetros del sistema. Accesible manteniendo pulsado el botón rojo durante el encendido. La adquisición de sensores se suspende para permitir la interacción con la interfaz serie. Comandos configurables a través de la interfaz serie: LOG_INTERVAL: Definir el intervalo de medición. FILE_MAX_SIZE: Ajustar el tamaño máximo de los archivos de registro. TIMEOUT: Definir el tiempo de respuesta de los sensores. RESET: Restablecer los parámetros a los valores por defecto. VERSION: Muestra la versión del programa y un número de lote. CLOCK y DATE: Configuran la hora y la fecha mediante el RTC. Después de 30 minutos de inactividad, el sistema vuelve automáticamente al modo estándar."
+          },
+          {
+            "type": "heading",
+            "value": "Modo 3: Modo Mantenimiento"
+          },
+          {
+            "type": "text",
+            "value": "Objetivo: Permitir el acceso a los datos a través de la interfaz serie y reemplazar la tarjeta SD. Accesible desde el modo estándar o económico mediante una pulsación prolongada (5 segundos) en el botón rojo. La adquisición y el registro de datos se suspenden, pero los datos ya almacenados siguen siendo accesibles. La tarjeta SD se puede retirar de forma segura para evitar la corrupción de archivos. Una nueva pulsación prolongada en el botón rojo hace que el sistema vuelva al modo anterior."
+          },
+          {
+            "type": "heading",
+            "value": "Modo 4: Modo Económico"
+          },
+          {
+            "type": "text",
+            "value": "Objetivo: Optimizar el consumo de energía. Se accede desde el modo estándar mediante una pulsación prolongada de 5 segundos en el botón verde. Este modo reduce la actividad del sistema al desactivar ciertos sensores y duplicar el intervalo de adquisición (LOG_INTERVAL). Una pulsación larga en el botón rojo permite volver al modo estándar."
+          }
+        ]
+      },
+      {
+        "id": "guest-wifi-plugin",
+        "title": "Plugin Guest Wifi GLPI",
+        "category": "web",
+        "shortDescription": "Extensión PHP para GLPI 10.x que facilita la gestión de accesos Wi-Fi temporales con validación mediante tickets y creación automática de credenciales.",
+        "technologies": [
+          "PHP 7.4",
+          "API GLPI",
+          "MySQL",
+          "Arquitectura de Plugins"
+        ],
+        "nodownloadLabel": "Código fuente no disponible para descarga (propiedad de la empresa).",
+        "content": [
+          {
+            "type": "text",
+            "value": "El plugin Guest Wifi es una extensión destinada a GLPI 10.x que facilita la gestión de los accesos Wi-Fi temporales para los visitantes dentro de una organización. Proporciona una interfaz clara e intuitiva para crear, realizar el seguimiento y gestionar cuentas de invitados, con una validación automática prevista para los accesos a largo plazo."
+          },
+          {
+            "type": "heading",
+            "value": "Características principales:"
+          },
+          {
+            "type": "list",
+            "value": [
+              "Creación y gestión de cuentas Wi-Fi de invitados",
+              "Asignación automática de credenciales",
+              "Validación por ticket para accesos prolongados",
+              "Interfaz accesible desde el menú Guest Wifi",
+              "Control de acceso mediante grupos de GLPI",
+              "Localización de invitados basada en los sitios de GLPI",
+              "Estadísticas de uso"
+            ]
+          },
+          {
+            "type": "heading",
+            "value": "Requisitos técnicos:"
+          },
+          {
+            "type": "list",
+            "value": [
+              "GLPI 10.x o superior",
+              "PHP 7.4 mínimo",
+              "Derechos de administración en GLPI"
+            ]
+          },
+          {
+            "type": "heading",
+            "value": "Instalación:"
+          },
+          {
+            "type": "text",
+            "value": "La instalación se realiza descargando el archivo del plugin, descomprimiéndolo en la carpeta de plugins de GLPI y luego activándolo desde el menú Configuración > Plugins en la interfaz de administración."
+          },
+          {
+            "type": "heading",
+            "value": "Configuración:"
+          },
+          {
+            "type": "text",
+            "value": "Una vez instalado, es necesario configurar parámetros como el grupo de administradores autorizados y el límite de días para la validación del acceso. La configuración se realiza a través del menú Guest Wifi > Configuración."
+          },
+          {
+            "type": "heading",
+            "value": "Uso:"
+          },
+          {
+            "type": "text",
+            "value": "Para añadir un invitado, basta con acceder al menú Guest Wifi > Añadir un invitado, rellenar la información necesaria y validar. La gestión de los invitados se realiza desde la Lista de invitados, donde se pueden consultar los estados, filtrar los resultados o eliminar un invitado."
+          },
+          {
+            "type": "heading",
+            "value": "Seguridad:"
+          },
+          {
+            "type": "text",
+            "value": "Solo los usuarios del grupo de administradores configurado tienen acceso al plugin. Las credenciales de Wi-Fi se asignan de forma segura, y los accesos prolongados requieren una validación a través del sistema de tickets."
+          }
+        ]
+      },
+      {
+        "id": "strongbox-3000",
+        "title": "Strongbox 3000",
+        "category": "infra",
+        "shortDescription": "Creación de un dispositivo de ciberseguridad multinivel para proteger prototipos. Integra autenticación fuerte (MFA), biometría y códigos dinámicos.",
+        "technologies": ["Ciberseguridad", "MFA", "Biometría", "Algoritmia"],
+        "downloadUrl": "/downloads/strongbox.ino",
+        "downloadLabel": "Descargar el código fuente (INO)",
+        "content": [
+          {
+            "type": "text",
+            "value": "A raíz de varios incidentes relacionados con el desvío de material, una agencia de inteligencia solicitó nuestra experiencia para reforzar considerablemente su sistema de seguridad."
+          },
+          {
+            "type": "heading",
+            "value": "Objetivo principal:"
+          },
+          {
+            "type": "list",
+            "value": [
+              "Proteger datos sensibles relacionados con un prototipo de nueva generación",
+              "Impedir cualquier acceso no autorizado a información estratégica",
+              "Garantizar la integridad del dispositivo y la confidencialidad de los datos manipulados"
+            ]
+          },
+          {
+            "type": "heading",
+            "value": "Contexto:"
+          },
+          {
+            "type": "text",
+            "value": "El prototipo a proteger está en el centro de un proyecto confidencial y deberá integrar mecanismos avanzados de autenticación para prevenir cualquier riesgo de compromiso."
+          },
+          {
+            "type": "heading",
+            "value": "Funcionamiento:"
+          },
+          {
+            "type": "list",
+            "value": [
+              "Diseño de un dispositivo de autenticación basado en cinco mecanismos de seguridad distintos",
+              "Cada mecanismo corresponde a un nivel de protección específico, combinando enfoques de hardware, software y biometría",
+              "El acceso al prototipo está sujeto a una validación progresiva según el nivel de sensibilidad de los datos"
+            ]
+          },
+          {
+            "type": "heading",
+            "value": "Resultado esperado:"
+          },
+          {
+            "type": "list",
+            "value": [
+              "Un sistema de seguridad multinivel robusto y fiable",
+              "Trazabilidad completa de los accesos",
+              "Una arquitectura que cumpla con los estándares de ciberseguridad para sistemas sensibles"
+            ]
+          },
+          {
+            "type": "heading",
+            "value": "Detalles técnicos (Mecanismos de autenticación):"
+          },
+          {
+            "type": "list",
+            "value": [
+              "MA1 (Autenticación Q&R): Sistema de preguntas y respuestas personalizadas como capa de seguridad adicional.",
+              "MA2 (Código Dinámico): Generación de códigos temporales de un solo uso para autenticación de dos factores.",
+              "MA3 (Escaneo Retiniano): Tecnología de reconocimiento de retina de alta precisión para máxima seguridad.",
+              "MA4 (Escaneo Digital): Sistema avanzado de escaneo digital que permite una autenticación biométrica segura.",
+              "MA5 (Tarjeta ID): El sistema de tarjetas de identificación compara los números de los agentes con sus números binarios. Si los números no coinciden, el sistema se bloquea."
+            ]
+          },
+          {
+            "type": "image",
+            "value": "/projet/strongbox/tableau.png",
+            "alt": "Panel de seguridad",
+            "maxWidth": "600px"
+          },
+          {
+            "type": "image",
+            "value": "/projet/strongbox/coffre-tinkercad.png",
+            "alt": "Caja fuerte Tinkercad",
+            "maxWidth": "600px"
+          }
+        ]
+      },
+      {
+        "id": "escape-no-game",
+        "title": "Escape no Game",
+        "category": "iot",
+        "shortDescription": "Diseño de una tecnología de comunicación furtiva para zonas hostiles: conversión de voz en señales eléctricas inaudibles y análisis de emociones.",
+        "technologies": [
+          "Procesamiento de señales",
+          "Acústica",
+          "Electrónica",
+          "Sistemas integrados"
+        ],
+        "downloadUrl": "/downloads/Escape-no-game.ipynb",
+        "downloadLabel": "Descargar código fuente (Jupyter Notebook)",
+        "content": [
+          {
+            "type": "text",
+            "value": "Este proyecto tiene como objetivo desarrollar una solución de comunicación funcional en áreas que carecen de cobertura de red, particularmente donde las señales están bloqueadas."
+          },
+          {
+            "type": "heading",
+            "value": "Contexto:"
+          },
+          {
+            "type": "text",
+            "value": "Tras la infiltración del agente K57, capturado en una base de ciberpiratas inaccesible por los medios tradicionales, es crucial evitar que situaciones de este tipo se repitan. Este proyecto tiene como objetivo diseñar tecnología adaptada a entornos críticos."
+          },
+          {
+            "type": "heading",
+            "value": "Funcionamiento:"
+          },
+          {
+            "type": "list",
+            "value": [
+              "El agente habla por un micrófono: la voz se transforma en una señal sonora específica",
+              "Esta señal varía según lo que se dice y la forma en que se expresa (intensidad, frecuencia, amplitud)",
+              "La señal se convierte luego en una señal eléctrica, sincronizada con la voz y portando las mismas variaciones",
+              "Un transmisor envía esta señal en una frecuencia inaudible, indetectable por el enemigo",
+              "Un agente receptor intercepta, decodifica y transcribe el mensaje y la voz original"
+            ]
+          },
+          {
+            "type": "heading",
+            "value": "Aspectos técnicos:"
+          },
+          {
+            "type": "list",
+            "value": [
+              "Conversión del sonido en señal eléctrica para su análisis en tiempo real",
+              "Transmisión mediante ondas inaudibles para comunicaciones discretas",
+              "Recuperación de las emociones del emisor mediante el estudio de las variaciones de las curvas (intensidad, modulación, frecuencia)"
+            ]
+          },
+          {
+            "type": "heading",
+            "value": "Objetivos:"
+          },
+          {
+            "type": "list",
+            "value": [
+              "Garantizar comunicaciones seguras y discretas en territorio hostil",
+              "Permitir la captura de emociones para contextualizar los mensajes",
+              "Reforzar las tecnologías de campo en situaciones extremas"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contacto",
+    "description": "No dudes en contactarme."
+  }
+}

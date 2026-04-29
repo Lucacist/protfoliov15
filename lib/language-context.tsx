@@ -1,17 +1,19 @@
-"use client";
+'use client';
 
-import { createContext, useContext, useState, useCallback } from "react";
-import fr from "@/lib/i18n/fr.json";
-import en from "@/lib/i18n/en.json";
+import { createContext, useContext, useState, useCallback } from 'react';
+import fr from '@/lib/i18n/fr.json';
+import en from '@/lib/i18n/en.json';
+import es from '@/lib/i18n/es.json';
 
-export type Locale = "fr" | "en";
+export type Locale = 'fr' | 'en' | 'es';
 
 export const locales: { value: Locale; label: string; flag: string }[] = [
-  { value: "fr", label: "Français", flag: "🇫🇷" },
-  { value: "en", label: "English", flag: "🇬🇧" },
+  { value: 'fr', label: 'Français', flag: '🇫🇷' },
+  { value: 'en', label: 'English', flag: '🇬🇧' },
+  { value: 'es', label: 'Español', flag: '🇪🇸' },
 ];
 
-const messages: Record<Locale, Record<string, unknown>> = { fr, en };
+const messages: Record<Locale, Record<string, unknown>> = { fr, en, es };
 
 type LanguageContextType = {
   locale: Locale;
@@ -22,14 +24,14 @@ type LanguageContextType = {
 const LanguageContext = createContext<LanguageContextType | null>(null);
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [locale, setLocale] = useState<Locale>("fr");
+  const [locale, setLocale] = useState<Locale>('fr');
 
   const t = useCallback(
     <T = string>(key: string): T => {
-      const keys = key.split(".");
+      const keys = key.split('.');
       let value: unknown = messages[locale];
       for (const k of keys) {
-        if (value && typeof value === "object") {
+        if (value && typeof value === 'object') {
           value = (value as Record<string, unknown>)[k];
         } else {
           return key as T;
@@ -37,7 +39,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
       }
       return (value ?? key) as T;
     },
-    [locale]
+    [locale],
   );
 
   return (
@@ -50,7 +52,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
 export function useLanguage() {
   const context = useContext(LanguageContext);
   if (!context) {
-    throw new Error("useLanguage must be used within a LanguageProvider");
+    throw new Error('useLanguage must be used within a LanguageProvider');
   }
   return context;
 }
