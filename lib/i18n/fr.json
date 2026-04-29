@@ -88,6 +88,7 @@
           "SonarQube"
         ],
         "repoUrl": "https://github.com/Lucacist/calibre",
+        "siteUrl": "https://www.calibre-chatos.uk",
         "content": [
           {
             "type": "text",
@@ -155,6 +156,7 @@
           "Centralisation"
         ],
         "repoUrl": "https://github.com/Lucacist/arahub",
+        "siteUrl": "https://arahub.vercel.app/",
         "content": [
           {
             "type": "text",
