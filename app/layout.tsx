@@ -14,9 +14,80 @@ const google_sans_flex = Google_Sans_Flex({
 });
 
 export const metadata: Metadata = {
-  title: 'Luca Fourfooz',
+  metadataBase: new URL('https://lucaffz.dev'),
+  title: {
+    default: 'Luca Fourfooz - Développeur Full-Stack & Designer UI/UX',
+    template: '%s | Luca Fourfooz',
+  },
   description:
-    'Portfolio de Luca Fourfooz - Développeur web full-stack & Designer UI/UX',
+    'Portfolio de Luca Fourfooz, étudiant ingénieur à CESI et développeur full-stack chez Assystem. Spécialisé en Next.js, React, TypeScript, Node.js et design UI/UX.',
+  keywords: [
+    'Luca Fourfooz',
+    'développeur full-stack',
+    'développeur web',
+    'UI/UX designer',
+    'Next.js',
+    'React',
+    'TypeScript',
+    'Node.js',
+    'portfolio',
+    'CESI',
+    'Assystem',
+    'ingénieur logiciel',
+    'développeur frontend',
+    'développeur backend',
+  ],
+  authors: [{ name: 'Luca Fourfooz', url: 'https://lucaffz.dev' }],
+  icons: {
+    icon: '/icon.svg',
+  },
+  creator: 'Luca Fourfooz',
+  publisher: 'Luca Fourfooz',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'fr_FR',
+    alternateLocale: ['en_US', 'es_ES'],
+    url: 'https://lucaffz.dev',
+    title: 'Luca Fourfooz - Développeur Full-Stack & Designer UI/UX',
+    description:
+      'Portfolio de Luca Fourfooz, étudiant ingénieur à CESI et développeur full-stack chez Assystem. Spécialisé en Next.js, React, TypeScript, Node.js et design UI/UX.',
+    siteName: 'Luca Fourfooz Portfolio',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Luca Fourfooz - Développeur Full-Stack',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Luca Fourfooz - Développeur Full-Stack & Designer UI/UX',
+    description:
+      'Portfolio de Luca Fourfooz, étudiant ingénieur à CESI et développeur full-stack chez Assystem.',
+    images: ['/og-image.png'],
+    creator: '@lucaffz',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  verification: {
+    google: 'your-google-verification-code',
+  },
 };
 
 export default function RootLayout({

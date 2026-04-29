@@ -1,21 +1,27 @@
-"use client";
+import { Metadata } from 'next';
+import ProjectsPage from '@/components/project/ProjectsPage';
 
-import { useState } from "react";
-import { useLanguage } from "@/lib/language-context";
-import Search from "@/components/project/Search";
-import ProjectsList from "@/components/project/projects";
+export const metadata: Metadata = {
+  title: 'Projets',
+  description:
+    'Découvrez mes projets de développement web full-stack : applications Next.js, React, TypeScript, Node.js, PostgreSQL et plus encore. Projets personnels et professionnels.',
+  keywords: [
+    'projets web',
+    'portfolio projets',
+    'Next.js projets',
+    'React applications',
+    'TypeScript',
+    'développement full-stack',
+    'projets open source',
+  ],
+  openGraph: {
+    title: 'Projets - Luca Fourfooz',
+    description:
+      'Découvrez mes projets de développement web full-stack : applications Next.js, React, TypeScript, Node.js et plus encore.',
+    url: 'https://lucaffz.dev/projects',
+  },
+};
 
 export default function Projects() {
-  const { t } = useLanguage();
-  const [searchQuery, setSearchQuery] = useState("");
-
-  return (
-    <section className="container mt-12 mx-auto p-4 max-w-3xl gap-4">
-      <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-        <h1 className="text-2xl sm:text-3xl font-medium">{t("projects.title")}</h1>
-        <Search onSearchChange={setSearchQuery} />
-      </div>
-      <ProjectsList searchQuery={searchQuery} />
-    </section>
-  );
+  return <ProjectsPage />;
 }
