@@ -978,8 +978,9 @@
     ]
   },
   "contact": {
-    "title": "Contacto",
-    "description": "No dudes en contactarme."
+    "title": "Contact",
+    "description": "Estoy abierto a oportunidades de prácticas, aprendizaje o proyectos freelance. La mejor manera de contactarme es por correo electrónico.",
+    "note": "Suelo responder en un plazo de 24 a 48 horas. Para consultas profesionales, por favor, indique el asunto en el asunto del correo electrónico."
   },
   "footer": {
     "rights": "Todos los derechos reservados.",

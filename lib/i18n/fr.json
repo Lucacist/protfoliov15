@@ -974,7 +974,8 @@
   },
   "contact": {
     "title": "Contact",
-    "description": "N'hésitez pas à me contacter."
+    "description": "Ouvert aux opportunités de stage, alternance ou projets freelance. La meilleure façon de me contacter, c'est par mail.",
+    "note": "Je réponds généralement sous 24–48h. Pour toute demande professionnelle, n'hésitez pas à préciser l'objet dans le sujet du mail."
   },
   "footer": {
     "start": "Fait avec le",

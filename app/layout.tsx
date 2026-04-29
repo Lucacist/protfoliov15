@@ -29,11 +29,11 @@ export default function RootLayout({
       lang="en"
       className={cn('h-full', 'antialiased', google_sans_flex.variable)}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-screen flex flex-col">
         <LanguageProvider>
           <TooltipProvider>
             <Navbar />
-            {children}
+            <main className="flex-grow">{children}</main>
             <Footer />
           </TooltipProvider>
         </LanguageProvider>
