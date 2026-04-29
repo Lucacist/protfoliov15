@@ -91,25 +91,54 @@
         "content": [
           {
             "type": "text",
-            "value": "Calibre est une plateforme complète de gestion scolaire développée pour simplifier le travail des enseignants."
-          },
-          {
-            "type": "image",
-            "value": "/projects/calibre/screenshot1.png",
-            "alt": "Interface de gestion des notes"
+            "value": "Calibre est une application web de gestion pédagogique dédiée à la formation en mécanique automobile. Elle centralise l'organisation des classes, le suivi des élèves et la structuration des référentiels d'évaluation. Basée sur une architecture technique moderne (Next.js, Drizzle ORM et une base de données PostgreSQL distante via Neon), elle offre des interfaces sur mesure pour répondre aux besoins de chaque acteur de la formation."
           },
           {
             "type": "heading",
-            "value": "Fonctionnalités principales"
+            "value": "Objectifs du projet :"
           },
           {
             "type": "list",
             "value": [
-              "Gestion des notes par activité avec pondération",
-              "Génération automatique de bulletins PDF",
-              "Graphiques d'évolution des élèves",
-              "Planification pédagogique collaborative"
+              "Centraliser le suivi pédagogique des formations techniques (de type CAP ou Bac Pro)",
+              "Gérer efficacement les classes, les groupes et le suivi individuel des étudiants",
+              "Structurer un référentiel d'évaluation hiérarchique (pôles, activités, compétences et indicateurs)",
+              "Assurer la traçabilité des évaluations en y associant les véhicules et les types d'interventions réalisés"
             ]
+          },
+          {
+            "type": "heading",
+            "value": "Fonctionnalités principales :"
+          },
+          {
+            "type": "list",
+            "value": [
+              "Tableaux de bord personnalisés pour les enseignants et les administrateurs",
+              "Espaces dédiés par classe avec des grilles de notation détaillées",
+              "Portail élève individuel pour la consultation des résultats et de la progression pédagogique",
+              "Administration complète des ressources : classes, étudiants, flotte de véhicules et travaux pratiques",
+              "Authentification sécurisée gérée par Clerk, avec synchronisation des comptes en base de données via Webhooks"
+            ]
+          },
+          {
+            "type": "heading",
+            "value": "Gestion des rôles et accès :"
+          },
+          {
+            "type": "list",
+            "value": [
+              "Administrateur : contrôle total de la plateforme, gestion des utilisateurs et configuration des paramètres",
+              "Enseignant : accès aux outils d'évaluation, saisie des notes et suivi pédagogique des élèves",
+              "Élève : accès restreint à un espace personnel pour consulter uniquement ses propres résultats"
+            ]
+          },
+          {
+            "type": "heading",
+            "value": "Sécurité :"
+          },
+          {
+            "type": "text",
+            "value": "La sécurisation des accès est garantie par un middleware qui protège strictement les routes privées de l'application. De plus, l'accès à la plateforme est conditionné : tout utilisateur authentifié via Clerk doit impérativement correspondre à un profil préalablement enregistré et autorisé dans la base de données de l'établissement."
           }
         ]
       },
@@ -125,7 +154,79 @@
           "UI/UX",
           "Centralisation"
         ],
-        "repoUrl": "https://github.com/Lucacist/arahub"
+        "repoUrl": "https://github.com/Lucacist/arahub",
+        "content": [
+          {
+            "type": "text",
+            "value": "AraHub (du latin « Ara » : autel, lieu de concentration) est un hub visuel conçu sur mesure pour les freelances et les solopreneurs. Son objectif principal est de réduire la charge mentale en centralisant les liens, les tâches, l'agenda et les fichiers au sein d'un espace unifié et modulaire, régi par une règle d'or simple : un projet = une page."
+          },
+          {
+            "type": "heading",
+            "value": "Fonctionnalités principales :"
+          },
+          {
+            "type": "list",
+            "value": [
+              "Gestion des tâches : statuts, échéances et glisser-déposer",
+              "Centralisation des liens : regroupement des ressources importantes par projet",
+              "Éditeur de notes riche : intégration de BlockNote pour des prises de notes fluides",
+              "Suivi de l'agenda : gestion des réunions et événements liés au projet",
+              "Gestion de fichiers : upload et organisation via UploadThing",
+              "Tableur intégré : suivi de données structurées directement dans l'outil",
+              "Sécurité renforcée : stockage sécurisé des clés API (chiffrement AES-256-GCM)",
+              "Corbeille sécurisée : suppression logique (soft delete) avec restauration sous 7 jours",
+              "Multi-workspace : séparation claire des espaces professionnels et personnels",
+              "Design responsive : interface optimisée pour desktop et mobile"
+            ]
+          },
+          {
+            "type": "heading",
+            "value": "Cas d'usage :"
+          },
+          {
+            "type": "list",
+            "value": [
+              "Freelance solo : centraliser toutes les ressources d'un client (briefs, fichiers, liens, tâches).",
+              "Agence légère : gérer plusieurs espaces de travail distincts et partager des modèles de projets réutilisables.",
+              "Entrepreneur : suivre l'avancement global d'un produit, les livrables et les points de synchronisation."
+            ]
+          },
+          {
+            "type": "heading",
+            "value": "Parcours utilisateur type :"
+          },
+          {
+            "type": "list",
+            "value": [
+              "Création d'un espace de travail (ex: « Pro ») et d'un projet dédié à un client",
+              "Ajout des liens de référence et initialisation des premières tâches",
+              "Intégration des fichiers (contrats, maquettes) et planification des réunions",
+              "Prise de notes en direct durant les réunions et conversion des actions en tâches",
+              "Utilisation du tableur pour le suivi du temps passé ou de la facturation"
+            ]
+          },
+          {
+            "type": "heading",
+            "value": "Évolutions prévues (Roadmap) :"
+          },
+          {
+            "type": "list",
+            "value": [
+              "Intégrations externes : synchronisation avec Google Calendar et Notion",
+              "Collaboration en temps réel sur les notes et les tableurs",
+              "Création de templates partagés et mise en place d'une marketplace de composants",
+              "Amélioration de la gestion des permissions multi-utilisateurs par espace de travail"
+            ]
+          },
+          {
+            "type": "heading",
+            "value": "Architecture et déploiement :"
+          },
+          {
+            "type": "text",
+            "value": "Le projet est distribué sous licence MIT. Le répertoire intègre des scripts de linting ainsi que des tests unitaires pour assurer la fiabilité du code. L'architecture est pensée pour s'intégrer facilement dans un pipeline d'intégration continue (ex: GitHub Actions) avec un déploiement automatisé recommandé sur des plateformes comme Vercel."
+          }
+        ]
       },
       {
         "id": "easysave",
