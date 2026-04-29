@@ -484,7 +484,6 @@
         "shortDescription": "Implémentation interactive de l'automate cellulaire en C++ (POO). Mode console et interface graphique permettant de modifier la grille dynamiquement en temps réel.",
         "technologies": ["C++", "POO", "Algorithmique", "UI Graphique"],
         "repoUrl": "https://github.com/Lucacist/jeu-de-Conway-projet",
-
         "content": [
           {
             "type": "text",
@@ -616,7 +615,6 @@
           "Électronique"
         ],
         "nodownloadLabel": "Malheureusement, je n'ai pas le code sous la main. Si je le retrouve, je vous ferai signe.",
-
         "content": [
           {
             "type": "text",
