@@ -13,6 +13,21 @@
     "btn_projects": "Projects",
     "btn_contact": "Contact"
   },
+  "availability": {
+    "stageBadge": "International internship",
+    "stageTitle": "Looking for a 3-month internship abroad",
+    "stageDesc": "Available for an international internship, ideally in a product team or tech startup. Open to all destinations.",
+    "stagePeriod": "Summer 2027 — 3 months",
+    "freelanceBadge": "Projects & Freelance",
+    "freelanceTitle": "Got a project to build?",
+    "freelanceDesc": "Whether it's a web app, a landing page or a business tool, I'm available to work on your projects alongside my studies.",
+    "freelanceCta": "Let's talk"
+  },
+  "toast": {
+    "title": "🌍 Summer 2027 internship",
+    "description": "Looking for a 3-month internship abroad. Got an opportunity?",
+    "cta": "Contact me"
+  },
   "sec2": {
     "title": "Stack & Tools"
   },

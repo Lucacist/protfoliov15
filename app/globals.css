@@ -134,3 +134,7 @@
   -webkit-mask-image: radial-gradient(circle, black 40%, transparent 70%);
   mask-image: radial-gradient(circle, black 40%, transparent 70%);
 }
+
+[data-sonner-toast] [data-description] {
+  color: #5a5a5a !important;
+}

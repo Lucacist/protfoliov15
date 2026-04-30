@@ -13,6 +13,21 @@
     "btn_projects": "Proyectos",
     "btn_contact": "Contacto"
   },
+  "availability": {
+    "stageBadge": "Prácticas internacionales",
+    "stageTitle": "Busco unas prácticas de 3 meses en el extranjero",
+    "stageDesc": "Disponible para unas prácticas a nivel internacional, idealmente en un equipo de producto o una startup tecnológica. Abierto a cualquier destino.",
+    "stagePeriod": "Verano de 2027 — 3 meses",
+    "freelanceBadge": "Proyectos y Freelance",
+    "freelanceTitle": "¿Un proyecto por desarrollar?",
+    "freelanceDesc": "Ya sea una aplicación web, un sitio web corporativo o una herramienta profesional, estoy disponible para trabajar en tus proyectos en paralelo a mis estudios.",
+    "freelanceCta": "Hablemos"
+  },
+  "toast": {
+    "title": "🌍 Prácticas verano 2027",
+    "description": "Busco unas prácticas de 3 meses en el extranjero. ¿Tienes alguna oportunidad?",
+    "cta": "Contáctame"
+  },
   "sec2": {
     "title": "Stack y Herramientas"
   },

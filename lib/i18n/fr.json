@@ -13,6 +13,21 @@
     "btn_projects": "Projets",
     "btn_contact": "Contact"
   },
+  "availability": {
+    "stageBadge": "Stage international",
+    "stageTitle": "Recherche un stage de 3 mois à l'étranger",
+    "stageDesc": "Disponible pour un stage à l'international, idéalement dans une équipe produit ou une startup tech. Ouvert à toutes les destinations.",
+    "stagePeriod": "Été 2027 — 3 mois",
+    "freelanceBadge": "Projets & Freelance",
+    "freelanceTitle": "Un projet à développer ?",
+    "freelanceDesc": "Que ce soit une application web, un site vitrine ou un outil métier, je suis disponible pour travailler sur vos projets en parallèle de mes études.",
+    "freelanceCta": "Discutons-en"
+  },
+  "toast": {
+    "title": "🌍 Stage été 2027",
+    "description": "Je recherche un stage de 3 mois à l'étranger. Vous avez une opportunité ?",
+    "cta": "Me contacter"
+  },
   "sec2": {
     "title": "Stack & Outils"
   },

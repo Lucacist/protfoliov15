@@ -4,6 +4,8 @@ import Navbar from '@/components/Navbar';
 import { LanguageProvider } from '@/lib/language-context';
 import { TooltipProvider } from '@/components/ui/tooltip';
 import Footer from '@/components/footer';
+import { Toaster } from '@/components/ui/sonner';
+import { StageToast } from '@/components/stage-toast';
 
 import './globals.css';
 import { cn } from '@/lib/utils';
@@ -100,6 +102,8 @@ export default function RootLayout({
       <body className="min-h-screen flex flex-col">
         <LanguageProvider>
           <TooltipProvider>
+            <StageToast />
+            <Toaster position="bottom-right" />
             <Navbar />
             <main className="flex-grow">{children}</main>
             <Footer />
