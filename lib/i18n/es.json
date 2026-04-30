@@ -390,7 +390,55 @@
         "shortDescription": "Desarrollo de un sitio web corporativo moderno y responsivo para una empresa de obras. Optimización SEO y diseño centrado en la conversión de clientes.",
         "technologies": ["Vue.js", "SEO", "Web Design"],
         "repoUrl": "https://github.com/Lucacist/site-jourdren-evans",
-        "siteUrl": "https://jourdren-tp.fr"
+        "siteUrl": "https://www.jourdren-tp.com",
+        "content": [
+          {
+            "type": "text",
+            "value": "Sitio web corporativo oficial de la empresa Jourdren TP, diseñado como una landing page clara y tranquilizadora para presentar la empresa, sus servicios y facilitar el contacto. Jourdren TP es una empresa familiar especializada en movimiento de tierras, redes de servicios públicos (VRD) y paisajismo exterior. El sitio destaca la experiencia de la empresa, su arraigo local en Normandía y sus proyectos, con un recorrido sencillo para obtener un presupuesto."
+          },
+          {
+            "type": "heading",
+            "value": "Estructura de la página de inicio:"
+          },
+          {
+            "type": "list",
+            "value": [
+              "Sección hero visual con llamada a la acción",
+              "Destacado de los servicios principales",
+              "Sección sobre la empresa",
+              "Testimonios de clientes",
+              "Bloque de contacto con datos y mapa"
+            ]
+          },
+          {
+            "type": "heading",
+            "value": "Objetivos del sitio:"
+          },
+          {
+            "type": "list",
+            "value": [
+              "Descubrir los servicios ofrecidos",
+              "Consultar los proyectos y realizaciones",
+              "Contactar con la empresa",
+              "Solicitar un presupuesto"
+            ]
+          },
+          {
+            "type": "heading",
+            "value": "Características principales:"
+          },
+          {
+            "type": "list",
+            "value": [
+              "Navegación entre las páginas Servicios, Proyectos, Acerca de y Contacto",
+              "Presentación de los servicios de movimiento de tierras, redes de servicios (VRD) y paisajismo exterior",
+              "Testimonios de clientes para generar confianza",
+              "Datos de contacto completos y horarios de apertura",
+              "Página de aviso legal y política de privacidad",
+              "Integración de un mapa de Google Maps"
+            ]
+          }
+        ]
       },
       {
         "id": "stagelink",

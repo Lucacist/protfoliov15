@@ -390,7 +390,55 @@
         "shortDescription": "Développement d'un site vitrine moderne et responsive pour une entreprise de travaux. Optimisation SEO et design centré sur la conversion client.",
         "technologies": ["Vue.js", "SEO", "Web Design"],
         "repoUrl": "https://github.com/Lucacist/site-jourdren-evans",
-        "siteUrl": "https://jourdren-tp.fr"
+        "siteUrl": "https://www.jourdren-tp.com",
+        "content": [
+          {
+            "type": "text",
+            "value": "Site vitrine officiel de la société Jourdren TP, pensé comme une landing page claire et rassurante pour présenter l’entreprise, ses services et faciliter la prise de contact. Jourdren TP est une entreprise familiale spécialisée dans les travaux de terrassement, de VRD et d’aménagements extérieurs. Le site met en avant le savoir-faire de l’entreprise, son ancrage local en Normandie et ses réalisations, avec un parcours simple pour obtenir un devis."
+          },
+          {
+            "type": "heading",
+            "value": "Structure de la page d'accueil :"
+          },
+          {
+            "type": "list",
+            "value": [
+              "Hero visuel avec appel à l’action",
+              "Mise en avant des services principaux",
+              "Section à propos de l’entreprise",
+              "Témoignages clients",
+              "Bloc contact avec coordonnées et carte"
+            ]
+          },
+          {
+            "type": "heading",
+            "value": "Objectifs du site :"
+          },
+          {
+            "type": "list",
+            "value": [
+              "Découvrir les prestations proposées",
+              "Consulter les projets et les réalisations",
+              "Contacter l’entreprise",
+              "Demander un devis"
+            ]
+          },
+          {
+            "type": "heading",
+            "value": "Fonctionnalités principales :"
+          },
+          {
+            "type": "list",
+            "value": [
+              "Navigation entre les pages Services, Projets, À propos et Contact",
+              "Présentation des services de terrassement, VRD et aménagements extérieurs",
+              "Témoignages clients pour renforcer la confiance",
+              "Coordonnées complètes et horaires d’ouverture",
+              "Page des mentions légales et politique de confidentialité",
+              "Intégration d’une carte Google Maps"
+            ]
+          }
+        ]
       },
       {
         "id": "stagelink",

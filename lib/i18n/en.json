@@ -390,7 +390,55 @@
         "shortDescription": "Development of a modern and responsive showcase website for a construction company. SEO optimization and client-conversion-centric design.",
         "technologies": ["Vue.js", "SEO", "Web Design"],
         "repoUrl": "https://github.com/Lucacist/site-jourdren-evans",
-        "siteUrl": "https://jourdren-tp.fr"
+        "siteUrl": "https://www.jourdren-tp.com",
+        "content": [
+          {
+            "type": "text",
+            "value": "Official showcase website for Jourdren TP, designed as a clear and reassuring landing page to present the company, its services, and facilitate contact. Jourdren TP is a family business specializing in earthworks, utility networks (VRD), and exterior landscaping. The site highlights the company's expertise, its local roots in Normandy, and its projects, with a simple user journey to get a quote."
+          },
+          {
+            "type": "heading",
+            "value": "Homepage structure:"
+          },
+          {
+            "type": "list",
+            "value": [
+              "Visual hero section with a call to action",
+              "Highlighting of main services",
+              "About the company section",
+              "Customer testimonials",
+              "Contact block with details and map"
+            ]
+          },
+          {
+            "type": "heading",
+            "value": "Site objectives:"
+          },
+          {
+            "type": "list",
+            "value": [
+              "Discover the services offered",
+              "View projects and achievements",
+              "Contact the company",
+              "Request a quote"
+            ]
+          },
+          {
+            "type": "heading",
+            "value": "Main features:"
+          },
+          {
+            "type": "list",
+            "value": [
+              "Navigation between Services, Projects, About, and Contact pages",
+              "Presentation of earthworks, utility networks (VRD), and exterior landscaping services",
+              "Customer testimonials to build trust",
+              "Complete contact details and opening hours",
+              "Legal notice and privacy policy page",
+              "Google Maps integration"
+            ]
+          }
+        ]
       },
       {
         "id": "stagelink",
