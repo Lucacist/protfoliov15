@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useLanguage, locales } from '@/lib/language-context';
-import { Languages, Check, AlignRight } from 'lucide-react';
+import { Languages, Check, AlignRight, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
   Popover,
@@ -27,9 +27,20 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="flex fixed top-0 left-0 right-0 z-50 bg-background h-12 items-center justify-center shadow-md">
+    <nav
+      className="flex fixed top-0 left-0 right-0 z-50 bg-background h-12 items-center justify-center shadow-md"
+      aria-label="Main navigation"
+    >
       <div className="flex items-center justify-between gap-4 w-full max-w-4xl px-4">
-        <Image src="/landing/logo.svg" alt="Logo" width={24} height={24} className="h-5 sm:h-6 w-auto" />
+        <Link href="/" aria-label="Home">
+          <Image
+            src="/landing/logo.svg"
+            alt="Logo"
+            width={24}
+            height={24}
+            className="h-5 sm:h-6 w-auto"
+          />
+        </Link>
 
         <ul className="hidden sm:flex gap-4 md:gap-6 w-auto justify-center items-center">
           {links.map(({ href, labelKey }) => {
@@ -45,6 +56,7 @@ export default function Navbar() {
                       ? 'text-foreground font-semibold'
                       : 'text-muted-foreground hover:text-foreground',
                   )}
+                  aria-current={isActive ? 'page' : undefined}
                 >
                   {t(labelKey)}
                 </Link>
@@ -60,14 +72,17 @@ export default function Navbar() {
                 variant="ghost"
                 size="sm"
                 className="h-8 gap-1 sm:gap-1.5 px-1.5 sm:px-2"
+                aria-label={`Select language, currently ${locale}`}
               >
-                <Languages className="h-4 w-4" />
+                <Languages className="h-4 w-4" aria-hidden="true" />
               </Button>
             </PopoverTrigger>
-            <PopoverContent align="end" className="w-40 p-1 gap-1">
+            <PopoverContent align="end" className="w-40 p-1 gap-1" role="listbox">
               {locales.map((l) => (
                 <button
                   key={l.value}
+                  role="option"
+                  aria-selected={locale === l.value}
                   onClick={() => {
                     setLocale(l.value);
                     setOpen(false);
@@ -77,9 +92,11 @@ export default function Navbar() {
                     locale === l.value && 'bg-accent font-medium',
                   )}
                 >
-                  <span>{l.label}</span>
+                  <span>
+                    {l.flag} {l.label}
+                  </span>
                   {locale === l.value && (
-                    <Check className="ml-auto h-3.5 w-3.5" />
+                    <Check className="ml-auto h-3.5 w-3.5" aria-hidden="true" />
                   )}
                 </button>
               ))}
@@ -92,8 +109,14 @@ export default function Navbar() {
             size="sm"
             className="sm:hidden h-8 w-8 p-0"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={mobileMenuOpen}
           >
-            <AlignRight className="h-5 w-5" />
+            {mobileMenuOpen ? (
+              <X className="h-5 w-5" aria-hidden="true" />
+            ) : (
+              <AlignRight className="h-5 w-5" aria-hidden="true" />
+            )}
           </Button>
         </div>
       </div>
@@ -101,14 +124,15 @@ export default function Navbar() {
       {/* Mobile menu */}
       {mobileMenuOpen && (
         <div className="sm:hidden fixed top-12 left-0 right-0 bg-background border-b shadow-md z-40">
-          <ul className="flex flex-col p-4 gap-2">
+          <ul className="flex flex-col p-4 gap-2" role="menu">
             {links.map(({ href, labelKey }) => {
               const isActive =
                 href === '/' ? pathname === '/' : pathname.startsWith(href);
               return (
-                <li key={href}>
+                <li key={href} role="none">
                   <Link
                     href={href}
+                    role="menuitem"
                     onClick={() => setMobileMenuOpen(false)}
                     className={cn(
                       'block py-2 px-3 rounded-md text-base transition-colors',
@@ -116,6 +140,7 @@ export default function Navbar() {
                         ? 'bg-accent text-foreground font-semibold'
                         : 'text-muted-foreground hover:bg-accent hover:text-foreground',
                     )}
+                    aria-current={isActive ? 'page' : undefined}
                   >
                     {t(labelKey)}
                   </Link>

@@ -1,11 +1,13 @@
 'use client';
 
-import { createContext, useContext, useState, useCallback } from 'react';
+import { createContext, useContext, useState, useCallback, useEffect } from 'react';
 import fr from '@/lib/i18n/fr.json';
 import en from '@/lib/i18n/en.json';
 import es from '@/lib/i18n/es.json';
 
 export type Locale = 'fr' | 'en' | 'es';
+
+const SUPPORTED_LOCALES: Locale[] = ['fr', 'en', 'es'];
 
 export const locales: { value: Locale; label: string; flag: string }[] = [
   { value: 'fr', label: 'Français', flag: '🇫🇷' },
@@ -14,6 +16,22 @@ export const locales: { value: Locale; label: string; flag: string }[] = [
 ];
 
 const messages: Record<Locale, Record<string, unknown>> = { fr, en, es };
+
+function detectLocale(): Locale {
+  // Check localStorage first (persisted preference)
+  if (typeof window !== 'undefined') {
+    const stored = localStorage.getItem('preferred-locale') as Locale | null;
+    if (stored && SUPPORTED_LOCALES.includes(stored)) return stored;
+  }
+
+  // Detect from navigator
+  if (typeof navigator !== 'undefined') {
+    const browserLang = navigator.language.split('-')[0] as Locale;
+    if (SUPPORTED_LOCALES.includes(browserLang)) return browserLang;
+  }
+
+  return 'fr';
+}
 
 type LanguageContextType = {
   locale: Locale;
@@ -24,7 +42,14 @@ type LanguageContextType = {
 const LanguageContext = createContext<LanguageContextType | null>(null);
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [locale, setLocale] = useState<Locale>('fr');
+  const [locale, setLocale] = useState<Locale>(detectLocale);
+
+  // Persist preference
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('preferred-locale', locale);
+    }
+  }, [locale]);
 
   const t = useCallback(
     <T = string>(key: string): T => {

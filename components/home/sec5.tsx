@@ -11,8 +11,7 @@ export default function Sec5() {
   return (
     <section className="container mx-auto p-8 max-w-5xl flex flex-col gap-4">
       <motion.div
-        className="flex flex-col gap-2 p-8 rounded-lg"
-        style={{ backgroundColor: 'var(--background-muted)' }}
+        className="flex flex-col gap-2 p-8 rounded-lg bg-background-muted dark:bg-accent"
         initial={{ opacity: 0, y: 16 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.5 }}

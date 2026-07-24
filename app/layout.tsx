@@ -6,6 +6,9 @@ import { TooltipProvider } from '@/components/ui/tooltip';
 import Footer from '@/components/footer';
 import { Toaster } from '@/components/ui/sonner';
 import { StageToast } from '@/components/stage-toast';
+import { SkipToContent } from '@/components/SkipToContent';
+import { HtmlLang } from '@/components/HtmlLang';
+import { JsonLd } from '@/components/JsonLd';
 
 import './globals.css';
 import { cn } from '@/lib/utils';
@@ -50,6 +53,13 @@ export const metadata: Metadata = {
   },
   creator: 'Luca Fourfooz',
   publisher: 'Luca Fourfooz',
+  alternates: {
+    languages: {
+      'fr-FR': 'https://lucaffz.dev/fr',
+      'en-US': 'https://lucaffz.dev/en',
+      'es-ES': 'https://lucaffz.dev/es',
+    },
+  },
   formatDetection: {
     email: false,
     address: false,
@@ -102,15 +112,31 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cn('h-full', 'antialiased', inter.variable, geistMono.variable)}
+      className={cn(
+        'h-full',
+        'antialiased',
+        inter.variable,
+        geistMono.variable,
+      )}
+      suppressHydrationWarning
     >
-      <body className="min-h-screen flex flex-col" suppressHydrationWarning>
+      <head>
+        <JsonLd />
+      </head>
+      <body
+        className="min-h-screen flex flex-col"
+        suppressHydrationWarning
+      >
+        <SkipToContent />
         <LanguageProvider>
+          <HtmlLang />
           <TooltipProvider>
             <StageToast />
             <Toaster position="bottom-right" />
             <Navbar />
-            <main className="flex-grow">{children}</main>
+            <main id="main-content" className="flex-grow">
+              {children}
+            </main>
             <Footer />
           </TooltipProvider>
         </LanguageProvider>
