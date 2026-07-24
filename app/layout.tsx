@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter, Geist_Mono } from 'next/font/google';
+import { MotionConfig } from 'framer-motion';
+import { ThemeProvider } from 'next-themes';
 import Navbar from '@/components/Navbar';
 import { LanguageProvider } from '@/lib/language-context';
 import { TooltipProvider } from '@/components/ui/tooltip';
@@ -76,7 +78,7 @@ export const metadata: Metadata = {
     siteName: 'Luca Fourfooz Portfolio',
     images: [
       {
-        url: '/og-image.png',
+        url: '/api/og?title=Luca%20Fourfooz&subtitle=D%C3%A9veloppeur%20Full-Stack%20%26%20Designer%20UI%2FUX',
         width: 1200,
         height: 630,
         alt: 'Luca Fourfooz - Développeur Full-Stack',
@@ -88,7 +90,7 @@ export const metadata: Metadata = {
     title: 'Luca Fourfooz - Développeur Full-Stack & Designer UI/UX',
     description:
       'Portfolio de Luca Fourfooz, étudiant ingénieur à CESI et développeur full-stack chez Assystem.',
-    images: ['/og-image.png'],
+    images: ['/api/og?title=Luca%20Fourfooz&subtitle=D%C3%A9veloppeur%20Full-Stack%20%26%20Designer%20UI%2FUX'],
     creator: '@lucaffz',
   },
   robots: {
@@ -128,18 +130,27 @@ export default function RootLayout({
         suppressHydrationWarning
       >
         <SkipToContent />
-        <LanguageProvider>
-          <HtmlLang />
-          <TooltipProvider>
-            <StageToast />
-            <Toaster position="bottom-right" />
-            <Navbar />
-            <main id="main-content" className="flex-grow">
-              {children}
-            </main>
-            <Footer />
-          </TooltipProvider>
-        </LanguageProvider>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <LanguageProvider>
+            <HtmlLang />
+            <MotionConfig reducedMotion="user">
+              <TooltipProvider>
+                <StageToast />
+                <Toaster position="bottom-right" />
+                <Navbar />
+                <main id="main-content" className="flex-grow">
+                  {children}
+                </main>
+                <Footer />
+              </TooltipProvider>
+            </MotionConfig>
+          </LanguageProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

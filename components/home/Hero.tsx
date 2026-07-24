@@ -88,7 +88,7 @@ export default function Hero() {
           ><Tooltip>
               <TooltipTrigger asChild>
                 <a href="https://assystem.com/">
-                  <Image src="/landing/assystem.svg" alt="Assystem" width={80} height={24} className="h-6 w-auto" />
+                  <Image src="/landing/assystem.svg" alt="Assystem" width={80} height={24} className="h-6 w-auto" sizes="80px" />
                 </a>
               </TooltipTrigger>
               <TooltipContent>
@@ -104,7 +104,7 @@ export default function Hero() {
           >    <Tooltip>
               <TooltipTrigger asChild>
                 <a href="https://cesi.fr/">
-                  <Image src="/landing/cesi.png" alt="CESI" width={60} height={24} className="h-6 w-auto" />
+                  <Image src="/landing/cesi.png" alt="CESI" width={60} height={24} className="h-6 w-auto" sizes="60px" />
                 </a>
               </TooltipTrigger>
               <TooltipContent>

@@ -17,19 +17,19 @@ export const locales: { value: Locale; label: string; flag: string }[] = [
 
 const messages: Record<Locale, Record<string, unknown>> = { fr, en, es };
 
-function detectLocale(): Locale {
-  // Check localStorage first (persisted preference)
-  if (typeof window !== 'undefined') {
+function detectClientLocale(): Locale {
+  try {
     const stored = localStorage.getItem('preferred-locale') as Locale | null;
     if (stored && SUPPORTED_LOCALES.includes(stored)) return stored;
+  } catch {
+    // localStorage unavailable
   }
-
-  // Detect from navigator
-  if (typeof navigator !== 'undefined') {
+  try {
     const browserLang = navigator.language.split('-')[0] as Locale;
     if (SUPPORTED_LOCALES.includes(browserLang)) return browserLang;
+  } catch {
+    // navigator unavailable
   }
-
   return 'fr';
 }
 
@@ -42,14 +42,23 @@ type LanguageContextType = {
 const LanguageContext = createContext<LanguageContextType | null>(null);
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [locale, setLocale] = useState<Locale>(detectLocale);
+  const [locale, setLocaleState] = useState<Locale>('fr');
 
-  // Persist preference
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      localStorage.setItem('preferred-locale', locale);
+    const detected = detectClientLocale();
+    if (detected !== 'fr') {
+      setLocaleState(detected);
     }
-  }, [locale]);
+  }, []);
+
+  const setLocale = useCallback((newLocale: Locale) => {
+    setLocaleState(newLocale);
+    try {
+      localStorage.setItem('preferred-locale', newLocale);
+    } catch {
+      // localStorage unavailable
+    }
+  }, []);
 
   const t = useCallback(
     <T = string>(key: string): T => {

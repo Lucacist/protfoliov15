@@ -18,6 +18,21 @@ export const metadata: Metadata = {
     description:
       'Contactez-moi pour des opportunités de stage, alternance ou projets freelance.',
     url: 'https://lucaffz.dev/contact',
+    images: [
+      {
+        url: '/api/og?title=Contact&subtitle=Discutons%20de%20votre%20projet',
+        width: 1200,
+        height: 630,
+        alt: 'Contact - Luca Fourfooz',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Contact - Luca Fourfooz',
+    description:
+      'Contactez-moi pour des opportunités de stage, alternance ou projets freelance.',
+    images: ['/api/og?title=Contact&subtitle=Discutons%20de%20votre%20projet'],
   },
 };
 

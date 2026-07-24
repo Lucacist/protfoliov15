@@ -14,9 +14,33 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return { title: 'Projet non trouvé' };
   }
 
+  const ogParams = new URLSearchParams({
+    title: project.title,
+    subtitle: project.shortDescription.slice(0, 120),
+    tags: project.technologies.join(','),
+  }).toString();
+
   return {
     title: project.title,
     description: project.shortDescription,
+    openGraph: {
+      title: project.title,
+      description: project.shortDescription,
+      images: [
+        {
+          url: `/api/og?${ogParams}`,
+          width: 1200,
+          height: 630,
+          alt: project.title,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image' as const,
+      title: project.title,
+      description: project.shortDescription,
+      images: [`/api/og?${ogParams}`],
+    },
   };
 }
 

@@ -4,14 +4,10 @@ import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useLanguage, locales } from '@/lib/language-context';
-import { Languages, Check, AlignRight, X } from 'lucide-react';
+import { useLanguage } from '@/lib/language-context';
+import { AlignRight, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from '@/components/ui/popover';
+import { SettingsPopover } from '@/components/SettingsPopover';
 import { cn } from '@/lib/utils';
 
 const links = [
@@ -22,8 +18,7 @@ const links = [
 
 export default function Navbar() {
   const pathname = usePathname();
-  const { locale, setLocale, t } = useLanguage();
-  const [open, setOpen] = useState(false);
+  const { t } = useLanguage();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
@@ -39,6 +34,7 @@ export default function Navbar() {
             width={24}
             height={24}
             className="h-5 sm:h-6 w-auto"
+            sizes="24px"
           />
         </Link>
 
@@ -66,42 +62,7 @@ export default function Navbar() {
         </ul>
 
         <div className="flex items-center gap-0 sm:gap-2">
-          <Popover open={open} onOpenChange={setOpen}>
-            <PopoverTrigger asChild>
-              <Button
-                variant="ghost"
-                size="sm"
-                className="h-8 gap-1 sm:gap-1.5 px-1.5 sm:px-2"
-                aria-label={`Select language, currently ${locale}`}
-              >
-                <Languages className="h-4 w-4" aria-hidden="true" />
-              </Button>
-            </PopoverTrigger>
-            <PopoverContent align="end" className="w-40 p-1 gap-1" role="listbox">
-              {locales.map((l) => (
-                <button
-                  key={l.value}
-                  role="option"
-                  aria-selected={locale === l.value}
-                  onClick={() => {
-                    setLocale(l.value);
-                    setOpen(false);
-                  }}
-                  className={cn(
-                    'flex w-full items-center gap-2 rounded-sm px-2 py-1.5 text-sm transition-colors hover:bg-accent',
-                    locale === l.value && 'bg-accent font-medium',
-                  )}
-                >
-                  <span>
-                    {l.flag} {l.label}
-                  </span>
-                  {locale === l.value && (
-                    <Check className="ml-auto h-3.5 w-3.5" aria-hidden="true" />
-                  )}
-                </button>
-              ))}
-            </PopoverContent>
-          </Popover>
+          <SettingsPopover />
 
           {/* Mobile menu button */}
           <Button
