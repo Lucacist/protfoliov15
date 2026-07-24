@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Google_Sans_Flex } from 'next/font/google';
+import { Inter, Geist_Mono } from 'next/font/google';
 import Navbar from '@/components/Navbar';
 import { LanguageProvider } from '@/lib/language-context';
 import { TooltipProvider } from '@/components/ui/tooltip';
@@ -10,9 +10,14 @@ import { StageToast } from '@/components/stage-toast';
 import './globals.css';
 import { cn } from '@/lib/utils';
 
-const google_sans_flex = Google_Sans_Flex({
+const inter = Inter({
   subsets: ['latin'],
   variable: '--font-sans',
+});
+
+const geistMono = Geist_Mono({
+  subsets: ['latin'],
+  variable: '--font-mono',
 });
 
 export const metadata: Metadata = {
@@ -97,9 +102,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cn('h-full', 'antialiased', google_sans_flex.variable)}
+      className={cn('h-full', 'antialiased', inter.variable, geistMono.variable)}
     >
-      <body className="min-h-screen flex flex-col">
+      <body className="min-h-screen flex flex-col" suppressHydrationWarning>
         <LanguageProvider>
           <TooltipProvider>
             <StageToast />

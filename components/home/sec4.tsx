@@ -2,7 +2,6 @@
 
 import { useLanguage } from '@/lib/language-context';
 import { motion, type Variants } from 'framer-motion';
-import { div, section } from 'framer-motion/client';
 import { ExternalLink } from 'lucide-react';
 
 const containerVariants: Variants = {
@@ -45,18 +44,13 @@ type ExperienceItem = {
 export default function Sec4() {
   const { t, locale } = useLanguage();
 
-  const education = (t<EducationItem[]>('sec4.education') ??
-    []) as EducationItem[];
-  const experience = (t<ExperienceItem[]>('sec4.experience') ??
-    []) as ExperienceItem[];
+  const education = (t<EducationItem[]>('sec4.education') ?? []) as EducationItem[];
+  const experience = (t<ExperienceItem[]>('sec4.experience') ?? []) as ExperienceItem[];
 
   return (
-    <section
-      key={locale}
-      className="container mx-auto p-4 max-w-5xl flex flex-col gap-8"
-    >
+    <section className="container mx-auto p-4 max-w-5xl flex flex-col gap-8">
       {/* Formation */}
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-4" key={`edu-${locale}`}>
         <motion.h2
           className="text-xl sm:text-2xl font-bold"
           initial={{ opacity: 0, y: 16 }}
@@ -108,7 +102,7 @@ export default function Sec4() {
       </div>
 
       {/* Expérience */}
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-4" key={`exp-${locale}`}>
         <motion.h2
           className="text-xl sm:text-2xl font-bold"
           initial={{ opacity: 0, y: 16 }}

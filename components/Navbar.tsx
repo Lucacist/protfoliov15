@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useLanguage, locales } from '@/lib/language-context';
@@ -30,7 +31,7 @@ export default function Navbar() {
   return (
     <nav className="flex fixed top-0 left-0 right-0 z-50 bg-background h-12 items-center justify-center shadow-md">
       <div className="flex items-center justify-between gap-4 w-full max-w-4xl px-4">
-        <img src="/landing/logo.svg" alt="Logo" className="h-5 sm:h-6" />
+        <Image src="/landing/logo.svg" alt="Logo" width={24} height={24} className="h-5 sm:h-6 w-auto" />
 
         <ul className="hidden sm:flex gap-4 md:gap-6 w-auto justify-center items-center">
           {links.map(({ href, labelKey }) => {

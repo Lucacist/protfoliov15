@@ -1,5 +1,6 @@
 "use client";
 
+import Image from 'next/image';
 import { Badge } from "@/components/ui/badge"
 import {
   Tooltip,
@@ -87,7 +88,7 @@ export default function Hero() {
           ><Tooltip>
               <TooltipTrigger asChild>
                 <a href="https://assystem.com/">
-                  <img src="/landing/assystem.svg" alt="Assystem" className="h-6 w-auto object-cover" />
+                  <Image src="/landing/assystem.svg" alt="Assystem" width={80} height={24} className="h-6 w-auto" />
                 </a>
               </TooltipTrigger>
               <TooltipContent>
@@ -103,7 +104,7 @@ export default function Hero() {
           >    <Tooltip>
               <TooltipTrigger asChild>
                 <a href="https://cesi.fr/">
-                  <img src="/landing/cesi.png" alt="CESI" className="h-6 w-auto object-cover" />
+                  <Image src="/landing/cesi.png" alt="CESI" width={60} height={24} className="h-6 w-auto" />
                 </a>
               </TooltipTrigger>
               <TooltipContent>
@@ -115,9 +116,9 @@ export default function Hero() {
         </div>
       </div>
       <div className="relative hidden md:block">
-        <img src="/rosas/rosas1.svg" className="absolute top-[-30px] left-[-50px] h-30 w-30 object-cover z-10 opacity-50" />
-        <img src="/rosas/rosas2.svg" className="absolute bottom-[-100px] right-[-50px] h-60 w-60 object-cover z-10 opacity-80 " />
-        <img src="/landing/profile.png" alt="Profile" className="h-80 lg:h-120 w-80 lg:w-120 object-cover filter grayscale" />
+        <Image src="/rosas/rosas1.svg" alt="" width={120} height={120} className="absolute top-[-30px] left-[-50px] h-30 w-30 z-10 opacity-50" />
+        <Image src="/rosas/rosas2.svg" alt="" width={240} height={240} className="absolute bottom-[-100px] right-[-50px] h-60 w-60 z-10 opacity-80" />
+        <Image src="/landing/profile.png" alt="Profile" width={480} height={480} className="h-80 lg:h-120 w-80 lg:w-120 object-cover filter grayscale" priority />
       </div>
       <motion.div
         className="absolute bottom-8 left-1/2 -translate-x-1/2"
@@ -129,7 +130,7 @@ export default function Hero() {
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
         >
-          <img src="/landing/Hand.svg" alt="Hand" className="h-8 w-8 sm:h-12 sm:w-12 object-cover" />
+          <Image src="/landing/Hand.svg" alt="Scroll down" width={48} height={48} className="h-8 w-8 sm:h-12 sm:w-12" />
         </motion.div>
       </motion.div>
     </section >

@@ -2,7 +2,7 @@
 
 import { useLanguage } from '@/lib/language-context';
 import { motion } from 'framer-motion';
-import { section } from 'framer-motion/client';
+
 import { MapPin, Calendar, Code } from 'lucide-react';
 
 export default function SecAvailability() {
@@ -18,13 +18,10 @@ export default function SecAvailability() {
         transition={{ duration: 0.4, ease: 'easeOut' as const }}
       >
         {/* Stage */}
-        <div
-          className="flex flex-col gap-3 p-5 rounded-lg border border-[#f8c4c4]"
-          style={{ backgroundColor: '#ffecec' }}
-        >
+        <div className="flex flex-col gap-3 p-5 rounded-lg border border-rose-200 dark:border-rose-800 bg-rose-50 dark:bg-rose-950">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-md bg-[#f8c4c4] flex items-center justify-center shrink-0">
-              <MapPin className="h-4 w-4 text-[#c0504d]" />
+            <div className="w-8 h-8 rounded-md bg-rose-200 dark:bg-rose-800 flex items-center justify-center shrink-0">
+              <MapPin className="h-4 w-4 text-rose-700 dark:text-rose-300" />
             </div>
             <span className="text-xs text-muted-foreground font-medium uppercase tracking-wide">
               {t('availability.stageBadge')}
@@ -47,13 +44,10 @@ export default function SecAvailability() {
         </div>
 
         {/* Freelance */}
-        <div
-          className="flex flex-col gap-3 p-5 rounded-lg border border-[#f5b8b8]"
-          style={{ backgroundColor: '#fde0e0' }}
-        >
+        <div className="flex flex-col gap-3 p-5 rounded-lg border border-rose-300 dark:border-rose-700 bg-rose-100 dark:bg-rose-900">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-md bg-[#f8c4c4] flex items-center justify-center shrink-0">
-              <Code className="h-4 w-4 text-[#c0504d]" />
+            <div className="w-8 h-8 rounded-md bg-rose-200 dark:bg-rose-800 flex items-center justify-center shrink-0">
+              <Code className="h-4 w-4 text-rose-700 dark:text-rose-300" />
             </div>
             <span className="text-xs text-muted-foreground font-medium uppercase tracking-wide">
               {t('availability.freelanceBadge')}

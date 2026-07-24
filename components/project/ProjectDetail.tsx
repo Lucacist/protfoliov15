@@ -4,31 +4,10 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { ExternalLink, ArrowLeft, TriangleAlert } from 'lucide-react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import Link from 'next/link';
 import { useLanguage } from '@/lib/language-context';
-
-type ContentBlock =
-  | { type: 'text'; value: string }
-  | { type: 'image'; value: string; alt: string; maxWidth?: string }
-  | { type: 'heading'; value: string }
-  | { type: 'list'; value: string[] };
-
-type Project = {
-  id: string;
-  title: string;
-  category: string;
-  shortDescription: string;
-  technologies: string[];
-  repoUrl?: string;
-  projectUrl?: string;
-  siteUrl?: string;
-  downloadUrl?: string;
-  downloadUrl2?: string;
-  downloadLabel?: string;
-  downloadLabel2?: string;
-  nodownloadLabel?: string;
-  content?: ContentBlock[];
-};
+import { getProjectById } from '@/lib/data/projects';
 
 interface Props {
   projectId: string;
@@ -54,12 +33,9 @@ const itemVariants = {
 };
 
 export default function ProjectDetail({ projectId }: Props) {
-  const { t } = useLanguage();
+  const { t, locale } = useLanguage();
 
-  const allProjects = t<Project[]>('projects.items');
-  const project = Array.isArray(allProjects)
-    ? allProjects.find((p) => p.id === projectId)
-    : undefined;
+  const project = getProjectById(projectId, locale);
 
   if (!project) {
     return (
@@ -210,11 +186,13 @@ export default function ProjectDetail({ projectId }: Props) {
                   );
                 case 'image':
                   return (
-                    <img
+                    <Image
                       key={index}
                       src={block.value}
                       alt={block.alt}
-                      className="rounded-lg w-full mx-auto object-cover"
+                      width={1200}
+                      height={675}
+                      className="rounded-lg w-full mx-auto object-cover h-auto"
                       style={
                         block.maxWidth
                           ? { maxWidth: block.maxWidth }
