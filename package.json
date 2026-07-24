@@ -6,7 +6,14 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test": "vitest run --exclude='**/smoke.test.ts'",
+    "test:watch": "vitest --exclude='**/smoke.test.ts'",
+    "test:unit": "vitest run __tests__/utils.test.ts __tests__/projects-data.test.ts",
+    "test:smoke": "vitest run __tests__/smoke.test.ts",
+    "validate": "vitest run __tests__/i18n.test.ts __tests__/project-integrity.test.ts",
+    "check": "npm run lint && npm run validate && npm run test:unit",
+    "check:all": "npm run build && npm run lint && npm test && npm run test:smoke"
   },
   "dependencies": {
     "class-variance-authority": "^0.7.1",
@@ -28,10 +35,13 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@vitejs/plugin-react": "^6.0.4",
     "eslint": "^9",
     "eslint-config-next": "16.2.4",
+    "jsdom": "^29.1.1",
     "prettier": "^3.8.3",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^5",
+    "vitest": "^4.1.10"
   }
 }

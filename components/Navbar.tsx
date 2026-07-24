@@ -26,8 +26,6 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const currentLocale = locales.find((l) => l.value === locale);
-
   return (
     <nav className="flex fixed top-0 left-0 right-0 z-50 bg-background h-12 items-center justify-center shadow-md">
       <div className="flex items-center justify-between gap-4 w-full max-w-4xl px-4">
