@@ -43,7 +43,7 @@ export default function Navbar() {
             alt="Logo"
             width={24}
             height={24}
-            className="h-5 sm:h-6 w-auto"
+            className="h-5 sm:h-6 w-auto dark:invert"
             sizes="24px"
           />
         </Link>
