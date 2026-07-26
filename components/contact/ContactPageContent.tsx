@@ -2,7 +2,7 @@
 
 import { useLanguage } from '@/lib/language-context';
 import { motion, type Variants } from 'framer-motion';
-import { Mail, Info } from 'lucide-react';
+import { Mail, Info, MoveRight } from 'lucide-react';
 
 const containerVariants: Variants = {
   hidden: {},
@@ -80,7 +80,7 @@ export default function ContactPageContent() {
               href={href}
               target={id !== 'email' ? '_blank' : undefined}
               rel={id !== 'email' ? 'noopener noreferrer' : undefined}
-              className="flex items-center justify-between p-4 rounded-lg border border-border bg-card hover:border-border/80 hover:bg-accent transition-colors"
+              className="flex items-center justify-between p-4 rounded-lg border border-border bg-card hover:border-border/80 hover:bg-accent transition-colors hover:cursor-pointer group "
               variants={itemVariants}
             >
               <div className="flex items-center gap-3">
@@ -101,11 +101,13 @@ export default function ContactPageContent() {
                   )}
                 </div>
                 <div>
-                  <p className="text-xs text-muted-foreground mb-0.5">{label}</p>
+                  <p className="text-xs text-muted-foreground mb-0.5">
+                    {label}
+                  </p>
                   <p className="text-sm font-medium">{value}</p>
                 </div>
               </div>
-              <span className="text-muted-foreground text-sm">↗</span>
+              <MoveRight className="h-4 w-4 text-muted-foreground group-hover:rotate-[-45deg] transition-transform group-hover:text-foreground" />
             </motion.a>
           );
         })}

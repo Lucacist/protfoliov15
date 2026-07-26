@@ -18,7 +18,7 @@ export default function Footer() {
         <p className="text-sm text-muted-foreground">{t('footer.start')}</p>
         <Heart className="h-4 w-4 text-red-500" />
         <p className="text-sm text-muted-foreground">{t('footer.after')}</p>
-        <Coffee className="h-4 w-4 text-black" />
+        <Coffee className="h-4 w-4 text-foreground" />
       </div>
     </footer>
   );

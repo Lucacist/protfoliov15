@@ -5,20 +5,9 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { ExternalLink, ArrowRight } from 'lucide-react';
 import { motion, type Variants } from 'framer-motion';
+import Image from 'next/image';
 import Link from 'next/link';
-
-type Project = {
-  id: string;
-  title: string;
-  category: string;
-  shortDescription: string;
-  technologies: string[];
-  repoUrl?: string;
-  projectUrl?: string;
-  siteUrl?: string;
-  downloadUrl?: string;
-  downloadLabel?: string;
-};
+import { getProjects } from '@/lib/data/projects';
 
 const selectedProjectIds = ['calibre', 'arahub-workspace', 'easysave'];
 
@@ -42,12 +31,12 @@ const itemVariants: Variants = {
 };
 
 export default function Sec3() {
-  const { t } = useLanguage();
+  const { t, locale } = useLanguage();
 
-  const allItems = t<Project[]>('projects.items');
-  const selectedProjects = Array.isArray(allItems)
-    ? allItems.filter((project) => selectedProjectIds.includes(project.id))
-    : [];
+  const allProjects = getProjects(locale);
+  const selectedProjects = allProjects.filter((project) =>
+    selectedProjectIds.includes(project.id),
+  );
 
   return (
     <section className="flex container mx-auto p-4 max-w-5xl gap-6">
@@ -65,16 +54,18 @@ export default function Sec3() {
           <div className="flex relative items-center md:hidden">
             <div className="flex flex-col items-center h-auto w-full justify-center z-2">
               <span className="text-xl font-bold">
-                {Array.isArray(allItems) ? allItems.length : 0}
+                {allProjects.length}
               </span>
               <Badge className="font-bold text-[6px] text-center">
                 {t('sec3.projectCount')}
               </Badge>
             </div>
-            <img
+            <Image
               className="opacity-50 w-20 absolute top-1/2 right-0 -translate-y-1/2"
               src="/rosas/rosas1.svg"
               alt=""
+              width={80}
+              height={80}
             />
           </div>
         </div>
@@ -148,16 +139,18 @@ export default function Sec3() {
       >
         <div className="flex flex-col items-center h-[200px] w-full justify-center p-8 z-2">
           <span className="text-6xl font-bold">
-            {Array.isArray(allItems) ? allItems.length : 0}
+            {allProjects.length}
           </span>
           <Badge className="font-bold text-sm text-center">
             {t('sec3.projectCount')}
           </Badge>
         </div>
-        <img
+        <Image
           className="opacity-50 w-full absolute top-1/2 right-0 -translate-y-1/2"
           src="/rosas/rosas1.svg"
           alt=""
+          width={200}
+          height={200}
         />
       </motion.div>
     </section>

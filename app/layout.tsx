@@ -1,18 +1,28 @@
 import type { Metadata } from 'next';
-import { Google_Sans_Flex } from 'next/font/google';
+import { Inter, Geist_Mono } from 'next/font/google';
+import { MotionConfig } from 'framer-motion';
+import { ThemeProvider } from 'next-themes';
 import Navbar from '@/components/Navbar';
 import { LanguageProvider } from '@/lib/language-context';
 import { TooltipProvider } from '@/components/ui/tooltip';
 import Footer from '@/components/footer';
 import { Toaster } from '@/components/ui/sonner';
 import { StageToast } from '@/components/stage-toast';
+import { SkipToContent } from '@/components/SkipToContent';
+import { HtmlLang } from '@/components/HtmlLang';
+import { JsonLd } from '@/components/JsonLd';
 
 import './globals.css';
 import { cn } from '@/lib/utils';
 
-const google_sans_flex = Google_Sans_Flex({
+const inter = Inter({
   subsets: ['latin'],
   variable: '--font-sans',
+});
+
+const geistMono = Geist_Mono({
+  subsets: ['latin'],
+  variable: '--font-mono',
 });
 
 export const metadata: Metadata = {
@@ -45,6 +55,13 @@ export const metadata: Metadata = {
   },
   creator: 'Luca Fourfooz',
   publisher: 'Luca Fourfooz',
+  alternates: {
+    languages: {
+      'fr-FR': 'https://lucaffz.dev/fr',
+      'en-US': 'https://lucaffz.dev/en',
+      'es-ES': 'https://lucaffz.dev/es',
+    },
+  },
   formatDetection: {
     email: false,
     address: false,
@@ -61,7 +78,7 @@ export const metadata: Metadata = {
     siteName: 'Luca Fourfooz Portfolio',
     images: [
       {
-        url: '/og-image.png',
+        url: '/api/og?title=Luca%20Fourfooz&subtitle=D%C3%A9veloppeur%20Full-Stack%20%26%20Designer%20UI%2FUX',
         width: 1200,
         height: 630,
         alt: 'Luca Fourfooz - Développeur Full-Stack',
@@ -73,7 +90,7 @@ export const metadata: Metadata = {
     title: 'Luca Fourfooz - Développeur Full-Stack & Designer UI/UX',
     description:
       'Portfolio de Luca Fourfooz, étudiant ingénieur à CESI et développeur full-stack chez Assystem.',
-    images: ['/og-image.png'],
+    images: ['/api/og?title=Luca%20Fourfooz&subtitle=D%C3%A9veloppeur%20Full-Stack%20%26%20Designer%20UI%2FUX'],
     creator: '@lucaffz',
   },
   robots: {
@@ -97,18 +114,43 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cn('h-full', 'antialiased', google_sans_flex.variable)}
+      className={cn(
+        'h-full',
+        'antialiased',
+        inter.variable,
+        geistMono.variable,
+      )}
+      suppressHydrationWarning
     >
-      <body className="min-h-screen flex flex-col">
-        <LanguageProvider>
-          <TooltipProvider>
-            <StageToast />
-            <Toaster position="bottom-right" />
-            <Navbar />
-            <main className="flex-grow">{children}</main>
-            <Footer />
-          </TooltipProvider>
-        </LanguageProvider>
+      <head>
+        <JsonLd />
+      </head>
+      <body
+        className="min-h-screen flex flex-col"
+        suppressHydrationWarning
+      >
+        <SkipToContent />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <LanguageProvider>
+            <HtmlLang />
+            <MotionConfig reducedMotion="user">
+              <TooltipProvider>
+                <StageToast />
+                <Toaster position="bottom-right" />
+                <Navbar />
+                <main id="main-content" className="flex-grow">
+                  {children}
+                </main>
+                <Footer />
+              </TooltipProvider>
+            </MotionConfig>
+          </LanguageProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

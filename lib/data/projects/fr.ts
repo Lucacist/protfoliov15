@@ -1,0 +1,996 @@
+import type { Project } from './types';
+
+const projects: Project[] = [
+  {
+    "id": "saiem-agire",
+    "title": "SAIEM AGIRE",
+    "category": "web",
+    "shortDescription": "Refonte complète du site web d'une entreprise de logement social. Design moderne, responsive et optimisé pour la conversion.",
+    "technologies": [
+      "Freelance",
+      "Web Design",
+      "SEO"
+    ],
+    "content": [
+      {
+        "type": "text",
+        "value": "Projet freelance de refonte complète du site web de SAIEM AGIRE, une entreprise de logement social. Détails à venir."
+      }
+    ]
+  },
+  {
+    "id": "calibre",
+    "title": "Calibre",
+    "category": "web",
+    "shortDescription": "Plateforme web pour enseignants : gestion des notes par activité, génération de bulletins avec graphiques d'évolution et planification pédagogique.",
+    "technologies": [
+      "Typescript",
+      "PostgreSQL",
+      "Next.js",
+      "Gestion scolaire",
+      "SonarQube"
+    ],
+    "repoUrl": "https://github.com/Lucacist/calibre",
+    "siteUrl": "https://www.calibre-chatos.uk",
+    "content": [
+      {
+        "type": "text",
+        "value": "Calibre est une application web de gestion pédagogique dédiée à la formation en mécanique automobile. Elle centralise l'organisation des classes, le suivi des élèves et la structuration des référentiels d'évaluation. Basée sur une architecture technique moderne (Next.js, Drizzle ORM et une base de données PostgreSQL distante via Neon), elle offre des interfaces sur mesure pour répondre aux besoins de chaque acteur de la formation."
+      },
+      {
+        "type": "heading",
+        "value": "Objectifs du projet :"
+      },
+      {
+        "type": "list",
+        "value": [
+          "Centraliser le suivi pédagogique des formations techniques (de type CAP ou Bac Pro)",
+          "Gérer efficacement les classes, les groupes et le suivi individuel des étudiants",
+          "Structurer un référentiel d'évaluation hiérarchique (pôles, activités, compétences et indicateurs)",
+          "Assurer la traçabilité des évaluations en y associant les véhicules et les types d'interventions réalisés"
+        ]
+      },
+      {
+        "type": "heading",
+        "value": "Fonctionnalités principales :"
+      },
+      {
+        "type": "list",
+        "value": [
+          "Tableaux de bord personnalisés pour les enseignants et les administrateurs",
+          "Espaces dédiés par classe avec des grilles de notation détaillées",
+          "Portail élève individuel pour la consultation des résultats et de la progression pédagogique",
+          "Administration complète des ressources : classes, étudiants, flotte de véhicules et travaux pratiques",
+          "Authentification sécurisée gérée par Clerk, avec synchronisation des comptes en base de données via Webhooks"
+        ]
+      },
+      {
+        "type": "heading",
+        "value": "Gestion des rôles et accès :"
+      },
+      {
+        "type": "list",
+        "value": [
+          "Administrateur : contrôle total de la plateforme, gestion des utilisateurs et configuration des paramètres",
+          "Enseignant : accès aux outils d'évaluation, saisie des notes et suivi pédagogique des élèves",
+          "Élève : accès restreint à un espace personnel pour consulter uniquement ses propres résultats"
+        ]
+      },
+      {
+        "type": "heading",
+        "value": "Sécurité :"
+      },
+      {
+        "type": "text",
+        "value": "La sécurisation des accès est garantie par un middleware qui protège strictement les routes privées de l'application. De plus, l'accès à la plateforme est conditionné : tout utilisateur authentifié via Clerk doit impérativement correspondre à un profil préalablement enregistré et autorisé dans la base de données de l'établissement."
+      }
+    ]
+  },
+  {
+    "id": "arahub-workspace",
+    "title": "AraHub",
+    "category": "web",
+    "shortDescription": "Espace de travail centralisé pour la gestion de projets : agrégation de notes, agendas, ressources, liens et médias au sein d'une interface unifiée.",
+    "technologies": [
+      "Next.js",
+      "Productivité",
+      "Gestion de projet",
+      "UI/UX",
+      "Centralisation"
+    ],
+    "repoUrl": "https://github.com/Lucacist/arahub",
+    "siteUrl": "https://arahub.vercel.app/",
+    "content": [
+      {
+        "type": "text",
+        "value": "AraHub (du latin « Ara » : autel, lieu de concentration) est un hub visuel conçu sur mesure pour les freelances et les solopreneurs. Son objectif principal est de réduire la charge mentale en centralisant les liens, les tâches, l'agenda et les fichiers au sein d'un espace unifié et modulaire, régi par une règle d'or simple : un projet = une page."
+      },
+      {
+        "type": "heading",
+        "value": "Fonctionnalités principales :"
+      },
+      {
+        "type": "list",
+        "value": [
+          "Gestion des tâches : statuts, échéances et glisser-déposer",
+          "Centralisation des liens : regroupement des ressources importantes par projet",
+          "Éditeur de notes riche : intégration de BlockNote pour des prises de notes fluides",
+          "Suivi de l'agenda : gestion des réunions et événements liés au projet",
+          "Gestion de fichiers : upload et organisation via UploadThing",
+          "Tableur intégré : suivi de données structurées directement dans l'outil",
+          "Sécurité renforcée : stockage sécurisé des clés API (chiffrement AES-256-GCM)",
+          "Corbeille sécurisée : suppression logique (soft delete) avec restauration sous 7 jours",
+          "Multi-workspace : séparation claire des espaces professionnels et personnels",
+          "Design responsive : interface optimisée pour desktop et mobile"
+        ]
+      },
+      {
+        "type": "heading",
+        "value": "Cas d'usage :"
+      },
+      {
+        "type": "list",
+        "value": [
+          "Freelance solo : centraliser toutes les ressources d'un client (briefs, fichiers, liens, tâches).",
+          "Agence légère : gérer plusieurs espaces de travail distincts et partager des modèles de projets réutilisables.",
+          "Entrepreneur : suivre l'avancement global d'un produit, les livrables et les points de synchronisation."
+        ]
+      },
+      {
+        "type": "heading",
+        "value": "Parcours utilisateur type :"
+      },
+      {
+        "type": "list",
+        "value": [
+          "Création d'un espace de travail (ex: « Pro ») et d'un projet dédié à un client",
+          "Ajout des liens de référence et initialisation des premières tâches",
+          "Intégration des fichiers (contrats, maquettes) et planification des réunions",
+          "Prise de notes en direct durant les réunions et conversion des actions en tâches",
+          "Utilisation du tableur pour le suivi du temps passé ou de la facturation"
+        ]
+      },
+      {
+        "type": "heading",
+        "value": "Évolutions prévues (Roadmap) :"
+      },
+      {
+        "type": "list",
+        "value": [
+          "Intégrations externes : synchronisation avec Google Calendar et Notion",
+          "Collaboration en temps réel sur les notes et les tableurs",
+          "Création de templates partagés et mise en place d'une marketplace de composants",
+          "Amélioration de la gestion des permissions multi-utilisateurs par espace de travail"
+        ]
+      },
+      {
+        "type": "heading",
+        "value": "Architecture et déploiement :"
+      },
+      {
+        "type": "text",
+        "value": "Le projet est distribué sous licence MIT. Le répertoire intègre des scripts de linting ainsi que des tests unitaires pour assurer la fiabilité du code. L'architecture est pensée pour s'intégrer facilement dans un pipeline d'intégration continue (ex: GitHub Actions) avec un déploiement automatisé recommandé sur des plateformes comme Vercel."
+      }
+    ]
+  },
+  {
+    "id": "easysave",
+    "title": "EasySave",
+    "category": "software",
+    "shortDescription": "Logiciel de sauvegarde multithreadé en C# (MVVM). Intègre des sauvegardes différentielles, le chiffrement à la volée et la centralisation des logs via Docker.",
+    "technologies": [
+      "C#",
+      "Avalonia",
+      ".NET 10",
+      "GitHub Actions"
+    ],
+    "repoUrl": "https://github.com/Lucacist/EasySave",
+    "downloadUrl": "/files/Livrable_Final-grp-5.pdf",
+    "downloadLabel": "Télécharger le rapport (PDF)",
+    "content": [
+      {
+        "type": "text",
+        "value": "Le projet EasySave est le développement itératif d'un logiciel de sauvegarde professionnel pour l'éditeur ProSoft. Réalisé en C# et .NET 10.0, il évolue d'une application console vers une solution graphique multithreadée intégrant la centralisation des données sous Docker."
+      },
+      {
+        "type": "heading",
+        "value": "Fonctionnalités principales :"
+      },
+      {
+        "type": "list",
+        "value": [
+          "Exécution de travaux de sauvegarde complets ou différentiels (séquentiels puis en parallèle)",
+          "Génération de logs journaliers (JSON/XML) et suivi d'état en temps réel via une DLL dédiée",
+          "Gestion avancée : traitement des fichiers prioritaires et limitation de la bande passante",
+          "Interaction en temps réel : mise en pause, reprise (Play) et arrêt (Stop) des travaux",
+          "Détection de logiciels métiers pour suspendre automatiquement les sauvegardes",
+          "Centralisation des journaux d'activité sur un serveur Docker"
+        ]
+      },
+      {
+        "type": "heading",
+        "value": "Prérequis techniques :"
+      },
+      {
+        "type": "list",
+        "value": [
+          "Langage C# et framework .NET 10.0 (Architecture MVVM)",
+          "Interface graphique WPF ou équivalent",
+          "Conteneurisation Docker pour le serveur de centralisation",
+          "Outils de versioning et modélisation (Git, Visual Studio, ArgoUML)"
+        ]
+      },
+      {
+        "type": "heading",
+        "value": "Installation :"
+      },
+      {
+        "type": "text",
+        "value": "Le logiciel est conçu pour être déployé facilement sur les postes clients. L'installation comprend la mise en place de l'exécutable, des librairies dynamiques (EasyLog.dll) et de l'outil de chiffrement. Le système de centralisation nécessite le déploiement préalable d'un conteneur Docker sur le réseau de l'entreprise."
+      },
+      {
+        "type": "heading",
+        "value": "Configuration :"
+      },
+      {
+        "type": "text",
+        "value": "L'utilisateur peut paramétrer le logiciel via l'interface graphique. Les réglages incluent la définition des chemins source/cible (disques locaux, externes ou réseaux), le choix du format de log (JSON ou XML), la sélection des extensions à chiffrer, et la déclaration des logiciels métiers bloquants."
+      },
+      {
+        "type": "heading",
+        "value": "Utilisation :"
+      },
+      {
+        "type": "text",
+        "value": "Disponible en français et en anglais, l'application peut être pilotée via une interface graphique intuitive ou en ligne de commande (CLI). L'utilisateur suit l'avancement des transferts en temps réel, interagit avec les tâches en cours, et accède aux historiques locaux ou centralisés pour une traçabilité totale."
+      }
+    ]
+  },
+  {
+    "id": "xanadu-infra",
+    "title": "Infrastructure XANADU",
+    "category": "infra",
+    "shortDescription": "Architecture réseau complète sur Proxmox : segmentation VLAN, DMZ, liaison MPLS inter-sites, AD avec administration déléguée et politique de sauvegarde 3-2-1.",
+    "technologies": [
+      "pfSense",
+      "Active Directory",
+      "Windows Server",
+      "Proxmox",
+      "Docker",
+      "Linux"
+    ],
+    "content": [
+      {
+        "type": "text",
+        "value": "Le projet Administration et Sécurisation du SI XANADU accompagne l'entreprise dans son déménagement et son expansion. Face aux risques de cyberattaques comme les rançongiciels, cette refonte transforme une infrastructure vieillissante en un système d'information stable, fiable, sécurisé et facile à administrer."
+      },
+      {
+        "type": "heading",
+        "value": "Fonctionnalités principales :"
+      },
+      {
+        "type": "list",
+        "value": [
+          "Cartographie et refonte complète de l’annuaire Active Directory",
+          "Interconnexion sécurisée entre le site principal et distant via VPN MPLS",
+          "Gestion fine des droits d'accès et des dossiers partagés par service",
+          "Plan de sauvegarde hiérarchisé (données critiques, importantes, etc.)",
+          "Mise en place d'un système de supervision avec alertes de sécurité",
+          "Création de scripts automatisés d'administration (PowerShell/Bash)",
+          "Audit des vulnérabilités via un questionnaire de sécurité"
+        ]
+      },
+      {
+        "type": "heading",
+        "value": "Prérequis techniques :"
+      },
+      {
+        "type": "list",
+        "value": [
+          "Serveurs Windows Server 2019 (AD, DNS, DHCP) et serveurs Linux",
+          "Infrastructure réseau avec pare-feu et liaison VPN MPLS garantie par SLA",
+          "Compatibilité avec l'ERP existant (PostgreSQL) et la suite Office 365"
+        ]
+      },
+      {
+        "type": "heading",
+        "value": "Installation :"
+      },
+      {
+        "type": "text",
+        "value": "Le déploiement s'appuie sur une cartographie cible détaillée et une maquette validant la nouvelle architecture. Il inclut l'installation des équipements réseau, la mise en place des serveurs et l'intégration sécurisée des postes de travail au domaine."
+      },
+      {
+        "type": "heading",
+        "value": "Configuration :"
+      },
+      {
+        "type": "text",
+        "value": "La configuration repose sur une structuration optimisée des Unités d'Organisation (OU). Des Stratégies de Groupe (GPO) sont appliquées pour durcir la sécurité. Une politique de pare-feu stricte et des règles de filtrage réseau sont configurées selon les recommandations de l'ANSSI."
+      },
+      {
+        "type": "heading",
+        "value": "Utilisation :"
+      },
+      {
+        "type": "list",
+        "value": [
+          "Au quotidien, l'infrastructure permet aux collaborateurs d'accéder aux ressources à distance en toute sécurité",
+          "Les correspondants informatiques peuvent gérer les comptes de leur propre service",
+          "L'équipe IT peut superviser les événements critiques en temps réel",
+          "Un retour à la normale est assuré sous 4 heures pour les services critiques"
+        ]
+      },
+      {
+        "type": "heading",
+        "value": "Sécurité :"
+      },
+      {
+        "type": "text",
+        "value": "L'architecture garantit la confidentialité, l'intégrité, la disponibilité et la traçabilité (CIDT). Le système est protégé contre les rançongiciels grâce à un plan de sauvegarde robuste, une politique de moindre privilège, et une surveillance continue."
+      }
+    ]
+  },
+  {
+    "id": "jourdren-tp-landing",
+    "title": "Jourdren-TP",
+    "category": "web",
+    "shortDescription": "Développement d'un site vitrine moderne et responsive pour une entreprise de travaux. Optimisation SEO et design centré sur la conversion client.",
+    "technologies": [
+      "Vue.js",
+      "SEO",
+      "Web Design"
+    ],
+    "repoUrl": "https://github.com/Lucacist/site-jourdren-evans",
+    "siteUrl": "https://www.jourdren-tp.com",
+    "content": [
+      {
+        "type": "text",
+        "value": "Site vitrine officiel de la société Jourdren TP, pensé comme une landing page claire et rassurante pour présenter l’entreprise, ses services et faciliter la prise de contact. Jourdren TP est une entreprise familiale spécialisée dans les travaux de terrassement, de VRD et d’aménagements extérieurs. Le site met en avant le savoir-faire de l’entreprise, son ancrage local en Normandie et ses réalisations, avec un parcours simple pour obtenir un devis."
+      },
+      {
+        "type": "heading",
+        "value": "Structure de la page d'accueil :"
+      },
+      {
+        "type": "list",
+        "value": [
+          "Hero visuel avec appel à l’action",
+          "Mise en avant des services principaux",
+          "Section à propos de l’entreprise",
+          "Témoignages clients",
+          "Bloc contact avec coordonnées et carte"
+        ]
+      },
+      {
+        "type": "heading",
+        "value": "Objectifs du site :"
+      },
+      {
+        "type": "list",
+        "value": [
+          "Découvrir les prestations proposées",
+          "Consulter les projets et les réalisations",
+          "Contacter l’entreprise",
+          "Demander un devis"
+        ]
+      },
+      {
+        "type": "heading",
+        "value": "Fonctionnalités principales :"
+      },
+      {
+        "type": "list",
+        "value": [
+          "Navigation entre les pages Services, Projets, À propos et Contact",
+          "Présentation des services de terrassement, VRD et aménagements extérieurs",
+          "Témoignages clients pour renforcer la confiance",
+          "Coordonnées complètes et horaires d’ouverture",
+          "Page des mentions légales et politique de confidentialité",
+          "Intégration d’une carte Google Maps"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "stagelink",
+    "title": "Stagelink",
+    "category": "web",
+    "shortDescription": "Application web MVC centralisant les offres de stage. Gestion complexe des rôles (étudiants, pilotes, admins) avec des candidatures et tableau de bord.",
+    "technologies": [
+      "PHP",
+      "MVC",
+      "MySQL",
+      "JavaScript",
+      "HTML5/CSS3"
+    ],
+    "repoUrl": "https://github.com/Lucacist/StageLinkV1",
+    "content": [
+      {
+        "type": "text",
+        "value": "Ce projet consiste en la création d'une application web permettant de centraliser les offres de stage pour les étudiants du CESI. L’objectif est de faciliter la recherche de stage en regroupant les offres et en enregistrant les données des entreprises partenaires, tout en offrant un espace de gestion aux différents profils d’utilisateurs (étudiants, pilotes de promotion, administrateurs)."
+      },
+      {
+        "type": "heading",
+        "value": "Fonctionnalités principales :"
+      },
+      {
+        "type": "list",
+        "value": [
+          "Authentification selon le rôle utilisateur (étudiant, pilote, administrateur)",
+          "Gestion complète des entreprises : création, modification, évaluation, suppression",
+          "Gestion des offres de stage : recherche, création, modification, suppression, statistiques",
+          "Gestion des comptes étudiants et pilotes : création, modification, suppression",
+          "Ajout et suppression d'offres à la wish-list",
+          "Postulation à une offre avec envoi de CV et lettre de motivation",
+          "Affichage des candidatures en cours",
+          "Tableau de bord statistique pour les administrateurs"
+        ]
+      },
+      {
+        "type": "heading",
+        "value": "Prérequis techniques :"
+      },
+      {
+        "type": "list",
+        "value": [
+          "Serveur Apache avec gestion des vhost",
+          "Langages requis : HTML5, CSS3, JavaScript, PHP (POO)",
+          "Base de données relationnelle (MySQL, PostgreSQL, etc.)",
+          "Architecture MVC obligatoire",
+          "Moteur de template côté back-end",
+          "Utilisation de clés étrangères dans la base de données",
+          "Responsive design pour compatibilité mobile et tablette",
+          "Vérification des formulaires côté client et serveur",
+          "Interdiction d’utiliser des CMS"
+        ]
+      },
+      {
+        "type": "heading",
+        "value": "Installation :"
+      },
+      {
+        "type": "text",
+        "value": "Le site sera déployé sur un serveur Apache configuré avec plusieurs vhosts, un pour le contenu statique (images, CSS, JS), un autre pour l'application dynamique PHP. La base de données sera initialisée avec les tables et relations nécessaires au bon fonctionnement du site."
+      },
+      {
+        "type": "heading",
+        "value": "Configuration :"
+      },
+      {
+        "type": "text",
+        "value": "Lors de la mise en place du projet, les rôles utilisateurs sont définis dans une matrice de gestion des permissions. Chaque utilisateur se connecte via une interface sécurisée (email/mot de passe). Les données sensibles sont protégées selon les normes de sécurité en vigueur (cookies sécurisés, données chiffrées, protection SQL)."
+      },
+      {
+        "type": "heading",
+        "value": "Utilisation :"
+      },
+      {
+        "type": "list",
+        "value": [
+          "Les étudiants peuvent chercher et consulter des offres, les ajouter à leur liste de souhaits, postuler, et suivre leur progression.",
+          "Les pilotes peuvent gérer les comptes, consulter les statistiques de candidatures et encadrer les étudiants.",
+          "Les administrateurs disposent de tous les droits, y compris la gestion des utilisateurs, des offres et des entreprises."
+        ]
+      },
+      {
+        "type": "heading",
+        "value": "Sécurité :"
+      },
+      {
+        "type": "text",
+        "value": "Le projet respecte les normes RGPD. Les données personnelles sont stockées de manière sécurisée et ne sont accessibles que selon les droits de chaque utilisateur. Aucune information sensible n’est conservée en clair. Des mécanismes sont mis en place pour prévenir les attaques type injection SQL et assurer la fiabilité de l’authentification."
+      }
+    ]
+  },
+  {
+    "id": "conway-game",
+    "title": "Jeu de la Vie de Conway",
+    "category": "software",
+    "shortDescription": "Implémentation interactive de l'automate cellulaire en C++ (POO). Mode console et interface graphique permettant de modifier la grille dynamiquement en temps réel.",
+    "technologies": [
+      "C++",
+      "POO",
+      "Algorithmique",
+      "UI Graphique"
+    ],
+    "repoUrl": "https://github.com/Lucacist/jeu-de-Conway-projet",
+    "content": [
+      {
+        "type": "text",
+        "value": "Le Jeu de la Vie est un automate cellulaire fascinant créé par le mathématicien John Conway en 1970. Ce projet est une implémentation interactive qui permet d'explorer les motifs émergents et les comportements complexes qui peuvent naître de règles très simples. Il a été réalisé en moins d'une semaine dans le cadre d'un travail en groupe de deux personnes, en utilisant la programmation orientée objet (POO) avec le langage C++."
+      },
+      {
+        "type": "heading",
+        "value": "Règles de fonctionnement :"
+      },
+      {
+        "type": "list",
+        "value": [
+          "Une cellule morte entourée exactement de trois voisines vivantes devient vivante",
+          "Une cellule vivante reste en vie si elle a deux ou trois voisines vivantes",
+          "Elle meurt de solitude si elle a moins de deux voisines vivantes",
+          "Elle meurt de surpopulation si elle en a plus de trois"
+        ]
+      },
+      {
+        "type": "heading",
+        "value": "Exécution et interactions :"
+      },
+      {
+        "type": "text",
+        "value": "Le jeu s'effectue sur une grille bidimensionnelle, chaque cellule étant influencée par ses huit voisines adjacentes. Deux modes d'exécution sont disponibles : un mode console et un mode graphique. Ce dernier offre la possibilité d'interagir directement avec la grille, en ajoutant ou supprimant des cellules par simple clic, et de régler la vitesse de simulation à l'aide des touches '<' et '>'."
+      },
+      {
+        "type": "heading",
+        "value": "Options avancées :"
+      },
+      {
+        "type": "text",
+        "value": "Une fonctionnalité supplémentaire permet d'activer le mode torique, dans lequel les bords de la grille sont connectés entre eux, comme si la grille était repliée sur elle-même. Enfin, des cellules obstacles peuvent être placées sur la grille ; celles-ci restent figées et ne subissent aucune évolution au fil des itérations."
+      }
+    ]
+  },
+  {
+    "id": "funkytown-network",
+    "title": "FunkyTown City",
+    "category": "infra",
+    "shortDescription": "Conception et déploiement d'une architecture réseau globale multi-sites. Plan d'adressage IPv4/IPv6, segmentation avancée et tunnel IPv6 sécurisé.",
+    "technologies": [
+      "Cisco Packet Tracer",
+      "VLAN",
+      "IPv6",
+      "Routage",
+      "Switching L3"
+    ],
+    "downloadUrl": "/files/Livrable_1_Equipe_1_Réseau.docx",
+    "downloadLabel": "Livrable 1",
+    "downloadUrl2": "/files/Livrable_2_Equipe_1_Réseau.docx",
+    "downloadLabel2": "Livrable 2",
+    "content": [
+      {
+        "type": "text",
+        "value": "Le projet \"Infrastructure Réseau FunkyTown\" consiste en la conception, la planification et le déploiement d'une architecture réseau globale pour plusieurs entités (ESN eXia, Bibliothèque, Engie, DIGIPLEX et un Datacenter). Il vise à fournir une connectivité inter-sites fiable, sécurisée et évolutive, tout en optimisant les ressources via un plan d'adressage rigoureux."
+      },
+      {
+        "type": "heading",
+        "value": "Fonctionnalités principales :"
+      },
+      {
+        "type": "list",
+        "value": [
+          "Élaboration d'un plan d'adressage complet en IPv4 (VLSM/CIDR) et IPv6",
+          "Segmentation avancée des réseaux locaux via des VLANs dédiés par service",
+          "Interconnexion sécurisée des sites au DSLAM du FAI via des liaisons point à point",
+          "Mise en place d'un tunnel IPv6 entre le site eXia et le Datacenter (accès cloud Meraki)",
+          "Déploiement de réseaux sans fil avec SSIDs distincts (Employés et Invités)",
+          "Planification et suivi de projet via des diagrammes de Gantt et PERT"
+        ]
+      },
+      {
+        "type": "heading",
+        "value": "Prérequis techniques :"
+      },
+      {
+        "type": "list",
+        "value": [
+          "Équipements réseaux (Routeurs, Switchs L2/L3, Contrôleurs et bornes WiFi)",
+          "Serveurs de services locaux (DHCP, DNS, FTP)",
+          "Outil de maquettage et simulation (Cisco Packet Tracer)"
+        ]
+      },
+      {
+        "type": "heading",
+        "value": "Installation :"
+      },
+      {
+        "type": "text",
+        "value": "Le déploiement suit un plan structuré allant de l'analyse des besoins à l'installation physique. Il inclut le câblage stratégique des sites (topologies en étoile et hiérarchiques) et la mise en place d'agrégations de liens (EtherChannel) pour garantir la redondance et la bande passante."
+      },
+      {
+        "type": "heading",
+        "value": "Configuration :"
+      },
+      {
+        "type": "text",
+        "value": "La configuration intègre le routage inter-VLAN, la translation d'adresses (NAT) pour l'accès Internet, et l'attribution dynamique des adresses (DHCP). La gestion des switchs est centralisée via le protocole VTP, et le routage du trafic cloud est assuré par des routes statiques IPv6."
+      },
+      {
+        "type": "heading",
+        "value": "Utilisation :"
+      },
+      {
+        "type": "text",
+        "value": "Au quotidien, les collaborateurs et le public accèdent aux ressources de manière fluide et segmentée. Les administrateurs réseau supervisent l'infrastructure à distance via des VLANs de management dédiés et gèrent les équipements cloud de manière centralisée grâce au tunnel IPv6."
+      },
+      {
+        "type": "heading",
+        "value": "Sécurité :"
+      },
+      {
+        "type": "text",
+        "value": "L'architecture protège les données grâce à l'isolation des flux (VLANs), la restriction des accès distants (SSH), le contrôle des ports (Port Security) et le chiffrement des réseaux sans fil (WPA2-PSK). Le NAT masque les adresses privées des attaques externes."
+      }
+    ]
+  },
+  {
+    "id": "weather-station",
+    "title": "Station Météo Embarquée",
+    "category": "iot",
+    "shortDescription": "Système embarqué pour navires mesurant des paramètres environnementaux critiques (pression, température, GPS) avec centralisation des logs sur carte SD.",
+    "technologies": [
+      "Arduino",
+      "C++",
+      "Capteurs I2C/SPI",
+      "RTC",
+      "Électronique"
+    ],
+    "nodownloadLabel": "Malheureusement, je n'ai pas le code sous la main. Si je le retrouve, je vous ferai signe.",
+    "content": [
+      {
+        "type": "text",
+        "value": "Le projet \"Worldwide Weather Watcher\" est une initiative portée par l'Agence Internationale pour la Vigilance Météorologique (AIVM), visant à équiper les navires de surveillance océanique avec des stations météo embarquées. L’objectif principal est de mesurer des paramètres environnementaux critiques contribuant à la formation de cyclones ou d’autres catastrophes naturelles."
+      },
+      {
+        "type": "heading",
+        "value": "Contexte :"
+      },
+      {
+        "type": "text",
+        "value": "De nombreuses sociétés de transport maritime ont accepté d’équiper leurs navires avec ces stations, à condition qu’elles soient simples d’utilisation, efficaces et pilotables par un membre de l’équipage. Une documentation technique sera fournie à cet effet."
+      },
+      {
+        "type": "heading",
+        "value": "Matériel sélectionné :"
+      },
+      {
+        "type": "list",
+        "value": [
+          "Microcontrôleur : ATmega328 (Arduino)",
+          "Stockage : Lecteur de carte SD (SPI)",
+          "Temps réel : Horloge RTC (I2C)",
+          "Signalisation : LED RGB (2 fils)",
+          "Interaction : 2 boutons poussoirs (numériques)"
+        ]
+      },
+      {
+        "type": "heading",
+        "value": "Capteurs intégrés :"
+      },
+      {
+        "type": "list",
+        "value": [
+          "Pression atmosphérique (I2C ou SPI)",
+          "Température de l’air (I2C ou SPI)",
+          "Hygrométrie (I2C ou SPI)",
+          "GPS (UART)",
+          "Luminosité (analogique)"
+        ]
+      },
+      {
+        "type": "heading",
+        "value": "Modules complémentaires prévus :"
+      },
+      {
+        "type": "list",
+        "value": [
+          "Température de l’eau (analogique)",
+          "Force du courant marin (I2C)",
+          "Force du vent (I2C)",
+          "Taux de particules fines (2 fils)"
+        ]
+      },
+      {
+        "type": "heading",
+        "value": "Objectifs pédagogiques :"
+      },
+      {
+        "type": "list",
+        "value": [
+          "Analyser, concevoir et structurer un système embarqué en environnement critique",
+          "Mettre en œuvre des capteurs et composants matériels sur microcontrôleur",
+          "Fournir une documentation claire pour l’utilisateur et le superviseur final"
+        ]
+      },
+      {
+        "type": "heading",
+        "value": "Les Branchements :"
+      },
+      {
+        "type": "text",
+        "value": "Emboiter les 3 composants dans cet ordre délicatement en faisant correspondre les broches aux ports"
+      },
+      {
+        "type": "image",
+        "value": "/projet/weather/piece1.webp",
+        "alt": "Pièce 1",
+        "maxWidth": "200px"
+      },
+      {
+        "type": "image",
+        "value": "/projet/weather/piece2.webp",
+        "alt": "Pièce 2",
+        "maxWidth": "200px"
+      },
+      {
+        "type": "image",
+        "value": "/projet/weather/piece3.webp",
+        "alt": "Pièce 3",
+        "maxWidth": "200px"
+      },
+      {
+        "type": "heading",
+        "value": "Modes de fonctionnement :"
+      },
+      {
+        "type": "heading",
+        "value": "Mode 1 : Mode Standard"
+      },
+      {
+        "type": "text",
+        "value": "Objectif : Acquisition régulière des données environnementales. Ce mode démarre automatiquement sans qu'aucun bouton ne soit pressé au démarrage. Le système lit les capteurs à intervalles réguliers (par défaut, toutes les 10 minutes, configurables via LOG_INTERVAL). Les données sont sauvegardées dans des fichiers sur la carte SD. Chaque fichier est limité à 2 Ko (FILE_MAX_SIZE), après quoi un nouveau fichier est créé avec un numéro de révision. Si un capteur ne répond pas dans un délai (TIMEOUT) de 30 secondes, la valeur \"NA\" est enregistrée."
+      },
+      {
+        "type": "heading",
+        "value": "Mode 2 : Mode Configuration"
+      },
+      {
+        "type": "text",
+        "value": "Objectif : Permettre la configuration des paramètres du système. Accessible en maintenant le bouton rouge enfoncé lors du démarrage. L'acquisition des capteurs est suspendue pour permettre l'interaction avec l'interface série. Commandes configurables via l'interface série : LOG_INTERVAL : Définir l'intervalle de mesure. FILE_MAX_SIZE : Ajuster la taille maximale des fichiers de log. TIMEOUT : Définir le délai de réponse des capteurs. RESET : Réinitialisation des paramètres aux valeurs par défaut. VERSION : Affiche la version du programme et un numéro de lot. CLOCK et DATE : Définissent l'heure et la date via le RTC. Après 30 minutes d'inactivité, le système retourne automatiquement en mode standard."
+      },
+      {
+        "type": "heading",
+        "value": "Mode 3 : Mode Maintenance"
+      },
+      {
+        "type": "text",
+        "value": "Objectif : Permettre l'accès aux données via l'interface série et remplacer la carte SD. Accessible depuis le mode standard ou économique par un appui prolongé (5 secondes) sur le bouton rouge. L'acquisition et l'enregistrement des données sont suspendus, mais les données déjà stockées restent accessibles. La carte SD peut être retirée en toute sécurité pour éviter la corruption des fichiers. Un nouvel appui prolongé sur le bouton rouge fait basculer le système vers le mode précédent."
+      },
+      {
+        "type": "heading",
+        "value": "Mode 4 : Mode Économique"
+      },
+      {
+        "type": "text",
+        "value": "Objectif : Optimiser la consommation d'énergie. Accès depuis le mode standard par un appui prolongé de 5 secondes sur le bouton vert. Ce mode réduit l'activité du système en désactivant certains capteurs et en doublant l'intervalle d'acquisition (LOG_INTERVAL). Un appui long sur le bouton rouge permet de revenir en mode standard."
+      }
+    ]
+  },
+  {
+    "id": "guest-wifi-plugin",
+    "title": "Plugin Guest Wifi GLPI",
+    "category": "web",
+    "shortDescription": "Extension PHP pour GLPI 10.x facilitant la gestion des accès Wi-Fi temporaires avec validation par ticket et création automatique d'identifiants.",
+    "technologies": [
+      "PHP 7.4",
+      "GLPI API",
+      "MySQL",
+      "Plugin Architecture"
+    ],
+    "nodownloadLabel": "Code source non disponible au téléchargement (propriété de l'entreprise).",
+    "content": [
+      {
+        "type": "text",
+        "value": "Le plugin Guest Wifi est une extension destinée à GLPI 10.x qui facilite la gestion des accès Wi-Fi temporaires pour les visiteurs au sein d'une organisation. Il propose une interface claire et intuitive permettant de créer, suivre et gérer les comptes invités, avec une validation automatique prévue pour les accès de longue durée."
+      },
+      {
+        "type": "heading",
+        "value": "Fonctionnalités principales :"
+      },
+      {
+        "type": "list",
+        "value": [
+          "Création et gestion de comptes Wi-Fi invités",
+          "Attribution automatique d'identifiants",
+          "Validation par ticket pour les accès de longue durée",
+          "Interface accessible depuis le menu Guest Wifi",
+          "Contrôle d'accès par groupes GLPI",
+          "Localisation des invités basée sur les sites GLPI",
+          "Statistiques d'usage"
+        ]
+      },
+      {
+        "type": "heading",
+        "value": "Prérequis techniques :"
+      },
+      {
+        "type": "list",
+        "value": [
+          "GLPI 10.x ou supérieur",
+          "PHP 7.4 minimum",
+          "Droits d'administration sur GLPI"
+        ]
+      },
+      {
+        "type": "heading",
+        "value": "Installation :"
+      },
+      {
+        "type": "text",
+        "value": "L'installation se fait en téléchargeant l'archive du plugin, en la décompressant dans le dossier plugins de GLPI, puis en l'activant depuis le menu Configuration > Plugins dans l'interface d'administration."
+      },
+      {
+        "type": "heading",
+        "value": "Configuration :"
+      },
+      {
+        "type": "text",
+        "value": "Une fois installé, il faut configurer les paramètres comme le groupe de gestionnaires autorisés et le seuil de jours pour la validation d'accès. La configuration s'effectue via le menu Guest Wifi > Configuration."
+      },
+      {
+        "type": "heading",
+        "value": "Utilisation :"
+      },
+      {
+        "type": "text",
+        "value": "Pour ajouter un invité, il suffit d'accéder au menu Guest Wifi > Ajouter un invité, de remplir les informations nécessaires et de valider. La gestion des invités s'effectue depuis la Liste des invités, où l'on peut consulter les statuts, filtrer les résultats ou supprimer un invité."
+      },
+      {
+        "type": "heading",
+        "value": "Sécurité :"
+      },
+      {
+        "type": "text",
+        "value": "Seuls les utilisateurs du groupe de gestionnaires configuré ont accès au plugin. Les identifiants Wi-Fi sont attribués de manière sécurisée, et les accès prolongés nécessitent une validation via le système de tickets."
+      }
+    ]
+  },
+  {
+    "id": "strongbox-3000",
+    "title": "Strongbox 3000",
+    "category": "infra",
+    "shortDescription": "Création d'un dispositif de cybersécurité multi-niveaux pour protéger des prototypes. Intègre une authentification forte (MFA), la biométrie et des codes dynamiques.",
+    "technologies": [
+      "Cybersécurité",
+      "MFA",
+      "Biométrie",
+      "Algorithmique"
+    ],
+    "downloadUrl": "/downloads/strongbox.ino",
+    "downloadLabel": "Télécharger le code source (INO)",
+    "content": [
+      {
+        "type": "text",
+        "value": "À la suite de plusieurs incidents liés au détournement de matériel, une agence de renseignement a sollicité notre expertise pour renforcer considérablement son système de sécurité."
+      },
+      {
+        "type": "heading",
+        "value": "Objectif principal :"
+      },
+      {
+        "type": "list",
+        "value": [
+          "Protéger des données sensibles liées à un prototype de nouvelle génération",
+          "Empêcher tout accès non autorisé à des informations stratégiques",
+          "Garantir l'intégrité du dispositif et la confidentialité des données manipulées"
+        ]
+      },
+      {
+        "type": "heading",
+        "value": "Contexte :"
+      },
+      {
+        "type": "text",
+        "value": "Le prototype à sécuriser est au cœur d’un projet confidentiel et devra intégrer des mécanismes d’authentification avancés pour prévenir tout risque de compromission."
+      },
+      {
+        "type": "heading",
+        "value": "Fonctionnement :"
+      },
+      {
+        "type": "list",
+        "value": [
+          "Conception d’un dispositif d’authentification basé sur cinq mécanismes de sécurité distincts",
+          "Chaque mécanisme correspond à un niveau de protection spécifique, combinant des approches matérielles, logicielles et biométriques",
+          "L'accès au prototype est soumis à une validation progressive selon le niveau de sensibilité des données"
+        ]
+      },
+      {
+        "type": "heading",
+        "value": "Résultat attendu :"
+      },
+      {
+        "type": "list",
+        "value": [
+          "Un système de sécurité multi-niveaux robuste et fiable",
+          "Une traçabilité complète des accès",
+          "Une architecture conforme aux standards de cybersécurité pour les systèmes sensibles"
+        ]
+      },
+      {
+        "type": "heading",
+        "value": "Détails techniques (Mécanismes d'authentification) :"
+      },
+      {
+        "type": "list",
+        "value": [
+          "MA1 (Authentification Q&R) : Système de questions et réponses personnalisées comme couche de sécurité supplémentaire.",
+          "MA2 (Code Dynamique) : Génération de codes temporaires à usage unique pour l'authentification à deux facteurs.",
+          "MA3 (Scan Rétinien) : Technologie de reconnaissance rétinienne de haute précision pour une sécurité maximale.",
+          "MA4 (Scan Digital) : Système de scan digital avancé permettant une authentification biométrique sécurisée.",
+          "MA5 (Carte ID) : Le système de carte d'identité compare les numéros d'agent avec leurs numéros binaires. Si les numéros ne correspondent pas, le système se verrouille."
+        ]
+      },
+      {
+        "type": "image",
+        "value": "/projet/strongbox/tableau.png",
+        "alt": "Tableau de sécurité",
+        "maxWidth": "600px"
+      },
+      {
+        "type": "image",
+        "value": "/projet/strongbox/coffre-tinkercad.png",
+        "alt": "Coffre fort Tinkercad",
+        "maxWidth": "600px"
+      }
+    ]
+  },
+  {
+    "id": "escape-no-game",
+    "title": "Escape no Game",
+    "category": "iot",
+    "shortDescription": "Conception d'une technologie de communication furtive pour zones hostiles : conversion de la voix en signaux électriques inaudibles et analyse des émotions.",
+    "technologies": [
+      "Traitement du signal",
+      "Acoustique",
+      "Électronique",
+      "Systèmes embarqués"
+    ],
+    "downloadUrl": "/downloads/Escape-no-game.ipynb",
+    "downloadLabel": "Télécharger le code source (Jupyter Notebook)",
+    "content": [
+      {
+        "type": "text",
+        "value": "Ce projet a pour objectif de développer une solution de communication fonctionnelle dans des zones dépourvues de couverture réseau, notamment là où les ondes sont bloquées."
+      },
+      {
+        "type": "heading",
+        "value": "Contexte :"
+      },
+      {
+        "type": "text",
+        "value": "Suite à l'infiltration de l'agent K57, capturé dans une base de cyber-pirates inaccessible par les moyens traditionnels, il devient crucial d'éviter que ce type de situation se reproduise. Ce projet vise donc à concevoir une technologie adaptée aux environnements critiques."
+      },
+      {
+        "type": "heading",
+        "value": "Fonctionnement :"
+      },
+      {
+        "type": "list",
+        "value": [
+          "L’agent parle dans un microphone : la voix est transformée en un signal sonore spécifique",
+          "Ce signal varie selon ce qui est dit et la manière dont c’est exprimé (intensité, fréquence, amplitude)",
+          "Le signal est ensuite converti en signal électrique, synchronisé avec la voix et portant les mêmes variations",
+          "Un transmetteur envoie ce signal sur une fréquence inaudible, indétectable par l’ennemi",
+          "Un agent récepteur intercepte, décode et retranscrit le message et la voix originale"
+        ]
+      },
+      {
+        "type": "heading",
+        "value": "Aspects techniques :"
+      },
+      {
+        "type": "list",
+        "value": [
+          "Conversion du son en signal électrique pour l’analyse en temps réel",
+          "Transmission par ondes inaudibles pour une communication discrète",
+          "Récupération des émotions de l’émetteur via l’étude des variations de courbes (intensité, modulation, fréquence)"
+        ]
+      },
+      {
+        "type": "heading",
+        "value": "Objectifs :"
+      },
+      {
+        "type": "list",
+        "value": [
+          "Assurer des communications sécurisées et discrètes en terrain hostile",
+          "Permettre la capture d’émotions pour contextualiser les messages",
+          "Renforcer les technologies de terrain dans des situations extrêmes"
+        ]
+      }
+    ]
+  }
+];
+
+export default projects;

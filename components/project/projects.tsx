@@ -6,41 +6,27 @@ import { Button } from '@/components/ui/button';
 import { ExternalLink, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-
-type Project = {
-  id: string;
-  title: string;
-  category: string;
-  shortDescription: string;
-  technologies: string[];
-  repoUrl?: string;
-  projectUrl?: string;
-  siteUrl?: string;
-  downloadUrl?: string;
-  downloadLabel?: string;
-};
+import { getProjects } from '@/lib/data/projects';
 
 export default function Projects({
   searchQuery = '',
 }: {
   searchQuery?: string;
 }) {
-  const { t } = useLanguage();
+  const { t, locale } = useLanguage();
 
-  const items = t<Project[]>('projects.items');
+  const allProjects = getProjects(locale);
 
-  const filteredItems = Array.isArray(items)
-    ? items.filter((project) => {
-        const query = searchQuery.toLowerCase();
-        return (
-          project.title.toLowerCase().includes(query) ||
-          project.shortDescription.toLowerCase().includes(query) ||
-          project.technologies.some((tech) =>
-            tech.toLowerCase().includes(query),
-          )
-        );
-      })
-    : [];
+  const filteredItems = allProjects.filter((project) => {
+    const query = searchQuery.toLowerCase();
+    return (
+      project.title.toLowerCase().includes(query) ||
+      project.shortDescription.toLowerCase().includes(query) ||
+      project.technologies.some((tech) =>
+        tech.toLowerCase().includes(query),
+      )
+    );
+  });
 
   return (
     <div className="flex flex-col gap-6 sm:gap-8 mt-6 sm:mt-8">
