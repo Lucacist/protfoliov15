@@ -39,21 +39,31 @@
   "sec4": {
     "titleEducation": "Education",
     "titleExperience": "Experience",
+    "expandLabel": "Show missions",
+    "collapseLabel": "Collapse",
     "education": [
       {
         "school": "CESI Engineering School",
         "url": "https://cesi.fr",
         "degree": "Engineering Degree in Computer Science and Software Engineering",
-        "start": "Oct 2025",
-        "end": "Oct 2028 (expected)",
+        "start": "Sept 2025",
+        "end": "Sept 2028 (expected)",
         "location": "Rouen, France"
       },
       {
         "school": "CESI Engineering School",
         "url": "https://cesi.fr",
         "degree": "Engineering Preparatory Cycle",
-        "start": "Sep 2023",
+        "start": "Sept 2023",
         "end": "Jul 2025",
+        "location": "Rouen, France"
+      },
+      {
+        "school": "La Châtaigneraie",
+        "url": "",
+        "degree": "High School Diploma — With Honors",
+        "start": "Sept 2020",
+        "end": "Jun 2023",
         "location": "Rouen, France"
       }
     ],
@@ -61,9 +71,66 @@
       {
         "company": "Assystem",
         "url": "https://assystem.com",
-        "role": "Full-Stack Developer Apprentice",
-        "start": "Oct 2025",
+        "role": "Fullstack Developer Apprentice",
+        "start": "Sept 2025",
         "end": "Present",
+        "location": "Rouen, France",
+        "highlights": [
+          "DTS — MDM: data management tool for Air Liquide (external client)",
+          "APM — APACT: solo development of a billing management tool"
+        ]
+      },
+      {
+        "company": "Assystem (DEC)",
+        "url": "https://assystem.com",
+        "role": "Web Developer — Internship (4 months)",
+        "start": "Apr 2025",
+        "end": "Jul 2025",
+        "location": "Rouen, France",
+        "highlights": [
+          "Development of the new Assystem portal",
+          "GLPI plugins: leave management and guest Wi-Fi"
+        ]
+      },
+      {
+        "company": "Short-term assignments",
+        "url": "",
+        "role": "Temp / Support staff",
+        "start": "2022",
+        "end": "2025",
+        "location": "Normandy, France",
+        "highlights": [
+          "Restaurant de la Halle",
+          "Vinco Groupe Pierre Henry",
+          "SNAD — Heudebouville",
+          "Delagrave — Romilly",
+          "L'Hôtelier Dépollution — Alizay",
+          "Ferme Des Peupliers",
+          "Hauville Traiteur"
+        ]
+      },
+      {
+        "company": "CLEP",
+        "url": "",
+        "role": "Activity Leader",
+        "start": "2022",
+        "end": "2023",
+        "location": "Rouen, France"
+      },
+      {
+        "company": "Vallette",
+        "url": "",
+        "role": "Job shadowing",
+        "start": "2021",
+        "end": "2021",
+        "location": "Rouen, France"
+      },
+      {
+        "company": "Sel et Poivre Architectes",
+        "url": "",
+        "role": "Job shadowing",
+        "start": "2019",
+        "end": "2019",
         "location": "Rouen, France"
       }
     ]
@@ -71,6 +138,17 @@
   "sec5": {
     "title": "Let's work together",
     "subtitle": "Open to internship, apprenticeship, or freelance project opportunities."
+  },
+  "languages": {
+    "title": "Languages",
+    "items": [
+      { "language": "French", "level": "Native" },
+      { "language": "English", "level": "Fluent" }
+    ]
+  },
+  "softSkills": {
+    "title": "Strengths",
+    "items": ["Teamwork", "Adaptability", "Operational autonomy"]
   },
   "projects": {
     "title": "My Projects",

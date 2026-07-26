@@ -39,21 +39,31 @@
   "sec4": {
     "titleEducation": "Educación",
     "titleExperience": "Experiencia",
+    "expandLabel": "Ver misiones",
+    "collapseLabel": "Contraer",
     "education": [
       {
         "school": "CESI Escuela de Ingeniería",
         "url": "https://cesi.fr",
         "degree": "Título de Ingeniero en Informática e Ingeniería de Software",
-        "start": "Oct 2025",
-        "end": "Oct 2028 (previsto)",
+        "start": "Sept 2025",
+        "end": "Sept 2028 (previsto)",
         "location": "Ruán, Francia"
       },
       {
         "school": "CESI Escuela de Ingeniería",
         "url": "https://cesi.fr",
         "degree": "Ciclo preparatorio de ingeniería",
-        "start": "Sep 2023",
+        "start": "Sept 2023",
         "end": "Jul 2025",
+        "location": "Ruán, Francia"
+      },
+      {
+        "school": "La Châtaigneraie",
+        "url": "",
+        "degree": "Bachillerato — Con honores",
+        "start": "Sept 2020",
+        "end": "Jun 2023",
         "location": "Ruán, Francia"
       }
     ],
@@ -61,9 +71,66 @@
       {
         "company": "Assystem",
         "url": "https://assystem.com",
-        "role": "Aprendiz de Desarrollador Full-Stack",
-        "start": "Oct 2025",
+        "role": "Desarrollador Fullstack en alternancia",
+        "start": "Sept 2025",
         "end": "Actualidad",
+        "location": "Ruán, Francia",
+        "highlights": [
+          "DTS — MDM: herramienta de gestión de datos para Air Liquide (cliente externo)",
+          "APM — APACT: desarrollo en solitario de una herramienta de facturación"
+        ]
+      },
+      {
+        "company": "Assystem (DEC)",
+        "url": "https://assystem.com",
+        "role": "Desarrollador Web — Prácticas (4 meses)",
+        "start": "Abr 2025",
+        "end": "Jul 2025",
+        "location": "Ruán, Francia",
+        "highlights": [
+          "Desarrollo del nuevo portal de Assystem",
+          "Plugins GLPI: gestión de ausencias y Wi-Fi para invitados"
+        ]
+      },
+      {
+        "company": "Misiones puntuales",
+        "url": "",
+        "role": "Temporal / Refuerzo",
+        "start": "2022",
+        "end": "2025",
+        "location": "Normandía, Francia",
+        "highlights": [
+          "Restaurant de la Halle",
+          "Vinco Groupe Pierre Henry",
+          "SNAD — Heudebouville",
+          "Delagrave — Romilly",
+          "L'Hôtelier Dépollution — Alizay",
+          "Ferme Des Peupliers",
+          "Hauville Traiteur"
+        ]
+      },
+      {
+        "company": "CLEP",
+        "url": "",
+        "role": "Animador",
+        "start": "2022",
+        "end": "2023",
+        "location": "Ruán, Francia"
+      },
+      {
+        "company": "Vallette",
+        "url": "",
+        "role": "Prácticas de observación",
+        "start": "2021",
+        "end": "2021",
+        "location": "Ruán, Francia"
+      },
+      {
+        "company": "Sel et Poivre Architectes",
+        "url": "",
+        "role": "Prácticas de observación",
+        "start": "2019",
+        "end": "2019",
         "location": "Ruán, Francia"
       }
     ]
@@ -71,6 +138,17 @@
   "sec5": {
     "title": "Trabajemos juntos",
     "subtitle": "Abierto a oportunidades de prácticas, aprendizaje en alternancia o proyectos freelance."
+  },
+  "languages": {
+    "title": "Idiomas",
+    "items": [
+      { "language": "Francés", "level": "Nativo" },
+      { "language": "Inglés", "level": "Fluido" }
+    ]
+  },
+  "softSkills": {
+    "title": "Fortalezas",
+    "items": ["Trabajo en equipo", "Adaptabilidad", "Autonomía operativa"]
   },
   "projects": {
     "title": "Mis proyectos",
@@ -91,7 +169,7 @@
     }
   },
   "contact": {
-    "title": "Contact",
+    "title": "Contacto",
     "description": "Estoy abierto a oportunidades de prácticas, aprendizaje o proyectos freelance. La mejor manera de contactarme es por correo electrónico.",
     "note": "Suelo responder en un plazo de 24 a 48 horas. Para consultas profesionales, por favor, indique el asunto en el asunto del correo electrónico."
   },

@@ -15,9 +15,23 @@ const SecAvailability = dynamic(
 const Sec4 = dynamic(() => import('@/components/home/sec4'), {
   loading: () => <SectionSkeleton />,
 });
+const SecLanguages = dynamic(
+  () =>
+    import('@/components/home/LanguagesSection').then(
+      (m) => ({ default: m.LanguagesSection }),
+    ),
+  { loading: () => <SectionSkeleton /> },
+);
+const SecSoftSkills = dynamic(
+  () =>
+    import('@/components/home/SoftSkillsSection').then(
+      (m) => ({ default: m.SoftSkillsSection }),
+    ),
+  { loading: () => <SectionSkeleton /> },
+);
 const Sec5 = dynamic(() => import('@/components/home/sec5'), {
-  loading: () => <SectionSkeleton />,
-});
+  loading: () => <SectionSkeleton /> },
+);
 
 function SectionSkeleton() {
   return (
@@ -36,6 +50,8 @@ export default function Home() {
       <Sec3 />
       <SecAvailability />
       <Sec4 />
+      <SecLanguages />
+      <SecSoftSkills />
       <Sec5 />
     </section>
   );

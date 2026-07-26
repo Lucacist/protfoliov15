@@ -2,6 +2,23 @@ import type { Project } from './types';
 
 const projects: Project[] = [
   {
+    "id": "saiem-agire",
+    "title": "SAIEM AGIRE",
+    "category": "web",
+    "shortDescription": "Rediseño completo del sitio web de una empresa de vivienda social. Diseño moderno, responsive y optimizado para la conversión.",
+    "technologies": [
+      "Freelance",
+      "Diseño Web",
+      "SEO"
+    ],
+    "content": [
+      {
+        "type": "text",
+        "value": "Proyecto freelance de rediseño completo del sitio web de SAIEM AGIRE, una empresa de vivienda social. Detalles próximamente."
+      }
+    ]
+  },
+  {
     "id": "calibre",
     "title": "Calibre",
     "category": "web",

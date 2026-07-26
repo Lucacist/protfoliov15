@@ -2,6 +2,23 @@ import type { Project } from './types';
 
 const projects: Project[] = [
   {
+    "id": "saiem-agire",
+    "title": "SAIEM AGIRE",
+    "category": "web",
+    "shortDescription": "Complete redesign of a social housing company's website. Modern, responsive design optimized for conversion.",
+    "technologies": [
+      "Freelance",
+      "Web Design",
+      "SEO"
+    ],
+    "content": [
+      {
+        "type": "text",
+        "value": "Freelance project involving the complete redesign of the SAIEM AGIRE website, a social housing company. Details coming soon."
+      }
+    ]
+  },
+  {
     "id": "calibre",
     "title": "Calibre",
     "category": "web",
