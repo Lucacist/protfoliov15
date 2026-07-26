@@ -130,7 +130,7 @@ export default function Hero() {
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
         >
-          <Image src="/landing/Hand.svg" alt="Scroll down" width={48} height={48} className="h-8 w-8 sm:h-12 sm:w-12" />
+          <Image src="/landing/Hand.svg" alt="Scroll down" width={48} height={48} className="h-8 w-8 sm:h-12 sm:w-12 dark:invert" />
         </motion.div>
       </motion.div>
     </section >

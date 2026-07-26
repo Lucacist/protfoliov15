@@ -23,7 +23,17 @@ export default function Navbar() {
 
   return (
     <nav
-      className="flex fixed top-0 left-0 right-0 z-50 bg-background h-12 items-center justify-center shadow-md"
+      className="flex fixed top-0 left-0 right-0 z-50 h-14 items-center justify-center"
+      style={{
+        background: `linear-gradient(
+          to bottom,
+          var(--background) 0%,
+          var(--background) 25%,
+          color-mix(in srgb, var(--background) 90%, transparent) 50%,
+          color-mix(in srgb, var(--background) 50%, transparent) 80%,
+          transparent 100%
+        )`,
+      }}
       aria-label="Main navigation"
     >
       <div className="flex items-center justify-between gap-4 w-full max-w-4xl px-4">
@@ -33,7 +43,7 @@ export default function Navbar() {
             alt="Logo"
             width={24}
             height={24}
-            className="h-5 sm:h-6 w-auto"
+            className="h-5 sm:h-6 w-auto dark:invert"
             sizes="24px"
           />
         </Link>
@@ -84,7 +94,16 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {mobileMenuOpen && (
-        <div className="sm:hidden fixed top-12 left-0 right-0 bg-background border-b shadow-md z-40">
+        <div className="sm:hidden fixed top-14 left-0 right-0 z-40"
+          style={{
+            background: `linear-gradient(
+              to bottom,
+              var(--background) 0%,
+              var(--background) 60%,
+              color-mix(in srgb, var(--background) 70%, transparent) 85%,
+              transparent 100%
+            )`,
+          }}>
           <ul className="flex flex-col p-4 gap-2" role="menu">
             {links.map(({ href, labelKey }) => {
               const isActive =
