@@ -12,6 +12,10 @@ const SecAvailability = dynamic(
   () => import('@/components/home/SecAvailability'),
   { loading: () => <SectionSkeleton /> },
 );
+const SecFreelance = dynamic(
+  () => import('@/components/home/SecFreelance'),
+  { loading: () => <SectionSkeleton /> },
+);
 const Sec4 = dynamic(() => import('@/components/home/sec4'), {
   loading: () => <SectionSkeleton />,
 });
@@ -52,6 +56,7 @@ export default function Home() {
       <Sec4 />
       <SecLanguages />
       <SecSoftSkills />
+      <SecFreelance />
       <Sec5 />
     </section>
   );

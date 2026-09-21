@@ -16,8 +16,14 @@
   "availability": {
     "stageBadge": "Stage international",
     "stageTitle": "Recherche un stage de 3 mois à l'étranger",
-    "stageDesc": "Disponible pour un stage à l'international, idéalement dans une équipe produit ou une startup tech. Ouvert à toutes les destinations.",
-    "stagePeriod": "Été 2027 — 3 mois",
+    "stageDates": "Disponible du 12 juillet au 8 octobre 2027 pour un stage de 3 mois à l'international.",
+    "downloads": {
+      "cvFr": "CV (Français)",
+      "cvEn": "CV (English)",
+      "coverLetterFr": "Lettre de motivation (FR)",
+      "coverLetterEn": "Lettre de motivation (EN)",
+      "recommendation": "Lettre de recommandation"
+    },
     "freelanceBadge": "Projets & Freelance",
     "freelanceTitle": "Un projet à développer ?",
     "freelanceDesc": "Que ce soit une application web, un site vitrine ou un outil métier, je suis disponible pour travailler sur vos projets en parallèle de mes études.",
