@@ -42,7 +42,7 @@ export default function SecAvailability() {
   return (
     <section className="container mx-auto p-4 max-w-5xl">
       <motion.div
-        className="relative isolate overflow-hidden rounded-3xl bg-red-600 text-white shadow-lg shadow-red-500/20 flex flex-col sm:flex-row"
+        className="relative isolate overflow-hidden rounded-3xl bg-red-400 text-white shadow-lg shadow-red-500/20 flex flex-col sm:flex-row"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
@@ -50,17 +50,6 @@ export default function SecAvailability() {
       >
         {/* Text content */}
         <div className="flex flex-col gap-4 p-6 sm:p-8 flex-1 order-2 sm:order-1">
-          {/* Header */}
-          <motion.div
-            variants={itemVariants}
-            className="flex items-center gap-2"
-          >
-            <span className="h-2 w-2 rounded-full bg-emerald-300 shadow-[0_0_0_3px_rgba(110,231,183,0.3)]" />
-            <span className="text-sm font-medium text-white/90">
-              {t('hero.dispo')}
-            </span>
-          </motion.div>
-
           {/* Internship focus */}
           <motion.div
             variants={itemVariants}
