@@ -16,8 +16,14 @@
   "availability": {
     "stageBadge": "International internship",
     "stageTitle": "Looking for a 3-month internship abroad",
-    "stageDesc": "Available for an international internship, ideally in a product team or tech startup. Open to all destinations.",
-    "stagePeriod": "Summer 2027 — 3 months",
+    "stageDates": "Available July 12 – October 8, 2027 for a 3-month international internship.",
+    "downloads": {
+      "cvFr": "CV (Français)",
+      "cvEn": "CV (English)",
+      "coverLetterFr": "Cover letter (FR)",
+      "coverLetterEn": "Cover letter (EN)",
+      "recommendation": "Recommendation letter"
+    },
     "freelanceBadge": "Projects & Freelance",
     "freelanceTitle": "Got a project to build?",
     "freelanceDesc": "Whether it's a web app, a landing page or a business tool, I'm available to work on your projects alongside my studies.",

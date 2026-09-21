@@ -16,8 +16,14 @@
   "availability": {
     "stageBadge": "Prácticas internacionales",
     "stageTitle": "Busco unas prácticas de 3 meses en el extranjero",
-    "stageDesc": "Disponible para unas prácticas a nivel internacional, idealmente en un equipo de producto o una startup tecnológica. Abierto a cualquier destino.",
-    "stagePeriod": "Verano de 2027 — 3 meses",
+    "stageDates": "Disponible del 12 de julio al 8 de octubre de 2027 para unas prácticas internacionales de 3 meses.",
+    "downloads": {
+      "cvFr": "CV (Français)",
+      "cvEn": "CV (English)",
+      "coverLetterFr": "Carta de motivación (FR)",
+      "coverLetterEn": "Carta de motivación (EN)",
+      "recommendation": "Carta de recomendación"
+    },
     "freelanceBadge": "Proyectos y Freelance",
     "freelanceTitle": "¿Un proyecto por desarrollar?",
     "freelanceDesc": "Ya sea una aplicación web, un sitio web corporativo o una herramienta profesional, estoy disponible para trabajar en tus proyectos en paralelo a mis estudios.",
